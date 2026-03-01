@@ -11,7 +11,7 @@ const group = {
 };
 
 const dash = {
-  stroke: "rgba(156,163,175,0.2)",
+  stroke: "rgba(156,163,175,0.3)",
   strokeWidth: 1,
   strokeDasharray: "5 4",
   fill: "none",
@@ -28,7 +28,7 @@ export function SystemDiagram() {
         <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground/50">
           Protocol Account Architecture
         </p>
-        <p className="font-mono text-[9px] text-muted-foreground/30">
+        <p className="font-mono text-[9px] text-muted-foreground/45">
           Kamino Lending
         </p>
       </div>
@@ -113,8 +113,8 @@ export function SystemDiagram() {
         </text>
 
         <rect x="18" y="150" width="314" height="34" rx="4" {...node} />
-        <text x="32" y="172" fontFamily="monospace" fontSize="11" fill={dimColor}>
-          Reserve: USX
+        <text x="32" y="172" fontFamily="sans-serif" fontSize="12" fill={textColor}>
+          Reserve: USDG
         </text>
         <text
           x="318"
@@ -128,7 +128,7 @@ export function SystemDiagram() {
         </text>
 
         <rect x="18" y="190" width="314" height="34" rx="4" {...node} />
-        <text x="32" y="212" fontFamily="monospace" fontSize="11" fill={dimColor}>
+        <text x="32" y="212" fontFamily="sans-serif" fontSize="12" fill={textColor}>
           Reserve: USDC
         </text>
         <text
@@ -143,8 +143,8 @@ export function SystemDiagram() {
         </text>
 
         <rect x="18" y="230" width="314" height="34" rx="4" {...node} />
-        <text x="32" y="252" fontFamily="monospace" fontSize="11" fill={dimColor}>
-          Reserve: eUSX
+        <text x="32" y="252" fontFamily="sans-serif" fontSize="12" fill={textColor}>
+          Reserve: SOL
         </text>
         <text
           x="318"
@@ -222,7 +222,7 @@ export function SystemDiagram() {
           y="54"
           fontFamily="monospace"
           fontSize="7.5"
-          fill="rgba(156,163,175,0.35)"
+          fill="rgba(156,163,175,0.55)"
           textAnchor="middle"
         >
           belongs to
@@ -236,7 +236,7 @@ export function SystemDiagram() {
           y="155"
           fontFamily="monospace"
           fontSize="7.5"
-          fill="rgba(156,163,175,0.35)"
+          fill="rgba(156,163,175,0.55)"
           textAnchor="middle"
         >
           positions
