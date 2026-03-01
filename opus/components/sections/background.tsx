@@ -61,7 +61,7 @@ export function Background() {
               Blockchain systems introduce genuinely new financial structures, requiring the ability to reinterpret legacy instruments while cutting through narrative, ideology, and conflicting incentives that often obscure economic reality.
             </p>
             <p>
-              A strong foundation in traditional finance and economic reasoning provides the grounding to do this clearly, while remaining open to the structural possibilities that programmable onchain systems actually introduce.
+              A strong foundation in traditional finance and economic reasoning provides the grounding to do this clearly, while remaining open to the structural possibilities that programmable onchain systems actually create.
             </p>
             <p>
               Success hinges on treating blockchain networks as observable financial systems – making full use of the public data they expose, often only accessible through substantial analytical and infrastructure development.
