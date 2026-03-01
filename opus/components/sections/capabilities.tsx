@@ -41,17 +41,27 @@ export function Capabilities() {
           required.
         </p>
       </FadeIn>
-      <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {domains.map((domain, i) => (
-          <FadeIn key={domain.title} delay={i * 0.05}>
-            <div className="card-interactive rounded-lg border border-border bg-card p-5 hover:bg-accent">
-              <h3 className="font-medium">{domain.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {domain.description}
-              </p>
-            </div>
-          </FadeIn>
-        ))}
+      <div className="relative z-0 mt-8">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -inset-8 -z-10 rounded-3xl"
+          style={{
+            background:
+              "radial-gradient(ellipse at 50% 50%, rgba(56, 130, 200, 0.05) 0%, transparent 65%)",
+          }}
+        />
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {domains.map((domain, i) => (
+            <FadeIn key={domain.title} delay={i * 0.09} className="h-full">
+              <div className="card-interactive flex h-full flex-col rounded-lg border border-border bg-card p-5 hover:bg-accent">
+                <h3 className="font-medium">{domain.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {domain.description}
+                </p>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
       </div>
     </SectionShell>
   );

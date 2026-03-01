@@ -49,7 +49,7 @@ export function Background() {
         </p>
       </FadeIn>
       <div className="mt-10 grid gap-12 lg:grid-cols-2 lg:gap-16">
-        <FadeIn delay={0.05}>
+        <FadeIn delay={0.09}>
           <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
               Financial systems work has consistently centred on data-led
@@ -93,7 +93,7 @@ export function Background() {
             </p>
           </div>
         </FadeIn>
-        <FadeIn delay={0.1}>
+        <FadeIn delay={0.18}>
           <div className="space-y-4">
             {credentialGroups.map((group) => (
               <div

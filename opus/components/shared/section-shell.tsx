@@ -32,7 +32,14 @@ export function SectionShell({
 
   if (variant === "open") {
     return (
-      <section id={id} className="scroll-mt-24">
+      <section
+        id={id}
+        className="scroll-mt-24"
+        style={{
+          background:
+            "linear-gradient(to bottom, transparent, rgba(15, 23, 42, 0.3) 50%, transparent)",
+        }}
+      >
         <div
           className={cn(
             "mx-auto max-w-[1180px] px-6 py-10 md:px-12 md:py-10",

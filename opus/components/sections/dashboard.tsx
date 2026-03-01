@@ -47,16 +47,16 @@ export function Dashboard() {
               protocol risk — structured for real-time decision support.
             </p>
 
-            <p className="mb-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/35">
+            <p className="mb-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/60">
               Core Capabilities
             </p>
             <ul className="mb-10 space-y-2">
               {capabilities.map((item) => (
                 <li
                   key={item}
-                  className="flex gap-2.5 text-sm leading-snug text-muted-foreground/60"
+                  className="flex gap-2.5 text-sm leading-snug text-muted-foreground/80"
                 >
-                  <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/30" />
+                  <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/50" />
                   {item}
                 </li>
               ))}
@@ -64,15 +64,15 @@ export function Dashboard() {
 
             <hr className="mb-6 border-border/30" />
             <div className="rounded-md border border-border/50 bg-accent/40 px-5 py-4">
-              <p className="mb-2.5 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/60">
+              <p className="mb-2.5 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/75">
                 Deployment Readiness
               </p>
-              <p className="text-sm leading-relaxed text-muted-foreground/70">
+              <p className="text-sm leading-relaxed text-muted-foreground/85">
                 Solana protocols&ensp;&mdash;&ensp;turnkey deployment
                 <br />
                 EVM environments&ensp;&mdash;&ensp;rapid implementation
               </p>
-              <p className="mt-2.5 text-xs text-muted-foreground/40">
+              <p className="mt-2.5 text-xs text-muted-foreground/65">
                 Shared analytical framework, protocol mechanics already
                 modelled.
               </p>
@@ -80,8 +80,16 @@ export function Dashboard() {
           </div>
 
           {/* Dashboard showcase — fade carousel */}
-          <div>
-            <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/40">
+          <div className="relative z-0">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -inset-10 -z-10 rounded-3xl"
+              style={{
+                background:
+                  "radial-gradient(ellipse at 50% 45%, rgba(56, 130, 200, 0.07) 0%, transparent 65%)",
+              }}
+            />
+            <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/65">
               Operational Views
             </p>
             <div className="relative grid aspect-[17/10] overflow-hidden rounded-lg bg-[#0c1425] ring-1 ring-inset ring-white/[0.05]">

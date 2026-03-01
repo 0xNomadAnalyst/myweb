@@ -35,7 +35,7 @@ export function Architecture() {
       </FadeIn>
       <div className="mt-10 grid gap-4 md:grid-cols-3">
         {principles.map((item, i) => (
-          <FadeIn key={item.title} delay={i * 0.05}>
+          <FadeIn key={item.title} delay={i * 0.09}>
             <div className="card-interactive rounded-lg border border-border bg-card p-5 hover:bg-accent">
               <h3 className="font-medium">{item.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
