@@ -4,6 +4,7 @@ import { Hero } from "@/components/sections/hero";
 import { Dashboard } from "@/components/sections/dashboard";
 import { Capabilities } from "@/components/sections/capabilities";
 import { Architecture } from "@/components/sections/architecture";
+import { ArchitectureBreak } from "@/components/sections/architecture-break";
 import { Engagement } from "@/components/sections/engagement";
 import { Background } from "@/components/sections/background";
 import { Contact } from "@/components/sections/contact";
@@ -28,7 +29,7 @@ export default function Home() {
         <Capabilities />
         <SectionDivider />
         <Architecture />
-        <SectionDivider />
+        <ArchitectureBreak />
         <Engagement />
         <SectionDivider />
         <Background />
