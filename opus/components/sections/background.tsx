@@ -5,8 +5,8 @@ const credentialGroups = [
   {
     title: "Education",
     items: [
-      "BSc Economics & Philosophy — University of Bristol (First Class Honours)",
-      "MSc Economic Policy — University College London",
+      "BSc Economics & Philosophy – University of Bristol (First Class Honours)",
+      "MSc Economic Policy – University College London",
     ],
     caption: "Economic training applied to market structure and incentive design.",
   },
@@ -20,9 +20,9 @@ const credentialGroups = [
   {
     title: "Financial & Investment Experience",
     items: [
-      "Bloomberg — Analytical Research & Financial Modelling",
-      "M&A Analyst — UK Renewable Energy",
-      "Project Finance Modelling — Utility-Scale Renewables (Chile)",
+      "Bloomberg – Analytical Research & Financial Modelling",
+      "M&A Analyst – UK Renewable Energy",
+      "Project Finance Modelling – Utility-Scale Renewables (Chile)",
     ],
     caption: "Private-equity sponsored infrastructure and capital structuring.",
   },
@@ -31,7 +31,7 @@ const credentialGroups = [
     items: [
       "ICO / Utility Token Fundraising Support (~$60M raised)",
       "Token Economy Modelling & Treasury Management Support",
-      "Operational Risk Infrastructure — Solstice Stablecoin (~$300M AUM)",
+      "Operational Risk Infrastructure – Solstice Stablecoin (~$300M AUM)",
     ],
   },
 ];
@@ -52,44 +52,25 @@ export function Background() {
         <FadeIn delay={0.09}>
           <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
-              Financial systems work has consistently centred on data-led
-              decisionmaking under uncertainty — evaluating how incentives,
-              capital structure, and market behaviour translate into real
-              economic outcomes.
+              Blockchain systems introduce genuinely new financial structures, requiring the ability to reinterpret legacy instruments while cutting through narrative, ideology, and conflicting incentives that often obscure economic reality.
             </p>
             <p>
-              Across institutional research, investment analysis, and project
-              finance, my work focused on building analytical models used to
-              support capital allocation decisions involving material financial
-              risk. These environments required translating complex data into
-              decision frameworks trusted by investors, operators, and
-              executive stakeholders.
+              A strong foundation in traditional finance and economic reasoning provides the grounding to do this clearly, while remaining open to the structural possibilities that programmable onchain systems actually introduce.
             </p>
             <p>
-              Independent consulting work extended this approach across
-              startups and mid-market businesses, developing financial models,
-              analysing unit economics, and supporting operational and
-              strategic decisions across diverse business models.
+              Success in these efforts requires us treating blockchain networks as observable financial systems – making full use of the public data they expose, often only accessible through substantial analytical and infrastructure development.
             </p>
             <p>
-              Exposure to early digital-asset markets and token fundraising
-              cycles highlighted both the potential and the analytical
-              fragility of emerging crypto financial systems. Observing
-              repeated failures driven by weak incentive design and
-              insufficient risk visibility motivated a deliberate shift toward
-              more empirical approaches.
+              My career has consistently centred on enabling data-driven decision-making under uncertainty – building analytical frameworks that translate complex facts into insights and decision-guidance relied upon by senior stakeholders.            
             </p>
             <p>
-              This led to focused work in onchain analytics, market
-              microstructure analysis, and protocol risk monitoring — applying
-              established financial and risk-management discipline to digitally
-              native financial environments.
+              This experience was developed in institutional finance roles and later extended through independent consulting, supporting capital allocation, operational planning, and strategic decisions in environments carrying material financial risk.
             </p>
             <p>
-              Current engagements involve designing operational intelligence
-              and risk infrastructure supporting large-scale onchain financial
-              systems, where continuous visibility into liquidity, execution
-              quality, and protocol behaviour is required for safe operation.
+              Early exposure to digital-asset fundraising cycles highlighted the structural fragility of crypto financial systems, often lacking operational and risk visibilities. This prompted a deliberate shift toward empirical analysis and formal risk discipline.
+            </p>
+            <p>
+              My work today centres on applying this accumulated understanding alongside teams committed to operating complex digital-asset environments safely and with clarity – designing operational intelligence and risk infrastructure for the next generation of financial systems.
             </p>
           </div>
         </FadeIn>
