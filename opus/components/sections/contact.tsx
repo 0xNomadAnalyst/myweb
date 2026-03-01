@@ -8,7 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 export function Contact() {
   return (
-    <SectionShell id="contact">
+    <SectionShell id="contact" variant="open">
       <FadeIn>
         <div className="max-w-md">
           <h2 className="text-2xl font-medium tracking-tight">Availability</h2>

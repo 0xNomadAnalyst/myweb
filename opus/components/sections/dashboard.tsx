@@ -33,7 +33,7 @@ export function Dashboard() {
   }, [active]);
 
   return (
-    <SectionShell id="system" variant="feature">
+    <SectionShell id="system" variant="feature" className="py-14 md:py-14">
       <FadeIn>
         <div className="grid items-start gap-10 md:grid-cols-[9fr_11fr] md:gap-14">
           {/* Capability positioning */}

@@ -141,3 +141,17 @@
     scroll-behavior: smooth;
   }
 }
+
+@layer components {
+  .card-interactive {
+    transition: transform 220ms ease, box-shadow 220ms ease,
+      background-color 220ms ease;
+  }
+  .card-interactive:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+  .dark .card-interactive:hover {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
+  }
+}

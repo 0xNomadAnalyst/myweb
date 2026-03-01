@@ -31,7 +31,7 @@ const domains = [
 
 export function Capabilities() {
   return (
-    <SectionShell id="capabilities">
+    <SectionShell id="capabilities" variant="open">
       <FadeIn>
         <h2 className="text-2xl font-medium tracking-tight">
           Operational Problem Domains
@@ -44,7 +44,7 @@ export function Capabilities() {
       <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {domains.map((domain, i) => (
           <FadeIn key={domain.title} delay={i * 0.05}>
-            <div className="rounded-lg border border-border bg-card p-5 transition-colors hover:bg-accent">
+            <div className="card-interactive rounded-lg border border-border bg-card p-5 hover:bg-accent">
               <h3 className="font-medium">{domain.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {domain.description}

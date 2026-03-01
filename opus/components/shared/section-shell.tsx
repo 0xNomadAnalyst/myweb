@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-type SectionVariant = "hero" | "plate" | "feature";
+type SectionVariant = "hero" | "plate" | "feature" | "open";
 
 interface SectionShellProps {
   children: React.ReactNode;
@@ -21,6 +21,21 @@ export function SectionShell({
         <div
           className={cn(
             "mx-auto max-w-[1180px] px-6 pt-32 pb-16 md:px-12 md:pt-36 md:pb-20",
+            className,
+          )}
+        >
+          {children}
+        </div>
+      </section>
+    );
+  }
+
+  if (variant === "open") {
+    return (
+      <section id={id} className="scroll-mt-24">
+        <div
+          className={cn(
+            "mx-auto max-w-[1180px] px-6 py-10 md:px-12 md:py-10",
             className,
           )}
         >
