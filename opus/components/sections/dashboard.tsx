@@ -32,7 +32,7 @@ const dashboardViews = [
 
 export function Dashboard() {
   return (
-    <SectionShell id="system" wide>
+    <SectionShell id="system">
       <FadeIn>
         <p className="mb-6 font-mono text-xs uppercase tracking-wider text-muted-foreground">
           Operational Environment

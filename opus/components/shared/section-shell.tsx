@@ -1,24 +1,41 @@
 import { cn } from "@/lib/utils";
 
+type SectionVariant = "hero" | "plate" | "feature";
+
 interface SectionShellProps {
   children: React.ReactNode;
   id?: string;
   className?: string;
-  wide?: boolean;
+  variant?: SectionVariant;
 }
 
 export function SectionShell({
   children,
   id,
   className,
-  wide,
+  variant = "plate",
 }: SectionShellProps) {
+  if (variant === "hero") {
+    return (
+      <section id={id} className="scroll-mt-24">
+        <div
+          className={cn(
+            "mx-auto max-w-[1180px] px-6 pt-32 pb-16 md:px-12 md:pt-36 md:pb-20",
+            className,
+          )}
+        >
+          {children}
+        </div>
+      </section>
+    );
+  }
+
   return (
-    <section id={id} className="bg-surface">
+    <section id={id} className="scroll-mt-24 md:px-8">
       <div
         className={cn(
-          "mx-auto px-10 py-24 md:py-32",
-          wide ? "max-w-[1300px]" : "max-w-[1150px]",
+          "mx-auto bg-surface px-6 py-10 md:rounded-xl md:border md:border-border md:px-12 md:py-10",
+          variant === "feature" ? "max-w-[1360px]" : "max-w-[1180px]",
           className,
         )}
       >

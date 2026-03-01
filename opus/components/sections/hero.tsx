@@ -15,7 +15,7 @@ const domains = [
 
 export function Hero() {
   return (
-    <SectionShell className="pt-32 pb-16 md:pt-40 md:pb-24">
+    <SectionShell variant="hero">
       <FadeIn>
         <div className="max-w-2xl">
           <h1 className="text-3xl font-medium leading-tight tracking-tight md:text-4xl">
