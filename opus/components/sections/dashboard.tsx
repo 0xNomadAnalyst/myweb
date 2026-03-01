@@ -47,6 +47,9 @@ export function Dashboard() {
               translate market data into operational decision systems.
             </p>
 
+            <p className="mb-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/35">
+              Core Capabilities
+            </p>
             <ul className="mb-10 space-y-2">
               {capabilities.map((item) => (
                 <li
@@ -59,6 +62,7 @@ export function Dashboard() {
               ))}
             </ul>
 
+            <hr className="mb-6 border-border/30" />
             <div className="rounded-md border border-border/50 bg-accent/40 px-5 py-4">
               <p className="mb-2.5 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/60">
                 Deployment Readiness
@@ -77,24 +81,24 @@ export function Dashboard() {
 
           {/* Dashboard showcase — fade carousel */}
           <div>
-            <div className="relative grid overflow-hidden rounded-lg">
+            <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/40">
+              Operational Views
+            </p>
+            <div className="relative grid aspect-[17/10] overflow-hidden rounded-lg bg-[#0c1425] ring-1 ring-inset ring-white/[0.05]">
               {screenshots.map((img, i) => (
                 <img
                   key={img.src}
                   src={img.src}
                   alt={img.alt}
-                  className="col-start-1 row-start-1 w-full object-cover transition-opacity duration-1000 ease-in-out"
-                  style={{ opacity: i === active ? 1 : 0 }}
+                  className="col-start-1 row-start-1 h-full w-full object-contain object-center saturate-[0.95] contrast-[0.97] transition-opacity duration-[1500ms] ease-in-out"
+                  style={{ opacity: i === active ? 0.92 : 0 }}
                   loading={i === 0 ? "eager" : "lazy"}
                 />
               ))}
 
-              {/* Subtle edge softening */}
-              <div className="pointer-events-none col-start-1 row-start-1 z-10">
-                <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-r from-black/30 to-transparent" />
-                <div className="absolute inset-y-0 right-0 w-1 bg-gradient-to-l from-black/30 to-transparent" />
-                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-b from-black/30 to-transparent" />
-                <div className="absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-t from-black/30 to-transparent" />
+              {/* Bottom grounding gradient + edge softening */}
+              <div className="pointer-events-none col-start-1 row-start-1 relative z-10 h-full w-full">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent from-60% to-black/[0.18]" />
               </div>
 
               {/* Progress indicators */}
@@ -114,15 +118,11 @@ export function Dashboard() {
               </div>
             </div>
 
-            <p className="mt-4 text-xs leading-relaxed text-muted-foreground/50">
-              Example operational intelligence environment deployed across
-              digital-asset markets.
-            </p>
             <a
               href="#"
-              className="mt-1.5 inline-block font-mono text-[11px] text-muted-foreground/50 transition-colors hover:text-muted-foreground"
+              className="mt-4 inline-block font-mono text-[11px] text-cta/50 transition-colors duration-500 hover:text-cta/80"
             >
-              Explore operational dashboard&ensp;&rarr;
+              Explore Operational Dashboard&ensp;&rarr;
             </a>
           </div>
         </div>
