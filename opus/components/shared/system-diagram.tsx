@@ -18,7 +18,7 @@ const dash = {
 };
 
 const labelColor = "rgba(156,163,175,0.45)";
-const textColor = "#c8cdd4";
+const textColor = "rgba(200, 205, 212, 0.72)";
 const dimColor = "rgba(156,163,175,0.5)";
 
 export function SystemDiagram() {
@@ -75,7 +75,7 @@ export function SystemDiagram() {
           x="175"
           y="67"
           fontFamily="sans-serif"
-          fontSize="13"
+          fontSize="12"
           fill={textColor}
           textAnchor="middle"
         >
@@ -113,14 +113,14 @@ export function SystemDiagram() {
         </text>
 
         <rect x="18" y="150" width="314" height="34" rx="4" {...node} />
-        <text x="32" y="172" fontFamily="sans-serif" fontSize="12" fill={textColor}>
+        <text x="32" y="172" fontFamily="sans-serif" fontSize="11" fill={textColor}>
           Reserve: USDG
         </text>
         <text
           x="318"
           y="172"
           fontFamily="monospace"
-          fontSize="9"
+          fontSize="8"
           fill={labelColor}
           textAnchor="end"
         >
@@ -128,14 +128,14 @@ export function SystemDiagram() {
         </text>
 
         <rect x="18" y="190" width="314" height="34" rx="4" {...node} />
-        <text x="32" y="212" fontFamily="sans-serif" fontSize="12" fill={textColor}>
+        <text x="32" y="212" fontFamily="sans-serif" fontSize="11" fill={textColor}>
           Reserve: USDC
         </text>
         <text
           x="318"
           y="212"
           fontFamily="monospace"
-          fontSize="9"
+          fontSize="8"
           fill={labelColor}
           textAnchor="end"
         >
@@ -143,14 +143,14 @@ export function SystemDiagram() {
         </text>
 
         <rect x="18" y="230" width="314" height="34" rx="4" {...node} />
-        <text x="32" y="252" fontFamily="sans-serif" fontSize="12" fill={textColor}>
+        <text x="32" y="252" fontFamily="sans-serif" fontSize="11" fill={textColor}>
           Reserve: SOL
         </text>
         <text
           x="318"
           y="252"
           fontFamily="monospace"
-          fontSize="9"
+          fontSize="8"
           fill={labelColor}
           textAnchor="end"
         >
@@ -171,14 +171,14 @@ export function SystemDiagram() {
         </text>
 
         <rect x="473" y="50" width="309" height="44" rx="6" {...node} />
-        <text x="487" y="77" fontFamily="sans-serif" fontSize="13" fill={textColor}>
+        <text x="487" y="77" fontFamily="sans-serif" fontSize="12" fill={textColor}>
           Obligation
         </text>
         <text
           x="768"
           y="77"
           fontFamily="monospace"
-          fontSize="10"
+          fontSize="9"
           fill={labelColor}
           textAnchor="end"
         >
@@ -186,14 +186,14 @@ export function SystemDiagram() {
         </text>
 
         <rect x="473" y="110" width="309" height="44" rx="6" {...node} />
-        <text x="487" y="137" fontFamily="sans-serif" fontSize="13" fill={textColor}>
+        <text x="487" y="137" fontFamily="sans-serif" fontSize="12" fill={textColor}>
           Obligation
         </text>
         <text
           x="768"
           y="137"
           fontFamily="monospace"
-          fontSize="10"
+          fontSize="9"
           fill={labelColor}
           textAnchor="end"
         >
@@ -201,14 +201,14 @@ export function SystemDiagram() {
         </text>
 
         <rect x="473" y="170" width="309" height="44" rx="6" {...node} />
-        <text x="487" y="197" fontFamily="sans-serif" fontSize="13" fill={textColor}>
+        <text x="487" y="197" fontFamily="sans-serif" fontSize="12" fill={textColor}>
           Obligation
         </text>
         <text
           x="768"
           y="197"
           fontFamily="monospace"
-          fontSize="10"
+          fontSize="9"
           fill={labelColor}
           textAnchor="end"
         >

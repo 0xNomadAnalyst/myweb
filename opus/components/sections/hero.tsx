@@ -18,7 +18,7 @@ export function Hero() {
       <FadeIn>
         <div className="max-w-2xl">
           <h1 className="text-3xl font-medium leading-tight tracking-tight md:text-4xl">
-          Understand and operate complex financial systems in realtime environments.
+            Understand and operate complex financial systems in realtime environments.
           </h1>
           <p className="mt-5 max-w-xl text-base leading-7 text-muted-foreground">
           I work with teams facing complex financial environments – combining analytical judgement and technical implementation as a single principal practitioner.
