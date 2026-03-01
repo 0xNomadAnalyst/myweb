@@ -42,9 +42,9 @@ export function Dashboard() {
               Operational Intelligence Platform
             </p>
             <p className="mb-8 text-sm leading-relaxed text-muted-foreground/80">
-              Complex financial and onchain markets require continuous
-              operational visibility. I design analytical environments that
-              translate market data into operational decision systems.
+              I design operational intelligence environments providing
+              continuous visibility into liquidity, execution quality, and
+              protocol risk — structured for real-time decision support.
             </p>
 
             <p className="mb-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/35">

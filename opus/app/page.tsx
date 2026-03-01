@@ -7,7 +7,6 @@ import { Architecture } from "@/components/sections/architecture";
 import { Engagement } from "@/components/sections/engagement";
 import { Background } from "@/components/sections/background";
 import { Contact } from "@/components/sections/contact";
-
 export default function Home() {
   return (
     <>
