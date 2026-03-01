@@ -3,12 +3,21 @@ import { FadeIn } from "@/components/shared/fade-in";
 
 const credentialGroups = [
   {
-    title: "Education",
+    title: "Digital Asset & Token Economy Work",
     items: [
-      "BSc Economics & Philosophy – University of Bristol (First Class Honours)",
-      "MSc Economic Policy – University College London",
+      "Operational Risk Infrastructure — Solstice Stablecoin (~$300M AUM)",
+      "Token Economy Modelling & Treasury Management Support",
+      "ICO / Utility Token Fundraising Support (~$60M raised)",
     ],
-    caption: "Economic training applied to market structure and incentive design.",
+  },
+  {
+    title: "Financial & Investment Experience",
+    items: [
+      "Bloomberg — Analytical Research & Financial Modelling",
+      "M&A Analyst — UK Renewable Energy",
+      "Project Finance Modelling — Utility-Scale Renewables (Chile)",
+    ],
+    caption: "Private-equity sponsored infrastructure and capital structuring.",
   },
   {
     title: "Professional Certifications",
@@ -18,21 +27,12 @@ const credentialGroups = [
     ],
   },
   {
-    title: "Financial & Investment Experience",
+    title: "Education",
     items: [
-      "Bloomberg – Analytical Research & Financial Modelling",
-      "M&A Analyst – UK Renewable Energy",
-      "Project Finance Modelling – Utility-Scale Renewables (Chile)",
+      "MSc Economic Policy — University College London",
+      "BSc Economics & Philosophy — University of Bristol (First Class Honours)",
     ],
-    caption: "Private-equity sponsored infrastructure and capital structuring.",
-  },
-  {
-    title: "Digital Asset & Token Economy Work",
-    items: [
-      "ICO / Utility Token Fundraising Support (~$60M raised)",
-      "Token Economy Modelling & Treasury Management Support",
-      "Operational Risk Infrastructure – Solstice Stablecoin (~$300M AUM)",
-    ],
+    caption: "Economic training applied to market structure and incentive design.",
   },
 ];
 
@@ -58,7 +58,7 @@ export function Background() {
               A strong foundation in traditional finance and economic reasoning provides the grounding to do this clearly, while remaining open to the structural possibilities that programmable onchain systems actually introduce.
             </p>
             <p>
-              Success in these efforts requires us treating blockchain networks as observable financial systems – making full use of the public data they expose, often only accessible through substantial analytical and infrastructure development.
+              Doing this successfully requires us treating blockchain networks as observable financial systems – making full use of the public data they expose, often only accessible through substantial analytical and infrastructure development.
             </p>
             <p>
               My career has consistently centred on enabling data-driven decision-making under uncertainty – building analytical frameworks that translate complex facts into insights and decision-guidance relied upon by senior stakeholders.            
@@ -76,10 +76,12 @@ export function Background() {
         </FadeIn>
         <FadeIn delay={0.18}>
           <div className="space-y-4">
-            {credentialGroups.map((group) => (
+            {credentialGroups.map((group, i) => (
               <div
                 key={group.title}
-                className="card-interactive rounded-lg border border-border bg-card p-5 hover:bg-accent"
+                className={`card-interactive rounded-lg border border-border bg-card p-5 hover:bg-accent${
+                  i === 0 ? " brightness-[1.05]" : ""
+                }`}
               >
                 <p className="mb-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/50">
                   {group.title}
