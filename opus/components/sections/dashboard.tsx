@@ -34,8 +34,12 @@ export function Dashboard() {
   return (
     <SectionShell id="system">
       <FadeIn>
-        <p className="mb-6 font-mono text-xs uppercase tracking-wider text-muted-foreground">
+        <p className="mb-2 font-mono text-xs uppercase tracking-wider text-muted-foreground">
           Operational Environment
+        </p>
+        <p className="mb-6 text-sm text-muted-foreground/70">
+          Realtime ingestion and analytics across Solana DeFi protocols.
+          Proprietary infrastructure.
         </p>
         <Card className="p-6">
           <div className="mb-8 grid grid-cols-2 gap-6 md:grid-cols-4">

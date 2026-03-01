@@ -11,12 +11,13 @@ export function Contact() {
     <SectionShell id="contact">
       <FadeIn>
         <div className="max-w-md">
-          <h2 className="text-2xl font-medium tracking-tight">
-            Inquiries
-          </h2>
+          <h2 className="text-2xl font-medium tracking-tight">Availability</h2>
           <p className="mt-2 text-muted-foreground">
-            Selectively available for engagements involving financial data
-            infrastructure, risk systems, or protocol analytics.
+            Selective engagements where operational visibility is a hard
+            requirement.
+          </p>
+          <p className="mt-1 text-sm text-muted-foreground/60">
+            Financial data infrastructure, risk systems, or protocol analytics.
           </p>
           <form
             className="mt-8 space-y-4"

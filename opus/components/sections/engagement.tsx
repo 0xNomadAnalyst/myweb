@@ -5,28 +5,28 @@ const phases = [
   {
     phase: "01",
     title: "Environment Assessment",
-    duration: "2 weeks",
+    cadence: "Typically 2 weeks",
     description:
       "Map existing data flows, risk exposure surfaces, and system architecture. Identify observability gaps, latency constraints, and operational bottlenecks.",
   },
   {
     phase: "02",
     title: "System Design",
-    duration: "3 weeks",
+    cadence: "Typically 2\u20133 weeks",
     description:
       "Define target architecture covering ingestion topology, state management, analytics layers, and operational interfaces. Every design decision documented.",
   },
   {
     phase: "03",
     title: "Infrastructure Build",
-    duration: "8\u201312 weeks",
+    cadence: "Variable by scope",
     description:
       "Iterative implementation with continuous integration. Each layer is observable and independently deployable from initial deployment forward.",
   },
   {
     phase: "04",
     title: "Operational Transfer",
-    duration: "2 weeks",
+    cadence: "Typically 1\u20132 weeks",
     description:
       "Full system handoff with operational runbooks, monitoring configuration, and knowledge transfer. Infrastructure is owned and operated internally.",
   },
@@ -44,7 +44,7 @@ export function Engagement() {
           visibility toward operational clarity.
         </p>
       </FadeIn>
-      <div className="mt-12">
+      <div className="mt-8">
         {phases.map((phase, i) => (
           <FadeIn key={phase.phase} delay={i * 0.05}>
             <div className="flex gap-6">
@@ -59,8 +59,8 @@ export function Engagement() {
               <div className="pb-10">
                 <div className="flex items-center gap-3">
                   <h3 className="font-medium">{phase.title}</h3>
-                  <span className="font-mono text-xs text-muted-foreground">
-                    {phase.duration}
+                  <span className="font-mono text-[11px] text-muted-foreground/60">
+                    {phase.cadence}
                   </span>
                 </div>
                 <p className="mt-1.5 max-w-lg text-sm leading-relaxed text-muted-foreground">

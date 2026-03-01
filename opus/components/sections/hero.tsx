@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { SectionShell } from "@/components/shared/section-shell";
 import { FadeIn } from "@/components/shared/fade-in";
 
@@ -22,9 +21,13 @@ export function Hero() {
             Realtime financial infrastructure for environments where operational
             visibility is non-negotiable.
           </h1>
-          <p className="mt-4 max-w-xl text-lg leading-relaxed text-muted-foreground">
-            Design and operation of systems that transform live financial
-            activity into structured risk awareness.
+          <p className="mt-5 max-w-xl text-base leading-7 text-muted-foreground">
+            Design and build of systems that transform protocol activity, market data, and
+            risk exposure into structured operational visibility.
+          </p>
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground/70">
+            Designed at the intersection of quantitative finance and data
+            engineering.
           </p>
           <div className="mt-8">
             <Button asChild>
@@ -34,15 +37,14 @@ export function Hero() {
         </div>
       </FadeIn>
       <FadeIn delay={0.2}>
-        <div className="mt-16 flex flex-wrap gap-2">
+        <div className="mt-10 flex flex-wrap gap-2">
           {domains.map((domain) => (
-            <Badge
+            <span
               key={domain}
-              variant="secondary"
-              className="font-mono text-xs"
+              className="rounded-md bg-secondary/60 px-2.5 py-1 font-mono text-[11px] text-muted-foreground/70"
             >
               {domain}
-            </Badge>
+            </span>
           ))}
         </div>
       </FadeIn>

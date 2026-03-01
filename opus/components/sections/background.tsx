@@ -27,7 +27,7 @@ export function Background() {
               for operational clarity under volatile conditions.
             </p>
             <p>
-              Independent practice. Every engagement is principal-led.
+              Independent practice. CFA, FRM. Every engagement is principal-led.
             </p>
           </div>
         </FadeIn>
