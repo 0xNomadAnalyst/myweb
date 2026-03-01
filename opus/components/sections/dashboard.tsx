@@ -1,136 +1,152 @@
 import { SectionShell } from "@/components/shared/section-shell";
 import { FadeIn } from "@/components/shared/fade-in";
-import { MetricCard } from "@/components/shared/metric-card";
-import { Card } from "@/components/ui/card";
 
-const throughputData = [
-  65, 72, 58, 80, 92, 88, 76, 95, 87, 70, 82, 90, 78, 85, 93, 88, 75, 82, 91,
-  86, 79, 84, 88, 92,
+const capabilities = [
+  "Liquidity and market structure visibility across venues",
+  "Execution quality and price-impact monitoring",
+  "Protocol and lending risk surveillance",
+  "Stress propagation and scenario analysis",
+  "Operational decision support for trading and risk teams",
 ];
 
-const systems = [
-  { name: "DEX Liquidity Monitor", status: "operational" },
-  { name: "DEX Swap Analytics", status: "operational" },
-  { name: "Lending Markets", status: "operational" },
-  { name: "Risk Alert Pipeline", status: "operational" },
-];
-
-const dashboardViews = [
+const previews = [
   {
-    title: "DEX Liquidity",
-    metrics: ["TVL $12.5M", "Pool Balance 45/55%", "128 Pools"],
+    title: "Liquidity Monitor",
+    metrics: [
+      { label: "TVL", value: "$12.5M" },
+      { label: "Active Pools", value: "128" },
+      { label: "Pool Balance", value: "45 / 55%" },
+    ],
+    bars: [65, 72, 58, 80, 92, 88, 76, 95, 87, 70, 82, 90],
   },
   {
-    title: "DEX Swaps",
-    metrics: ["24h Vol $117K", "1,576 Swaps", "Spread 1.54bps"],
+    title: "Execution Analytics",
+    metrics: [
+      { label: "24h Volume", value: "$117K" },
+      { label: "Swaps", value: "1,576" },
+      { label: "Avg Spread", value: "1.54 bps" },
+    ],
+    bars: [40, 55, 70, 48, 62, 80, 73, 58, 65, 50, 72, 85],
   },
   {
-    title: "Lending Markets",
-    metrics: ["Util. 67.3%", "Loans $9.9M", "Collateral $19.5M"],
+    title: "Lending Risk",
+    metrics: [
+      { label: "Utilisation", value: "67.3%" },
+      { label: "Outstanding", value: "$9.9M" },
+      { label: "Collateral", value: "$19.5M" },
+    ],
   },
-];
-
-const scopeItems = [
-  "Diagnosing causes of stablecoin depeg events",
-  "Technical event studies linking liquidity, execution, and market structure behaviour",
-  "Modelling liquidity provisioning and arbitrage capacity requirements",
-  "Validating trading and market-making strategy assumptions",
-  "Enabling internal monitoring and decision capability",
 ];
 
 export function Dashboard() {
   return (
-    <SectionShell id="system">
+    <SectionShell id="system" variant="feature">
       <FadeIn>
-        <p className="mb-2 font-mono text-xs uppercase tracking-wider text-muted-foreground">
-          Operational Environment
-        </p>
-        <p className="mb-3 max-w-2xl text-sm leading-relaxed text-muted-foreground/70">
-          This dashboard represents one operational outcome from recent
-          engagement work. Typical scope included:
-        </p>
-        <ul className="mb-6 max-w-2xl space-y-1">
-          {scopeItems.map((item) => (
-            <li
-              key={item}
-              className="flex gap-2 text-sm leading-relaxed text-muted-foreground/60"
-            >
-              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-muted-foreground/30" />
-              {item}
-            </li>
-          ))}
-        </ul>
-        <Card className="p-6">
-          <div className="mb-8 grid grid-cols-2 gap-6 md:grid-cols-4">
-            <MetricCard
-              label="Events Ingested"
-              value="2.4B"
-              delta="+12.3% / 30d"
-            />
-            <MetricCard
-              label="System Uptime"
-              value="99.97%"
-              delta="last 90 days"
-            />
-            <MetricCard
-              label="Event Latency"
-              value="43ms"
-              delta="p99: 128ms"
-            />
-            <MetricCard
-              label="Protocol Sources"
-              value="128"
-              delta="+3 this week"
-            />
-          </div>
-
-          <div className="mb-8">
-            <p className="mb-3 font-mono text-xs text-muted-foreground">
-              Event Throughput (24h)
+        <div className="grid items-start gap-10 md:grid-cols-[9fr_11fr] md:gap-14">
+          {/* Capability positioning */}
+          <div>
+            <p className="mb-3 font-mono text-xs uppercase tracking-wider text-muted-foreground">
+              Operational Intelligence Platform
             </p>
-            <div className="flex h-24 items-end gap-1">
-              {throughputData.map((value, i) => (
-                <div
-                  key={i}
-                  className="flex-1 rounded-sm bg-primary/20 transition-colors hover:bg-primary/40"
-                  style={{ height: `${value}%` }}
-                />
+            <p className="mb-8 text-sm leading-relaxed text-muted-foreground/80">
+              Complex financial and onchain markets require continuous
+              operational visibility. I design analytical environments that
+              translate market data into operational decision systems.
+            </p>
+
+            <ul className="mb-10 space-y-2">
+              {capabilities.map((item) => (
+                <li
+                  key={item}
+                  className="flex gap-2.5 text-sm leading-snug text-muted-foreground/60"
+                >
+                  <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/30" />
+                  {item}
+                </li>
               ))}
+            </ul>
+
+            <div className="rounded-md border border-border/50 bg-accent/40 px-5 py-4">
+              <p className="mb-2.5 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/60">
+                Deployment Readiness
+              </p>
+              <p className="text-sm leading-relaxed text-muted-foreground/70">
+                Solana protocols&ensp;&mdash;&ensp;turnkey deployment
+                <br />
+                EVM environments&ensp;&mdash;&ensp;rapid implementation
+              </p>
+              <p className="mt-2.5 text-xs text-muted-foreground/40">
+                Shared analytical framework, protocol mechanics already
+                modelled.
+              </p>
             </div>
           </div>
 
-          <div className="mb-8 grid gap-3 md:grid-cols-3">
-            {dashboardViews.map((view) => (
-              <div
-                key={view.title}
-                className="rounded-md border border-border bg-accent p-4 transition-colors hover:border-primary/20"
-              >
-                <p className="font-mono text-xs font-medium">{view.title}</p>
-                <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1">
-                  {view.metrics.map((m) => (
-                    <span
-                      key={m}
-                      className="font-mono text-xs text-muted-foreground"
-                    >
-                      {m}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
+          {/* Dashboard showcase */}
+          <div>
+            <div className="relative">
+              {previews.map((preview, i) => (
+                <div
+                  key={preview.title}
+                  className="relative rounded-lg border border-border/80 bg-card p-4 shadow-md transition-transform duration-300 hover:scale-[1.01]"
+                  style={{
+                    marginTop: i > 0 ? "-0.75rem" : undefined,
+                    marginLeft: `${i * 0.5}rem`,
+                    zIndex: i + 1,
+                  }}
+                >
+                  <div className="mb-3 flex items-center justify-between">
+                    <p className="font-mono text-[11px] font-medium tracking-wide">
+                      {preview.title}
+                    </p>
+                    <div className="flex items-center gap-1.5">
+                      <div className="h-1.5 w-1.5 rounded-full bg-emerald-500/70" />
+                      <span className="font-mono text-[9px] text-muted-foreground/30">
+                        live
+                      </span>
+                    </div>
+                  </div>
 
-          <div className="flex flex-wrap gap-x-6 gap-y-2">
-            {systems.map((system) => (
-              <div key={system.name} className="flex items-center gap-2">
-                <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                <span className="font-mono text-xs text-muted-foreground">
-                  {system.name}
-                </span>
-              </div>
-            ))}
+                  <div className="flex gap-5">
+                    {preview.metrics.map((m) => (
+                      <div key={m.label}>
+                        <p className="font-mono text-[9px] uppercase tracking-wider text-muted-foreground/35">
+                          {m.label}
+                        </p>
+                        <p className="font-mono text-xs tabular-nums text-foreground/80">
+                          {m.value}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+
+                  {preview.bars && (
+                    <div className="mt-3 flex h-8 items-end gap-0.5">
+                      {preview.bars.map((v, j) => (
+                        <div
+                          key={j}
+                          className="flex-1 rounded-sm bg-primary/15"
+                          style={{ height: `${v}%` }}
+                        />
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            <p className="mt-4 text-xs leading-relaxed text-muted-foreground/50">
+              Example operational intelligence environment deployed across
+              digital-asset markets.
+            </p>
+            <a
+              href="#"
+              className="mt-1.5 inline-block font-mono text-[11px] text-muted-foreground/50 transition-colors hover:text-muted-foreground"
+            >
+              Explore operational dashboard&ensp;&rarr;
+            </a>
           </div>
-        </Card>
+        </div>
       </FadeIn>
     </SectionShell>
   );
