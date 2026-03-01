@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect, useCallback } from "react";
 import { SectionShell } from "@/components/shared/section-shell";
 import { FadeIn } from "@/components/shared/fade-in";
 
@@ -9,36 +12,26 @@ const capabilities = [
   "Operational decision support for trading and risk teams",
 ];
 
-const previews = [
-  {
-    title: "Liquidity Monitor",
-    metrics: [
-      { label: "TVL", value: "$12.5M" },
-      { label: "Active Pools", value: "128" },
-      { label: "Pool Balance", value: "45 / 55%" },
-    ],
-    bars: [65, 72, 58, 80, 92, 88, 76, 95, 87, 70, 82, 90],
-  },
-  {
-    title: "Execution Analytics",
-    metrics: [
-      { label: "24h Volume", value: "$117K" },
-      { label: "Swaps", value: "1,576" },
-      { label: "Avg Spread", value: "1.54 bps" },
-    ],
-    bars: [40, 55, 70, 48, 62, 80, 73, 58, 65, 50, 72, 85],
-  },
-  {
-    title: "Lending Risk",
-    metrics: [
-      { label: "Utilisation", value: "67.3%" },
-      { label: "Outstanding", value: "$9.9M" },
-      { label: "Collateral", value: "$19.5M" },
-    ],
-  },
+const screenshots = [
+  { src: "/dashboard/pt-swaps.png", alt: "Swap flow and trade count monitoring" },
+  { src: "/dashboard/loans-hf.png", alt: "Loan distribution and health factor analysis" },
+  { src: "/dashboard/ohlcv.png", alt: "OHLCV price and volume analysis" },
+  { src: "/dashboard/fixed-spread.png", alt: "Fixed vs variable rate spread monitoring" },
 ];
 
 export function Dashboard() {
+  const [active, setActive] = useState(0);
+
+  const goTo = useCallback((i: number) => setActive(i), []);
+
+  useEffect(() => {
+    const id = setInterval(
+      () => setActive((prev) => (prev + 1) % screenshots.length),
+      5000,
+    );
+    return () => clearInterval(id);
+  }, [active]);
+
   return (
     <SectionShell id="system" variant="feature">
       <FadeIn>
@@ -82,57 +75,43 @@ export function Dashboard() {
             </div>
           </div>
 
-          {/* Dashboard showcase */}
+          {/* Dashboard showcase — fade carousel */}
           <div>
-            <div className="relative">
-              {previews.map((preview, i) => (
-                <div
-                  key={preview.title}
-                  className="relative rounded-lg border border-border/80 bg-card p-4 shadow-md transition-transform duration-300 hover:scale-[1.01]"
-                  style={{
-                    marginTop: i > 0 ? "-0.75rem" : undefined,
-                    marginLeft: `${i * 0.5}rem`,
-                    zIndex: i + 1,
-                  }}
-                >
-                  <div className="mb-3 flex items-center justify-between">
-                    <p className="font-mono text-[11px] font-medium tracking-wide">
-                      {preview.title}
-                    </p>
-                    <div className="flex items-center gap-1.5">
-                      <div className="h-1.5 w-1.5 rounded-full bg-emerald-500/70" />
-                      <span className="font-mono text-[9px] text-muted-foreground/30">
-                        live
-                      </span>
-                    </div>
-                  </div>
-
-                  <div className="flex gap-5">
-                    {preview.metrics.map((m) => (
-                      <div key={m.label}>
-                        <p className="font-mono text-[9px] uppercase tracking-wider text-muted-foreground/35">
-                          {m.label}
-                        </p>
-                        <p className="font-mono text-xs tabular-nums text-foreground/80">
-                          {m.value}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-
-                  {preview.bars && (
-                    <div className="mt-3 flex h-8 items-end gap-0.5">
-                      {preview.bars.map((v, j) => (
-                        <div
-                          key={j}
-                          className="flex-1 rounded-sm bg-primary/15"
-                          style={{ height: `${v}%` }}
-                        />
-                      ))}
-                    </div>
-                  )}
-                </div>
+            <div className="relative grid overflow-hidden rounded-lg">
+              {screenshots.map((img, i) => (
+                <img
+                  key={img.src}
+                  src={img.src}
+                  alt={img.alt}
+                  className="col-start-1 row-start-1 w-full object-cover transition-opacity duration-1000 ease-in-out"
+                  style={{ opacity: i === active ? 1 : 0 }}
+                  loading={i === 0 ? "eager" : "lazy"}
+                />
               ))}
+
+              {/* Subtle edge softening */}
+              <div className="pointer-events-none col-start-1 row-start-1 z-10">
+                <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-r from-black/30 to-transparent" />
+                <div className="absolute inset-y-0 right-0 w-1 bg-gradient-to-l from-black/30 to-transparent" />
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-b from-black/30 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-t from-black/30 to-transparent" />
+              </div>
+
+              {/* Progress indicators */}
+              <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 gap-1.5">
+                {screenshots.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => goTo(i)}
+                    className={`h-1 rounded-full transition-all duration-500 ${
+                      i === active
+                        ? "w-5 bg-white/40"
+                        : "w-1.5 bg-white/15 hover:bg-white/25"
+                    }`}
+                    aria-label={`View screenshot ${i + 1}`}
+                  />
+                ))}
+              </div>
             </div>
 
             <p className="mt-4 text-xs leading-relaxed text-muted-foreground/50">
