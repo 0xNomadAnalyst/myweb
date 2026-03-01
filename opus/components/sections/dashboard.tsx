@@ -9,10 +9,10 @@ const throughputData = [
 ];
 
 const systems = [
-  { name: "Ingestion Pipeline", status: "operational" },
-  { name: "Transform Layer", status: "operational" },
-  { name: "Serving API", status: "operational" },
-  { name: "Monitoring", status: "operational" },
+  { name: "Protocol Ingestion", status: "operational" },
+  { name: "Risk Analytics Layer", status: "operational" },
+  { name: "State Reconciliation", status: "operational" },
+  { name: "Alert Pipeline", status: "operational" },
 ];
 
 export function Dashboard() {
@@ -20,27 +20,27 @@ export function Dashboard() {
     <SectionShell id="system">
       <FadeIn>
         <p className="mb-6 font-mono text-xs uppercase tracking-wider text-muted-foreground">
-          Live System Overview
+          Operational Environment
         </p>
         <Card className="p-6">
           <div className="mb-8 grid grid-cols-2 gap-6 md:grid-cols-4">
             <MetricCard
-              label="Records Processed"
+              label="Events Ingested"
               value="2.4B"
               delta="+12.3% / 30d"
             />
             <MetricCard
-              label="Pipeline Uptime"
+              label="System Uptime"
               value="99.97%"
               delta="last 90 days"
             />
             <MetricCard
-              label="Avg Latency"
+              label="Event Latency"
               value="43ms"
               delta="p99: 128ms"
             />
             <MetricCard
-              label="Active Sources"
+              label="Protocol Sources"
               value="128"
               delta="+3 this week"
             />
@@ -48,7 +48,7 @@ export function Dashboard() {
 
           <div className="mb-8">
             <p className="mb-3 font-mono text-xs text-muted-foreground">
-              Throughput (24h)
+              Event Throughput (24h)
             </p>
             <div className="flex h-24 items-end gap-1">
               {throughputData.map((value, i) => (

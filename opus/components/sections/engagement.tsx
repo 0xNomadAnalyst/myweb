@@ -4,31 +4,31 @@ import { FadeIn } from "@/components/shared/fade-in";
 const phases = [
   {
     phase: "01",
-    title: "Assessment",
+    title: "Environment Assessment",
     duration: "2 weeks",
     description:
-      "Comprehensive audit of existing infrastructure, data flows, and team capabilities. Deliverable: assessment report with prioritized recommendations.",
+      "Map existing data flows, risk exposure surfaces, and system architecture. Identify observability gaps, latency constraints, and operational bottlenecks.",
   },
   {
     phase: "02",
-    title: "Architecture Design",
+    title: "System Design",
     duration: "3 weeks",
     description:
-      "Detailed system design including technology selection, data models, pipeline specifications, and infrastructure requirements. All decisions documented.",
+      "Define target architecture covering ingestion topology, state management, analytics layers, and operational interfaces. Every design decision documented.",
   },
   {
     phase: "03",
-    title: "Implementation",
+    title: "Infrastructure Build",
     duration: "8\u201312 weeks",
     description:
-      "Iterative build-out with weekly milestones. Infrastructure as code. CI/CD pipelines. Comprehensive test coverage. Your team participates throughout.",
+      "Iterative implementation with continuous integration. Each layer is observable and independently deployable from initial deployment forward.",
   },
   {
     phase: "04",
-    title: "Handoff & Documentation",
+    title: "Operational Transfer",
     duration: "2 weeks",
     description:
-      "Knowledge transfer, runbook creation, operational documentation, and team training. System is fully owned and operated by your organization.",
+      "Full system handoff with operational runbooks, monitoring configuration, and knowledge transfer. Infrastructure is owned and operated internally.",
   },
 ];
 
@@ -37,11 +37,11 @@ export function Engagement() {
     <SectionShell id="engagement">
       <FadeIn>
         <h2 className="text-2xl font-medium tracking-tight">
-          Typical Engagement
+          Engagement Structure
         </h2>
         <p className="mt-2 max-w-xl text-muted-foreground">
-          A structured, phased approach designed for predictability and knowledge
-          transfer.
+          How complex financial data environments transition from fragmented
+          visibility toward operational clarity.
         </p>
       </FadeIn>
       <div className="mt-12">

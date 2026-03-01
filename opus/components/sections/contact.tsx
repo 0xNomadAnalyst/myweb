@@ -12,11 +12,11 @@ export function Contact() {
       <FadeIn>
         <div className="max-w-md">
           <h2 className="text-2xl font-medium tracking-tight">
-            Start a conversation
+            Inquiries
           </h2>
           <p className="mt-2 text-muted-foreground">
-            Describe your data infrastructure challenge. We respond within one
-            business day.
+            Selectively available for engagements involving financial data
+            infrastructure, risk systems, or protocol analytics.
           </p>
           <form
             className="mt-8 space-y-4"
@@ -25,7 +25,7 @@ export function Contact() {
             <Input placeholder="Name" />
             <Input type="email" placeholder="Email" />
             <Textarea
-              placeholder="Describe your project or challenge"
+              placeholder="Describe your environment or infrastructure requirement"
               rows={5}
             />
             <Button type="submit">Send Message</Button>

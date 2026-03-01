@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Opus — Data Infrastructure Consulting",
+  title: "Opus — Financial Data Infrastructure",
   description:
-    "Data infrastructure consulting for organizations that treat data as a first-class engineering problem.",
+    "Realtime financial infrastructure for environments where operational visibility is non-negotiable.",
 };
 
 export default function RootLayout({

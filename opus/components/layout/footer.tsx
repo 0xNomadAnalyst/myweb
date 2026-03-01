@@ -6,7 +6,7 @@ export function Footer() {
       <Separator className="mb-8" />
       <div className="flex items-center justify-between">
         <p className="text-xs text-muted-foreground">
-          &copy; 2026 Opus Data Infrastructure
+          &copy; 2026 Opus
         </p>
         <div className="flex gap-4">
           <a

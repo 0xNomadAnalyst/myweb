@@ -2,10 +2,10 @@ import { SectionShell } from "@/components/shared/section-shell";
 import { FadeIn } from "@/components/shared/fade-in";
 
 const credentials = [
-  { label: "Years of Experience", value: "12+" },
-  { label: "Engagements Completed", value: "40+" },
-  { label: "Industries Served", value: "8" },
-  { label: "Data Volume Managed", value: "Petabyte-scale" },
+  { label: "Background", value: "Financial Risk & Modelling" },
+  { label: "Infrastructure Focus", value: "Realtime Financial Systems" },
+  { label: "Protocol Coverage", value: "DeFi / Solana Ecosystem" },
+  { label: "Operational Scale", value: "Billions of events daily" },
 ];
 
 export function Background() {
@@ -16,20 +16,18 @@ export function Background() {
           <h2 className="text-2xl font-medium tracking-tight">Background</h2>
           <div className="mt-6 space-y-4 leading-relaxed text-muted-foreground">
             <p>
-              Opus is a data infrastructure consultancy founded on the principle
-              that data systems should be engineered with the same rigor as
-              production software. We work with mid-to-large organizations
-              across financial services, healthcare, logistics, and technology.
+              Architecture shaped by institutional financial risk practice.
+              Training in project finance and quantitative risk modelling
+              established the design principles applied to every system:
+              observability, resilience, and decision-relevant state management.
             </p>
             <p>
-              Our team has built and operated data platforms processing billions
-              of records daily. Prior experience includes infrastructure roles at
-              enterprise-scale organizations and contributions to open-source
-              data tooling.
+              Recent infrastructure covers realtime protocol monitoring, DeFi
+              risk analytics, and multi-venue market data systems. Each designed
+              for operational clarity under volatile conditions.
             </p>
             <p>
-              Every engagement is led by a senior practitioner. We do not
-              subcontract, and we do not staff with junior engineers.
+              Independent practice. Every engagement is principal-led.
             </p>
           </div>
         </FadeIn>

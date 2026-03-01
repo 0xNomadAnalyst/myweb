@@ -3,34 +3,34 @@ import { FadeIn } from "@/components/shared/fade-in";
 
 const capabilities = [
   {
-    title: "Pipeline Architecture",
+    title: "Realtime Ingestion",
     description:
-      "Design and implementation of fault-tolerant data pipelines. Batch and streaming. Custom orchestration patterns.",
+      "Architect and operate event-driven pipelines that ingest live financial activity across protocols, venues, and on-chain environments.",
   },
   {
-    title: "Data Modeling",
+    title: "Risk Observability",
     description:
-      "Dimensional modeling, entity resolution, and schema design. dbt-native transformation layers.",
+      "Design monitoring systems that maintain continuous visibility into position exposure, protocol state, and market microstructure.",
   },
   {
-    title: "Platform Migration",
+    title: "Financial Data Modeling",
     description:
-      "Zero-downtime migration from legacy systems to modern data stacks. Snowflake, BigQuery, Redshift.",
+      "Structure raw financial events into analytical layers that enable accurate risk measurement and operational reporting.",
   },
   {
-    title: "Observability & Monitoring",
+    title: "Protocol Analytics",
     description:
-      "End-to-end pipeline observability. Anomaly detection. SLA tracking. Incident response frameworks.",
+      "Build analytics infrastructure for protocol-level activity including liquidity dynamics, collateral flows, and state transitions.",
   },
   {
-    title: "Cost Optimization",
+    title: "Operational Intelligence",
     description:
-      "Infrastructure right-sizing, query optimization, and compute governance. Measurable cost reduction.",
+      "Enable decision-aware systems that surface actionable state changes rather than passive data accumulation.",
   },
   {
-    title: "Governance & Quality",
+    title: "Infrastructure Resilience",
     description:
-      "Data contracts, lineage tracking, access control, and automated quality validation.",
+      "Design composable, fault-tolerant architectures that maintain integrity under volatile market conditions.",
   },
 ];
 
@@ -38,10 +38,10 @@ export function Capabilities() {
   return (
     <SectionShell id="capabilities">
       <FadeIn>
-        <h2 className="text-2xl font-medium tracking-tight">Capabilities</h2>
+        <h2 className="text-2xl font-medium tracking-tight">System Responsibilities</h2>
         <p className="mt-2 max-w-xl text-muted-foreground">
-          Full-spectrum data infrastructure services, from initial assessment
-          through production operation.
+          Operational domains spanning ingestion, analytics, and risk
+          visibility across live financial environments.
         </p>
       </FadeIn>
       <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">

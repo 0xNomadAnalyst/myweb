@@ -2,19 +2,19 @@ import { SectionShell } from "@/components/shared/section-shell";
 import { FadeIn } from "@/components/shared/fade-in";
 
 const stages = [
-  { label: "Sources", items: ["APIs", "Databases", "Events", "Files"] },
-  { label: "Ingestion", items: ["CDC", "Streaming", "Batch", "Webhooks"] },
+  { label: "Sources", items: ["Protocol Events", "Market Feeds", "Chain State", "Internal Systems"] },
+  { label: "Ingestion", items: ["Event Capture", "State Sync", "Normalization", "Validation"] },
   {
-    label: "Storage",
-    items: ["Data Lake", "Warehouse", "Feature Store"],
+    label: "State Layer",
+    items: ["Position State", "Risk Metrics", "Protocol Health"],
   },
   {
-    label: "Transform",
-    items: ["dbt Models", "Spark Jobs", "Quality Checks"],
+    label: "Analytics",
+    items: ["Risk Models", "Anomaly Detection", "Trend Analysis"],
   },
   {
-    label: "Serve",
-    items: ["APIs", "Dashboards", "ML Models", "Exports"],
+    label: "Operations",
+    items: ["Alerts", "Dashboards", "Decision Surfaces", "Reporting"],
   },
 ];
 
@@ -24,24 +24,23 @@ export function Architecture() {
       <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
         <FadeIn>
           <h2 className="text-2xl font-medium tracking-tight">
-            Architecture Approach
+            Infrastructure Philosophy
           </h2>
           <div className="mt-6 max-w-prose space-y-4 leading-relaxed text-muted-foreground">
             <p>
-              Every engagement begins with a thorough assessment of existing
-              systems, data flows, and organizational requirements. We avoid
-              prescriptive solutions in favor of architectures tailored to
-              specific operational constraints.
+              Financial environments demand infrastructure that maintains
+              accurate state under continuous change. Every system is designed
+              around realtime observability, composable layers, and minimal
+              decision latency.
             </p>
             <p>
-              Our designs prioritize observability, fault tolerance, and
-              operational simplicity. Each layer is independently testable and
-              deployable. We use infrastructure-as-code throughout and document
-              every design decision.
+              Each component is independently deployable and observable.
+              Resilience is structural, not reactive. State management is
+              explicit. Failure modes are documented and tested.
             </p>
             <p>
-              The goal is a system your team can operate, extend, and debug
-              without ongoing external dependency.
+              The result is infrastructure that remains legible and operational
+              under the conditions that matter most.
             </p>
           </div>
         </FadeIn>
