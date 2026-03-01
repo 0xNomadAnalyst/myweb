@@ -49,7 +49,7 @@ export function Architecture() {
       <FadeIn delay={0.1}>
         <hr className="mt-10 border-border/90" />
         <h3 className="mt-6 font-medium tracking-tighter text-foreground/90">
-          Analysis at Protocol-Level Resolution
+          Protocol-Level Understanding
         </h3>
         <p className="mt-3 max-w-[640px] text-sm leading-relaxed text-muted-foreground/85">
           Onchain financial systems and data must be understood as operating structures
@@ -57,7 +57,7 @@ export function Architecture() {
           dependencies.
         </p>
         <div
-          className="mt-11 rounded-[14px] px-5 pb-6 pt-5 md:px-8 md:pb-8 md:pt-7"
+          className="mx-auto mt-11 max-w-[920px] rounded-[14px] px-5 pb-6 pt-5 md:px-8 md:pb-8 md:pt-7"
           style={{
             background: "rgba(15, 23, 42, 0.55)",
             border: "1px solid rgba(255, 255, 255, 0.06)",
