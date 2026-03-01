@@ -49,7 +49,7 @@ export function Engagement() {
           <FadeIn key={phase.phase} delay={i * 0.05}>
             <div className="flex gap-6">
               <div className="flex flex-col items-center">
-                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border font-mono text-xs">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-border bg-secondary font-mono text-xs">
                   {phase.phase}
                 </div>
                 {i < phases.length - 1 && (

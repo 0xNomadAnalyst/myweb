@@ -7,6 +7,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
   --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -49,6 +50,7 @@
 
 :root {
   --radius: 0.5rem;
+  --surface: oklch(0.97 0 0);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -83,36 +85,44 @@
 }
 
 .dark {
-  /* Deep navy foundation — harmonized with financial terminal dashboards */
-  --background: oklch(0.09 0.025 255);
-  --foreground: oklch(0.925 0.005 260);
-  --card: oklch(0.115 0.03 255);
-  --card-foreground: oklch(0.925 0.005 260);
-  --popover: oklch(0.115 0.03 255);
-  --popover-foreground: oklch(0.925 0.005 260);
+  /*
+   * 5-step surface hierarchy (tonal separation, no shadows):
+   *   L0  background       #0B1220  — page base (darkest)
+   *   L1  surface          #0F172A  — section bands
+   *   L2  secondary/muted  #111C34  — content containers, tags
+   *   L3  card             #172033  — cards, panels
+   *   L4  accent           #1E293B  — interactive / hover
+   */
+  --background: #0B1220;
+  --foreground: #E5E7EB;
+  --surface: #0F172A;
+  --card: #172033;
+  --card-foreground: #E5E7EB;
+  --popover: #172033;
+  --popover-foreground: #E5E7EB;
   --primary: oklch(0.61 0.18 260);
   --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.12 0.025 255);
-  --secondary-foreground: oklch(0.925 0.005 260);
-  --muted: oklch(0.12 0.025 255);
-  --muted-foreground: oklch(0.695 0.015 260);
-  --accent: oklch(0.155 0.03 255);
-  --accent-foreground: oklch(0.925 0.005 260);
+  --secondary: #111C34;
+  --secondary-foreground: #E5E7EB;
+  --muted: #111C34;
+  --muted-foreground: #9CA3AF;
+  --accent: #1E293B;
+  --accent-foreground: #E5E7EB;
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 6%);
-  --input: oklch(1 0 0 / 8%);
+  --input: oklch(1 0 0 / 10%);
   --ring: oklch(0.61 0.18 260);
   --chart-1: oklch(0.61 0.18 260);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.115 0.03 255);
-  --sidebar-foreground: oklch(0.925 0.005 260);
+  --sidebar: #0F172A;
+  --sidebar-foreground: #E5E7EB;
   --sidebar-primary: oklch(0.61 0.18 260);
   --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.155 0.03 255);
-  --sidebar-accent-foreground: oklch(0.925 0.005 260);
+  --sidebar-accent: #1E293B;
+  --sidebar-accent-foreground: #E5E7EB;
   --sidebar-border: oklch(1 0 0 / 6%);
   --sidebar-ring: oklch(0.61 0.18 260);
 }

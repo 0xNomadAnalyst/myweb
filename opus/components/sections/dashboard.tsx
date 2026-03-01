@@ -32,7 +32,7 @@ const dashboardViews = [
 
 export function Dashboard() {
   return (
-    <SectionShell id="system">
+    <SectionShell id="system" wide>
       <FadeIn>
         <p className="mb-6 font-mono text-xs uppercase tracking-wider text-muted-foreground">
           Operational Environment
@@ -80,7 +80,7 @@ export function Dashboard() {
             {dashboardViews.map((view) => (
               <div
                 key={view.title}
-                className="rounded-md border border-border bg-background p-4 transition-colors hover:border-primary/20"
+                className="rounded-md border border-border bg-accent p-4 transition-colors hover:border-primary/20"
               >
                 <p className="font-mono text-xs font-medium">{view.title}</p>
                 <div className="mt-2 flex flex-wrap gap-x-3 gap-y-1">

@@ -32,7 +32,7 @@ export function Background() {
           </div>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <div className="rounded-lg border border-border p-6">
+          <div className="rounded-lg border border-border bg-card p-6">
             <p className="mb-6 font-mono text-xs uppercase tracking-wider text-muted-foreground">
               Credentials
             </p>

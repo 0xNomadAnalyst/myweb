@@ -47,7 +47,7 @@ export function Capabilities() {
       <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {capabilities.map((cap, i) => (
           <FadeIn key={cap.title} delay={i * 0.05}>
-            <div className="rounded-lg border border-border p-5 transition-colors hover:border-primary/30">
+            <div className="rounded-lg border border-border bg-card p-5 transition-colors hover:bg-accent">
               <h3 className="font-medium">{cap.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                 {cap.description}

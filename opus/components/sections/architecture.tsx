@@ -52,7 +52,7 @@ export function Architecture() {
             {stages.map((stage, i) => (
               <div key={stage.label} className="flex gap-4">
                 <div className="flex flex-col items-center">
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-border bg-card font-mono text-xs">
+                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-border bg-secondary font-mono text-xs">
                     {String(i + 1).padStart(2, "0")}
                   </div>
                   {i < stages.length - 1 && (
