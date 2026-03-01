@@ -1,5 +1,6 @@
 import { SectionShell } from "@/components/shared/section-shell";
 import { FadeIn } from "@/components/shared/fade-in";
+import { SystemDiagram } from "@/components/shared/system-diagram";
 
 const principles = [
   {
@@ -45,6 +46,7 @@ export function Architecture() {
           </FadeIn>
         ))}
       </div>
+      <SystemDiagram />
     </SectionShell>
   );
 }

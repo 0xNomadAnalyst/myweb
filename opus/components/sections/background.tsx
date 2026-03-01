@@ -38,6 +38,12 @@ const credentialGroups = [
 
 export function Background() {
   return (
+    <div
+      style={{
+        background:
+          "linear-gradient(to bottom, #0B1220, #091320 12%, #091320 88%, #0B1220)",
+      }}
+    >
     <SectionShell id="background">
       <FadeIn>
         <h2 className="text-2xl font-medium tracking-tight">
@@ -58,7 +64,7 @@ export function Background() {
               A strong foundation in traditional finance and economic reasoning provides the grounding to do this clearly, while remaining open to the structural possibilities that programmable onchain systems actually introduce.
             </p>
             <p>
-              Doing this successfully requires us treating blockchain networks as observable financial systems – making full use of the public data they expose, often only accessible through substantial analytical and infrastructure development.
+              Success hinges on treating blockchain networks as observable financial systems – making full use of the public data they expose, often only accessible through substantial analytical and infrastructure development.
             </p>
             <p>
               My career has consistently centred on enabling data-driven decision-making under uncertainty – building analytical frameworks that translate complex facts into insights and decision-guidance relied upon by senior stakeholders.            
@@ -107,5 +113,6 @@ export function Background() {
         </FadeIn>
       </div>
     </SectionShell>
+    </div>
   );
 }
