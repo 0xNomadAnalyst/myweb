@@ -1,0 +1,4 @@
+# Subfolders - git tracks workspace root level only
+/gemini/
+/opus/
+/codex/
