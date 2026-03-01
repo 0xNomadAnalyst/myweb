@@ -1,36 +1,31 @@
 import { SectionShell } from "@/components/shared/section-shell";
 import { FadeIn } from "@/components/shared/fade-in";
 
-const capabilities = [
+const domains = [
   {
-    title: "Realtime Ingestion",
+    title: "Liquidity & Market Structure Visibility",
     description:
-      "Capture protocol and market state required for risk interpretation rather than reporting.",
+      "Understand true depth, concentration risk, and venue dependency under real trading conditions.",
   },
   {
-    title: "Risk Observability",
+    title: "Execution Quality & Price Impact",
     description:
-      "Continuous visibility into liquidity exposure, execution conditions, and systemic stress.",
+      "Measure execution outcomes versus quotes — slippage, spreads, and impact across venues and regimes.",
   },
   {
-    title: "Market Microstructure Analysis",
+    title: "Protocol & Lending Risk Surveillance",
     description:
-      "Model trading behaviour and liquidity dynamics informing operational decisions.",
+      "Track leverage, utilisation, liquidations, and collateral dynamics across onchain money markets.",
   },
   {
-    title: "Protocol State Monitoring",
+    title: "Stress Propagation & Contagion",
     description:
-      "Track evolving on-chain system conditions affecting risk and execution.",
+      "Identify how instability spreads across liquidity, lending, and execution venues — before it becomes operational.",
   },
   {
-    title: "Decision Surfaces",
+    title: "Operational Decision Support",
     description:
-      "Translate analytical outputs into actionable operational signals.",
-  },
-  {
-    title: "Failure & Stress Monitoring",
-    description:
-      "Identify instability propagation before operational impact emerges.",
+      "Turn fragmented market data into actionable signals for risk and trading teams.",
   },
 ];
 
@@ -39,20 +34,20 @@ export function Capabilities() {
     <SectionShell id="capabilities">
       <FadeIn>
         <h2 className="text-2xl font-medium tracking-tight">
-          System Responsibilities
+          Operational Problem Domains
         </h2>
         <p className="mt-2 max-w-xl text-muted-foreground">
-          Domains of analytical and technical ownership across live financial
-          environments.
+          Where analytical clarity and operational visibility are most often
+          required.
         </p>
       </FadeIn>
       <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {capabilities.map((cap, i) => (
-          <FadeIn key={cap.title} delay={i * 0.05}>
+        {domains.map((domain, i) => (
+          <FadeIn key={domain.title} delay={i * 0.05}>
             <div className="rounded-lg border border-border bg-card p-5 transition-colors hover:bg-accent">
-              <h3 className="font-medium">{cap.title}</h3>
+              <h3 className="font-medium">{domain.title}</h3>
               <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {cap.description}
+                {domain.description}
               </p>
             </div>
           </FadeIn>
