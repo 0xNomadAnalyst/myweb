@@ -4,31 +4,27 @@ import { FadeIn } from "@/components/shared/fade-in";
 const phases = [
   {
     phase: "01",
-    title: "Environment Assessment",
-    cadence: "Typically 2 weeks",
+    title: "Problem Definition",
     description:
-      "Map existing data flows, risk exposure surfaces, and system architecture. Identify observability gaps, latency constraints, and operational bottlenecks.",
+      "Clarify operational uncertainty, risk exposure, and decision constraints.",
   },
   {
     phase: "02",
-    title: "System Design",
-    cadence: "Typically 2\u20133 weeks",
+    title: "Analysis & Modelling",
     description:
-      "Define target architecture covering ingestion topology, state management, analytics layers, and operational interfaces. Every design decision documented.",
+      "Empirical investigation of system behaviour and strategy assumptions.",
   },
   {
     phase: "03",
-    title: "Infrastructure Build",
-    cadence: "Variable by scope",
+    title: "Implementation",
     description:
-      "Iterative implementation with continuous integration. Each layer is observable and independently deployable from initial deployment forward.",
+      "Build monitoring, analytics, or execution infrastructure required.",
   },
   {
     phase: "04",
     title: "Operational Transfer",
-    cadence: "Typically 1\u20132 weeks",
     description:
-      "Full system handoff with operational runbooks, monitoring configuration, and knowledge transfer. Infrastructure is owned and operated internally.",
+      "Enable internal teams to understand and operate systems independently.",
   },
 ];
 
@@ -40,8 +36,7 @@ export function Engagement() {
           Engagement Structure
         </h2>
         <p className="mt-2 max-w-xl text-muted-foreground">
-          How complex financial data environments transition from fragmented
-          visibility toward operational clarity.
+          How engagements typically evolve.
         </p>
       </FadeIn>
       <div className="mt-8">
@@ -57,12 +52,7 @@ export function Engagement() {
                 )}
               </div>
               <div className="pb-10">
-                <div className="flex items-center gap-3">
-                  <h3 className="font-medium">{phase.title}</h3>
-                  <span className="font-mono text-[11px] text-muted-foreground/60">
-                    {phase.cadence}
-                  </span>
-                </div>
+                <h3 className="font-medium">{phase.title}</h3>
                 <p className="mt-1.5 max-w-lg text-sm leading-relaxed text-muted-foreground">
                   {phase.description}
                 </p>

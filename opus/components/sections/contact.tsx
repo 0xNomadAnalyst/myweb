@@ -13,11 +13,12 @@ export function Contact() {
         <div className="max-w-md">
           <h2 className="text-2xl font-medium tracking-tight">Availability</h2>
           <p className="mt-2 text-muted-foreground">
-            Selective engagements where operational visibility is a hard
-            requirement.
+            Selective engagements where financial systems require analytical
+            clarity and operational correctness.
           </p>
           <p className="mt-1 text-sm text-muted-foreground/60">
-            Financial data infrastructure, risk systems, or protocol analytics.
+            Work typically spans risk analysis, system design, and
+            implementation.
           </p>
           <form
             className="mt-8 space-y-4"
@@ -29,7 +30,7 @@ export function Contact() {
               placeholder="Describe your environment or infrastructure requirement"
               rows={5}
             />
-            <Button type="submit">Send Message</Button>
+            <Button variant="cta" type="submit">Send Message</Button>
           </form>
           <p className="mt-6 font-mono text-xs text-muted-foreground">
             contact@opus-data.dev

@@ -5,32 +5,32 @@ const capabilities = [
   {
     title: "Realtime Ingestion",
     description:
-      "Event-driven pipelines that ingest live financial activity across protocols, venues, and on-chain environments. Sub-second capture at scale.",
+      "Capture protocol and market state required for risk interpretation rather than reporting.",
   },
   {
     title: "Risk Observability",
     description:
-      "Monitoring systems that maintain continuous visibility into position exposure, protocol state, and market microstructure.",
+      "Continuous visibility into liquidity exposure, execution conditions, and systemic stress.",
   },
   {
-    title: "Risk State Modeling",
+    title: "Market Microstructure Analysis",
     description:
-      "Model live financial events into analytical state layers. Position tracking, exposure measurement, and risk quantification across protocols and venues.",
+      "Model trading behaviour and liquidity dynamics informing operational decisions.",
   },
   {
-    title: "Protocol Analytics",
+    title: "Protocol State Monitoring",
     description:
-      "Analytics infrastructure for protocol-level activity including liquidity dynamics, collateral flows, and state transitions.",
+      "Track evolving on-chain system conditions affecting risk and execution.",
   },
   {
     title: "Decision Surfaces",
     description:
-      "Interfaces that surface operationally relevant state changes. Alert routing, threshold monitoring, and decision-support views.",
+      "Translate analytical outputs into actionable operational signals.",
   },
   {
-    title: "Fault-Tolerant State Management",
+    title: "Failure & Stress Monitoring",
     description:
-      "Composable architectures with explicit failure modes, automated recovery, and consistent state under volatile market conditions.",
+      "Identify instability propagation before operational impact emerges.",
   },
 ];
 
@@ -42,8 +42,8 @@ export function Capabilities() {
           System Responsibilities
         </h2>
         <p className="mt-2 max-w-xl text-muted-foreground">
-          Operational domains spanning ingestion, analytics, and risk visibility
-          across live financial environments.
+          Domains of analytical and technical ownership across live financial
+          environments.
         </p>
       </FadeIn>
       <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">

@@ -30,6 +30,14 @@ const dashboardViews = [
   },
 ];
 
+const scopeItems = [
+  "Diagnosing causes of stablecoin depeg events",
+  "Technical event studies linking liquidity, execution, and market structure behaviour",
+  "Modelling liquidity provisioning and arbitrage capacity requirements",
+  "Validating trading and market-making strategy assumptions",
+  "Enabling internal monitoring and decision capability",
+];
+
 export function Dashboard() {
   return (
     <SectionShell id="system">
@@ -37,10 +45,21 @@ export function Dashboard() {
         <p className="mb-2 font-mono text-xs uppercase tracking-wider text-muted-foreground">
           Operational Environment
         </p>
-        <p className="mb-6 text-sm text-muted-foreground/70">
-          Realtime ingestion and analytics across Solana DeFi protocols.
-          Proprietary infrastructure.
+        <p className="mb-3 max-w-2xl text-sm leading-relaxed text-muted-foreground/70">
+          This dashboard represents one operational outcome from recent
+          engagement work. Typical scope included:
         </p>
+        <ul className="mb-6 max-w-2xl space-y-1">
+          {scopeItems.map((item) => (
+            <li
+              key={item}
+              className="flex gap-2 text-sm leading-relaxed text-muted-foreground/60"
+            >
+              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-muted-foreground/30" />
+              {item}
+            </li>
+          ))}
+        </ul>
         <Card className="p-6">
           <div className="mb-8 grid grid-cols-2 gap-6 md:grid-cols-4">
             <MetricCard

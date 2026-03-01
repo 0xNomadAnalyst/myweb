@@ -5,10 +5,10 @@ import { SectionShell } from "@/components/shared/section-shell";
 import { FadeIn } from "@/components/shared/fade-in";
 
 const domains = [
-  "Risk Infrastructure",
-  "Protocol Analytics",
-  "Market Data",
-  "Realtime Systems",
+  "DeFi Risk Visibility",
+  "Protocol & Market Structure",
+  "On-Chain Market Data",
+  "Realtime Monitoring",
   "Operational Intelligence",
 ];
 
@@ -18,20 +18,23 @@ export function Hero() {
       <FadeIn>
         <div className="max-w-2xl">
           <h1 className="text-3xl font-medium leading-tight tracking-tight md:text-4xl">
-            Realtime financial infrastructure for environments where operational
-            visibility is non-negotiable.
+          Understand and operate complex financial systems in realtime environments.
           </h1>
           <p className="mt-5 max-w-xl text-base leading-7 text-muted-foreground">
-            Design and build of systems that transform protocol activity, market data, and
-            risk exposure into structured operational visibility.
+          I work with teams facing complex financial environments – combining analytical judgement and technical implementation as a single principal practitioner.
           </p>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground/70">
-            Designed at the intersection of quantitative finance and data
-            engineering.
+          Independent practice spanning financial risk analysis, empirical modelling, and realtime infrastructure across digital-asset markets – from problem definition to deployment.
+          </p>
+          <hr className="my-6 border-muted-foreground/20" />
+          <p className="text-sm text-muted-foreground/50">
+            Roderick McKinley, CFA, FRM
+            <br />
+            Independent Financial Systems Analyst
           </p>
           <div className="mt-8">
-            <Button asChild>
-              <a href="#system">View Operational Environment</a>
+            <Button variant="cta" asChild>
+              <a href="#system">Explore Operational Dashboard</a>
             </Button>
           </div>
         </div>

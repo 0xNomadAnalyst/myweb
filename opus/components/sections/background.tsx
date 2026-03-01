@@ -2,10 +2,10 @@ import { SectionShell } from "@/components/shared/section-shell";
 import { FadeIn } from "@/components/shared/fade-in";
 
 const credentials = [
-  { label: "Background", value: "Financial Risk & Modelling" },
-  { label: "Infrastructure Focus", value: "Realtime Financial Systems" },
+  { label: "Background", value: "Institutional Finance & Risk" },
+  { label: "Disciplines", value: "Risk Policy, Strategy Modelling, Infrastructure" },
   { label: "Protocol Coverage", value: "DeFi / Solana Ecosystem" },
-  { label: "Operational Scale", value: "Billions of events daily" },
+  { label: "Engagement Model", value: "Principal-led, end-to-end" },
 ];
 
 export function Background() {
@@ -16,18 +16,23 @@ export function Background() {
           <h2 className="text-2xl font-medium tracking-tight">Background</h2>
           <div className="mt-6 space-y-4 leading-relaxed text-muted-foreground">
             <p>
-              Architecture shaped by institutional financial risk practice.
-              Training in project finance and quantitative risk modelling
-              established the design principles applied to every system:
-              observability, resilience, and decision-relevant state management.
+              Practice grounded in institutional finance and risk modelling.
+              Training in project finance and quantitative risk established
+              the analytical principles applied to every engagement:
+              observability, system correctness, and decision-relevant state.
             </p>
             <p>
-              Recent infrastructure covers realtime protocol monitoring, DeFi
-              risk analytics, and multi-venue market data systems. Each designed
-              for operational clarity under volatile conditions.
+              Recent work includes operational risk policy design, stablecoin
+              depeg investigation and event analysis, liquidity and
+              market-making strategy validation, and building realtime
+              monitoring infrastructure for DeFi protocols. Each engagement
+              bridges institutional finance understanding with on-chain
+              mechanics — enabling internalization of trading and monitoring
+              capability.
             </p>
             <p>
-              Independent practice. CFA, FRM. Every engagement is principal-led.
+              Independent practice. CFA, FRM. Every engagement is
+              principal-led.
             </p>
           </div>
         </FadeIn>

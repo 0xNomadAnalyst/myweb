@@ -28,19 +28,16 @@ export function Architecture() {
           </h2>
           <div className="mt-6 max-w-prose space-y-4 leading-relaxed text-muted-foreground">
             <p>
-              Financial environments demand infrastructure that maintains
-              accurate state under continuous change. Every system is designed
-              around realtime observability, composable layers, and minimal
-              decision latency.
+              Most operational failures originate from separation between
+              analysis and implementation.
             </p>
             <p>
-              Each component is independently deployable and observable.
-              Resilience is structural, not reactive. State management is
-              explicit. Failure modes are documented and tested.
+              Systems are designed so the analytical understanding that defines
+              risk is the same understanding embedded in infrastructure.
             </p>
             <p>
-              The result is infrastructure that remains legible and operational
-              under the conditions that matter most.
+              Infrastructure exists to preserve decision clarity under live
+              market conditions.
             </p>
           </div>
         </FadeIn>
