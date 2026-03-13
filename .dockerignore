@@ -1,0 +1,10 @@
+opus/node_modules
+opus/.next
+opus/.env*.local
+.git
+marketing
+codex
+gemini
+*.sh
+*.md
+*.png

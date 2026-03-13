@@ -1,0 +1,28 @@
+@page {
+  size: 1920px 1080px landscape;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .deck-container {
+    gap: 0;
+    padding: 0;
+    background: transparent;
+  }
+
+  .slide {
+    break-after: page;
+    page-break-after: always;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}

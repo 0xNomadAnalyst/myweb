@@ -49,7 +49,7 @@ export function Architecture() {
       <FadeIn delay={0.1}>
         <hr className="mt-10 border-border/90" />
         <h3 className="mt-6 font-medium tracking-tighter text-foreground/90">
-          Protocol-Level Rigour
+          Protocol-Level Resolution
         </h3>
         <p className="mt-3 max-w-[640px] text-sm leading-relaxed text-muted-foreground/85">
           Onchain financial systems and data must be understood as operating structures
