@@ -58,13 +58,13 @@ export function Background() {
         <FadeIn delay={0.09}>
           <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
             <p>
-              Blockchain systems introduce genuinely new financial structures, requiring the ability to reinterpret legacy instruments while cutting through narrative, ideology, and conflicting incentives that often obscure economic reality.
+              Blockchain systems introduce genuinely new financial structures, requiring the ability to reinterpret legacy instruments, institutions and infrastructure, while cutting through narrative, ideology, and conflicting incentives that often obscure economic reality.
             </p>
             <p>
-              A strong foundation in traditional finance and economic reasoning provides the grounding to do this clearly, while remaining open to the structural possibilities that programmable onchain systems actually create.
+              A strong foundation in traditional finance and economic reasoning provides the grounding to do this clearly, while remaining open to the structural possibilities that programmable onchain systems genuinely create.
             </p>
             <p>
-              Success hinges on treating blockchain networks as observable financial systems – making full use of the public data they expose, often only accessible through substantial analytical and infrastructure development.
+              Success hinges on treating blockchain networks as observable financial systems – making full use of the public data they expose, although often only accessible with substantial analytical and infrastructure development.
             </p>
             <p>
               My career has consistently centred on enabling data-driven decision-making under uncertainty – building analytical frameworks that translate complex facts into insights and decision-guidance relied upon by senior stakeholders.            
