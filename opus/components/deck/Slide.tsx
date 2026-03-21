@@ -12,11 +12,6 @@ export function Slide({ children, className }: SlideProps) {
         "slide relative flex w-[1920px] h-[1080px] flex-col px-[120px] py-[80px] bg-background text-foreground overflow-hidden",
         className,
       )}
-      style={{
-        backgroundImage:
-          "radial-gradient(circle, rgba(255,255,255,0.03) 1px, transparent 1px)",
-        backgroundSize: "24px 24px",
-      }}
     >
       {children}
     </section>
