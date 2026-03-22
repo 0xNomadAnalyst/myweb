@@ -58,7 +58,7 @@ export function Capabilities() {
                   isLead ? "p-6 md:p-7" : "p-5"
                 }`}
               >
-                <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground/86">
+                <p className="font-mono text-[12px] uppercase tracking-[0.14em] text-cta/84">
                   {String(i + 1).padStart(2, "0")}
                 </p>
                 <h3 className={isLead ? "mt-3 text-xl font-medium tracking-tight text-foreground/98" : "mt-3 text-base font-medium tracking-tight text-foreground/96"}>

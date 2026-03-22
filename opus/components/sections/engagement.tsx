@@ -51,7 +51,7 @@ export function Engagement() {
           <div className="absolute bottom-6 left-[18px] top-6 hidden w-px bg-border-soft lg:block" />
           {principles.map((item, i) => (
             <FadeIn key={item.title} delay={0.08 * (i + 1)}>
-              <div className="relative rounded-lg border border-border-strong bg-card px-5 py-5 pl-14">
+              <div className="card-interactive relative rounded-lg border border-border-strong bg-card px-5 py-5 pl-14 hover:bg-accent">
                 <p className="absolute left-5 top-5 font-mono text-[12px] text-cta/84">
                   {String(i + 1).padStart(2, "0")}
                 </p>
