@@ -52,7 +52,7 @@ export function Architecture() {
         <h3 className="mt-7 font-medium tracking-tighter text-foreground/95">
           Protocol-Level Resolution
         </h3>
-        <p className="body-measure mt-3 text-sm leading-relaxed text-muted-foreground/90">
+        <p className="body-measure mt-3 text-sm leading-relaxed text-muted-foreground/96">
           Onchain financial systems and data must be understood as operating structures – mapped through protocol mechanics, capital flows, and system
           dependencies.
         </p>
@@ -66,13 +66,11 @@ export function Architecture() {
         >
           <SystemDiagram />
         </div>
-        <p className="mt-6 font-mono text-xs tracking-wide text-muted-foreground/68">
+        <p className="mt-6 font-mono text-xs tracking-wide text-muted-foreground/88">
           Operational systems are designed, not assembled.
         </p>
       </FadeIn>
     </SectionShell>
   );
 }
-
-
 

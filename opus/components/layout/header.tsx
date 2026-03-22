@@ -16,7 +16,7 @@ export function Header() {
       <div className="mx-auto flex h-14 max-w-[1180px] items-center justify-between px-6 md:px-12">
         <Link
           href="/"
-          className="font-mono text-sm font-medium tracking-tight text-foreground/92"
+          className="font-mono text-sm font-medium tracking-tight text-foreground/98"
         >
           opus
         </Link>
@@ -25,7 +25,7 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="hidden text-sm text-muted-foreground/85 hover:text-foreground sm:block"
+              className="hidden text-sm text-muted-foreground/92 hover:text-foreground sm:block"
             >
               {link.label}
             </a>

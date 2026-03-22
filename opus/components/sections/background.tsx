@@ -51,7 +51,7 @@ export function Background() {
       </FadeIn>
       <div className="mt-10 grid gap-12 lg:grid-cols-2 lg:gap-16">
         <FadeIn delay={0.09}>
-          <div className="body-measure space-y-4 text-sm leading-relaxed text-muted-foreground/90">
+          <div className="body-measure space-y-4 text-sm leading-relaxed text-muted-foreground/96">
             <p>
               Blockchain systems introduce genuinely new financial structures, requiring the ability to reinterpret legacy instruments, institutions and infrastructure, while cutting through narrative, ideology, and conflicting incentives that often obscure economic reality.
             </p>
@@ -89,14 +89,14 @@ export function Background() {
                   {group.items.map((item) => (
                     <li
                       key={item}
-                      className="text-sm leading-snug text-foreground/90"
+                      className="text-sm leading-snug text-foreground/96"
                     >
                       {item}
                     </li>
                   ))}
                 </ul>
                 {group.caption && (
-                  <p className="mt-2.5 text-xs text-muted-foreground/62">
+                  <p className="mt-2.5 text-xs text-muted-foreground/88">
                     {group.caption}
                   </p>
                 )}
@@ -108,5 +108,3 @@ export function Background() {
     </SectionShell>
   );
 }
-
-

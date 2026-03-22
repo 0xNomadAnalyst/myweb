@@ -17,17 +17,17 @@ const dash = {
   fill: "none",
 };
 
-const labelColor = "rgba(156,163,175,0.45)";
-const textColor = "rgba(200, 205, 212, 0.72)";
+const labelColor = "rgba(166,180,200,0.66)";
+const textColor = "rgba(226, 234, 244, 0.9)";
 
 export function SystemDiagram() {
   return (
     <>
       <div className="mb-5 flex items-baseline justify-between">
-        <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground/50">
+        <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground/86">
           Protocol Account Architecture
         </p>
-        <p className="font-mono text-[9px] text-muted-foreground/45">
+        <p className="font-mono text-[9px] text-muted-foreground/86">
           Kamino Lending
         </p>
       </div>

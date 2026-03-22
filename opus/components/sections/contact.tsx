@@ -17,7 +17,7 @@ export function Contact() {
             Selective engagements where financial systems require analytical
             clarity and operational correctness.
           </p>
-          <p className="mt-1 text-sm text-muted-foreground/76">
+          <p className="mt-1 text-sm text-muted-foreground/90">
             Work typically spans risk analysis, system design, and
             implementation.
           </p>
@@ -33,7 +33,7 @@ export function Contact() {
             />
             <Button variant="cta" type="submit">Send Message</Button>
           </form>
-          <p className="mt-6 font-mono text-xs text-muted-foreground/82">
+          <p className="mt-6 font-mono text-xs text-muted-foreground/90">
             contact@opus-data.dev
           </p>
         </div>

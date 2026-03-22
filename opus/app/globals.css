@@ -111,7 +111,7 @@
   --secondary: #10192E;
   --secondary-foreground: #EDF1F7;
   --muted: #10192E;
-  --muted-foreground: #93A0B7;
+  --muted-foreground: #A6B4C8;
   --accent: #1E2B42;
   --accent-foreground: #EDF1F7;
   --destructive: oklch(0.704 0.191 22.216);
@@ -183,11 +183,11 @@
   }
 
   .section-label {
-    @apply mb-2.5 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground/68;
+    @apply mb-2.5 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground/90;
   }
 
   .section-intro {
-    @apply mt-3 max-w-[66ch] text-[15px] leading-7 text-muted-foreground/90;
+    @apply mt-3 max-w-[66ch] text-[15px] leading-7 text-muted-foreground/96;
   }
 
   .body-measure {
@@ -199,7 +199,7 @@
   }
 
   .card-body {
-    @apply mt-2 text-sm leading-relaxed text-muted-foreground/90;
+    @apply mt-2 text-sm leading-relaxed text-muted-foreground/95;
   }
 }
 

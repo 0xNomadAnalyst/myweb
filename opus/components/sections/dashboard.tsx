@@ -57,7 +57,7 @@ export function Dashboard() {
             <p className="section-label mb-3">
               Operational Intelligence Platform
             </p>
-            <p className="body-measure mb-8 text-sm leading-relaxed text-muted-foreground/90">
+            <p className="body-measure mb-8 text-sm leading-relaxed text-muted-foreground/96">
               I design operational intelligence environments providing
               continuous visibility into liquidity, execution quality, and
               protocol risk – structured for real-time decision support.
@@ -70,9 +70,9 @@ export function Dashboard() {
               {capabilities.map((item) => (
                 <li
                   key={item}
-                  className="flex gap-2.5 text-sm leading-snug text-muted-foreground/90"
+                  className="flex gap-2.5 text-sm leading-snug text-muted-foreground/95"
                 >
-                  <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/62" />
+                  <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />
                   {item}
                 </li>
               ))}
@@ -83,12 +83,12 @@ export function Dashboard() {
               <p className="section-label mb-2.5">
                 Deployment Readiness
               </p>
-              <p className="text-sm leading-relaxed text-muted-foreground/92">
+              <p className="text-sm leading-relaxed text-muted-foreground/97">
                 Solana protocols&ensp;&ndash;&ensp;turnkey deployment
                 <br />
                 EVM environments&ensp;&ndash;&ensp;rapid implementation
               </p>
-              <p className="mt-2.5 text-xs text-muted-foreground/76">
+              <p className="mt-2.5 text-xs text-muted-foreground/86">
                 Shared analytical framework, protocol mechanics already
                 modelled.
               </p>
@@ -100,7 +100,7 @@ export function Dashboard() {
             <p className="section-label mb-5">
               Operational Views
             </p>
-            <div className="overflow-hidden rounded-xl border border-border/55 bg-[#0f192d] shadow-[0_0_0_1px_rgba(56,130,200,0.2),0_0_26px_2px_rgba(56,130,200,0.26)]">
+            <div className="overflow-hidden rounded-xl border border-border/55 bg-[#0f192d] shadow-[0_0_0_1px_rgba(128,162,198,0.16),0_0_22px_1px_rgba(82,114,150,0.2),0_12px_30px_rgba(1,8,20,0.34)]">
               <div className="relative grid aspect-[17/10] overflow-hidden bg-[#0f192d]">
                 {carouselScreenshots.map((img, i) => (
                   <Image
