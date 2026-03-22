@@ -33,6 +33,7 @@ export function Capabilities() {
   return (
     <SectionShell id="capabilities" variant="open">
       <FadeIn>
+        <p className="section-label">Problem Domains</p>
         <h2 className="section-title">
           Operational Problem Domains
         </h2>
@@ -53,9 +54,9 @@ export function Capabilities() {
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {domains.map((domain, i) => (
             <FadeIn key={domain.title} delay={i * 0.09} className="h-full">
-              <div className="card-interactive flex h-full flex-col rounded-lg border border-border bg-card p-5">
-                <h3 className="font-medium text-foreground/95">{domain.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground/90">
+              <div className="card-interactive flex h-full flex-col rounded-lg border border-border/70 bg-card p-5">
+                <h3 className="card-title">{domain.title}</h3>
+                <p className="card-body">
                   {domain.description}
                 </p>
               </div>

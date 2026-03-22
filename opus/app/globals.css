@@ -50,7 +50,7 @@
 }
 
 :root {
-  --radius: 0.5rem;
+  --radius: 0.625rem;
   --surface: oklch(0.97 0 0);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -167,10 +167,26 @@
   }
 
   .section-title {
-    @apply text-[1.9rem] font-medium tracking-tight text-foreground md:text-[2.05rem];
+    @apply text-[1.9rem] font-medium tracking-tight text-foreground md:text-[2.1rem];
+  }
+
+  .section-label {
+    @apply mb-2.5 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground/66;
   }
 
   .section-intro {
-    @apply mt-3 max-w-2xl text-[15px] leading-7 text-muted-foreground/88;
+    @apply mt-3 max-w-[66ch] text-[15px] leading-7 text-muted-foreground/88;
+  }
+
+  .body-measure {
+    @apply max-w-[66ch];
+  }
+
+  .card-title {
+    @apply font-medium tracking-tight text-foreground/95;
+  }
+
+  .card-body {
+    @apply mt-2 text-sm leading-relaxed text-muted-foreground/90;
   }
 }

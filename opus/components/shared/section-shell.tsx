@@ -56,7 +56,7 @@ export function SectionShell({
     <section id={id} className="scroll-mt-24 md:px-8">
       <div
         className={cn(
-          "mx-auto bg-surface px-6 py-11 md:rounded-xl md:border md:border-border/90 md:px-12 md:py-12",
+          "mx-auto bg-surface px-6 py-11 md:rounded-lg md:border md:border-border/80 md:px-12 md:py-12",
           variant === "feature" ? "max-w-[1360px]" : "max-w-[1180px]",
           className,
         )}

@@ -23,6 +23,7 @@ export function Engagement() {
   return (
     <SectionShell id="engagement" variant="open">
       <FadeIn>
+        <p className="section-label">Engagement Model</p>
         <h2 className="section-title">
           Ways of Working
         </h2>
@@ -43,9 +44,9 @@ export function Engagement() {
         <div className="grid gap-4 md:grid-cols-3">
           {principles.map((item, i) => (
             <FadeIn key={item.title} delay={i * 0.09} className="h-full">
-              <div className="card-interactive flex h-full flex-col rounded-lg border border-border bg-card p-5">
-                <h3 className="font-medium text-foreground/95">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground/90">
+              <div className="card-interactive flex h-full flex-col rounded-lg border border-border/70 bg-card p-5">
+                <h3 className="card-title">{item.title}</h3>
+                <p className="card-body">
                   {item.description}
                 </p>
               </div>

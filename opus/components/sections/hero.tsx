@@ -17,13 +17,14 @@ export function Hero() {
     <SectionShell variant="hero">
       <FadeIn>
         <div className="max-w-2xl">
+          <p className="section-label">Independent Advisory Practice</p>
           <h1 className="text-[2.2rem] font-medium leading-tight tracking-tight text-foreground md:text-[2.9rem]">
             Understand and operate complex financial systems in realtime environments.
           </h1>
-          <p className="mt-5 max-w-xl text-base leading-7 text-muted-foreground/90">
+          <p className="body-measure mt-5 text-base leading-7 text-muted-foreground/90">
           I work with teams facing complex financial environments – combining analytical judgement and technical implementation as a single principal practitioner.
           </p>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground/78">
+          <p className="body-measure mt-4 text-sm leading-relaxed text-muted-foreground/78">
           Independent practice spanning financial risk analysis, empirical modelling, and realtime infrastructure across digital-asset markets – from problem definition to deployment.
           </p>
           <hr className="my-7 border-muted-foreground/24" />
@@ -44,7 +45,7 @@ export function Hero() {
             </a>
             <a
               href="#"
-              className="mt-2.5 block font-mono text-xs text-muted-foreground/52 hover:text-muted-foreground/70"
+              className="mt-2.5 block font-mono text-xs text-muted-foreground/56 hover:text-muted-foreground/74"
             >
               Download capabilities overview (PDF)
             </a>
@@ -56,7 +57,7 @@ export function Hero() {
           {domains.map((domain) => (
             <span
               key={domain}
-              className="rounded-md border border-border/80 bg-secondary/72 px-2.5 py-1 font-mono text-[11px] text-muted-foreground/80"
+              className="rounded-lg border border-border/70 bg-secondary/72 px-2.5 py-1 font-mono text-[11px] text-muted-foreground/80"
             >
               {domain}
             </span>

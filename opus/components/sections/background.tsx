@@ -46,6 +46,7 @@ export function Background() {
     >
     <SectionShell id="background">
       <FadeIn>
+        <p className="section-label">Professional Background</p>
         <h2 className="section-title">
           Background & Perspective
         </h2>
@@ -56,7 +57,7 @@ export function Background() {
       </FadeIn>
       <div className="mt-10 grid gap-12 lg:grid-cols-2 lg:gap-16">
         <FadeIn delay={0.09}>
-          <div className="space-y-4 text-sm leading-relaxed text-muted-foreground/88">
+          <div className="body-measure space-y-4 text-sm leading-relaxed text-muted-foreground/88">
             <p>
               Blockchain systems introduce genuinely new financial structures, requiring the ability to reinterpret legacy instruments, institutions and infrastructure, while cutting through narrative, ideology, and conflicting incentives that often obscure economic reality.
             </p>
@@ -85,7 +86,7 @@ export function Background() {
             {credentialGroups.map((group) => (
               <div
                 key={group.title}
-                className="card-interactive rounded-lg border border-border bg-card p-5"
+                className="card-interactive rounded-lg border border-border/70 bg-card p-5"
               >
                 <p className="mb-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/62">
                   {group.title}

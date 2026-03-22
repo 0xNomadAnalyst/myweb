@@ -38,16 +38,16 @@ export function Dashboard() {
         <div className="grid items-start gap-10 md:grid-cols-[9fr_11fr] md:gap-14">
           {/* Capability positioning */}
           <div>
-            <p className="mb-3 font-mono text-xs uppercase tracking-wider text-muted-foreground/92">
+            <p className="section-label mb-3 text-muted-foreground/82">
               Operational Intelligence Platform
             </p>
-            <p className="mb-8 text-sm leading-relaxed text-muted-foreground/88">
+            <p className="body-measure mb-8 text-sm leading-relaxed text-muted-foreground/88">
               I design operational intelligence environments providing
               continuous visibility into liquidity, execution quality, and
               protocol risk — structured for real-time decision support.
             </p>
 
-            <p className="mb-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/70">
+            <p className="section-label mb-3 text-muted-foreground/70">
               Core Capabilities
             </p>
             <ul className="mb-10 space-y-2">
@@ -63,7 +63,7 @@ export function Dashboard() {
             </ul>
 
             <hr className="mb-6 border-border/45" />
-            <div className="rounded-md border border-border/70 bg-accent/34 px-5 py-4">
+            <div className="rounded-lg border border-border/68 bg-accent/32 px-5 py-4">
               <p className="mb-2.5 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/82">
                 Deployment Readiness
               </p>
@@ -89,7 +89,7 @@ export function Dashboard() {
                   "radial-gradient(ellipse at 50% 45%, rgba(56, 130, 200, 0.055) 0%, transparent 74%)",
               }}
             />
-            <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/72">
+            <p className="section-label mb-2 text-muted-foreground/72">
               Operational Views
             </p>
             <div className="relative grid aspect-[17/10] overflow-hidden rounded-lg bg-[#0c1425] ring-1 ring-inset ring-white/[0.06]">
@@ -128,7 +128,7 @@ export function Dashboard() {
 
             <a
               href="#"
-              className="mt-4 inline-block font-mono text-[11px] text-cta/56 hover:text-cta/80"
+              className="mt-4 inline-block font-mono text-[11px] text-muted-foreground/72 hover:text-foreground/90"
             >
               Explore Operational Dashboard&ensp;&rarr;
             </a>

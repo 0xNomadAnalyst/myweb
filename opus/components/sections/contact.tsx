@@ -11,6 +11,7 @@ export function Contact() {
     <SectionShell id="contact" variant="open">
       <FadeIn>
         <div className="max-w-md">
+          <p className="section-label">Engagement Enquiries</p>
           <h2 className="section-title">Availability</h2>
           <p className="section-intro">
             Selective engagements where financial systems require analytical
