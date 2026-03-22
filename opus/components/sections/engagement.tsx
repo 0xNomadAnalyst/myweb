@@ -5,7 +5,7 @@ const principles = [
   {
     title: "Principal-Led Delivery",
     description:
-      "You work directly with the person defining analysis, models, and operational systems – without delivery layers or handoffs.",
+      "You work directly with the person defining analysis, models, and operational systems - without delivery layers or handoffs.",
   },
   {
     title: "Integrated Advisory & Build",
@@ -22,23 +22,37 @@ const principles = [
 export function Engagement() {
   return (
     <SectionShell id="engagement" variant="open">
-      <FadeIn>
-        <p className="section-label">Engagement Model</p>
-        <h2 className="section-title">
-          Ways of Working
-        </h2>
-        <p className="section-intro max-w-xl">
-          Engagements adapt to the operational problem and internal team
-          structure.
-        </p>
-      </FadeIn>
-      <div className="mt-10">
-        <div className="grid gap-4 md:grid-cols-3">
+      <div className="grid gap-10 lg:grid-cols-[minmax(0,6fr)_minmax(0,6fr)] lg:gap-14">
+        <FadeIn>
+          <div className="max-w-xl">
+            <p className="section-label">Engagement Model</p>
+            <h2 className="section-title">
+              Ways of Working
+            </h2>
+            <p className="section-intro max-w-[56ch]">
+              Engagements adapt to the operational problem and internal team
+              structure.
+            </p>
+            <p className="mt-5 text-sm leading-relaxed text-muted-foreground/92">
+              The model stays compact by design: direct accountability, minimal
+              communication loss, and implementation choices grounded in
+              analytical intent.
+            </p>
+          </div>
+        </FadeIn>
+
+        <div className="relative space-y-4">
+          <div className="absolute bottom-6 left-[18px] top-6 hidden w-px bg-border-soft lg:block" />
           {principles.map((item, i) => (
-            <FadeIn key={item.title} delay={i * 0.09} className="h-full">
-              <div className="card-interactive flex h-full flex-col rounded-lg border border-border-strong bg-card p-5">
-                <h3 className="card-title">{item.title}</h3>
-                <p className="card-body">
+            <FadeIn key={item.title} delay={0.08 * (i + 1)}>
+              <div className="relative rounded-lg border border-border-strong bg-card px-5 py-5 pl-14">
+                <p className="absolute left-5 top-5 font-mono text-[11px] text-cta/84">
+                  {String(i + 1).padStart(2, "0")}
+                </p>
+                <h3 className="text-base font-medium tracking-tight text-foreground/97">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground/95">
                   {item.description}
                 </p>
               </div>
@@ -49,6 +63,3 @@ export function Engagement() {
     </SectionShell>
   );
 }
-
-
-
