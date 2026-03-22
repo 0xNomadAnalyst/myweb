@@ -26,16 +26,16 @@ export function Hero() {
           <p className="body-measure mt-5 text-base leading-7 text-foreground/90">
             I work with teams facing complex financial environments - combining analytical judgement and technical implementation as a single principal practitioner.
           </p>
-          <p className="mt-4 max-w-[76ch] text-sm leading-relaxed text-muted-foreground/86">
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground/70">
             Independent practice spanning financial risk analysis, empirical modelling, and realtime infrastructure across digital-asset markets - from problem definition to deployment.
           </p>
 
           <hr className="my-7 border-muted-foreground/24" />
 
-          <p className="text-sm">
-            <span className="text-muted-foreground/82">Roderick McKinley, CFA, FRM</span>
+          <p className="text-sm text-muted-foreground/50">
+            Roderick McKinley, CFA, FRM
             <br />
-            <span className="text-muted-foreground/74">Independent Financial Systems Analyst</span>
+            Independent Financial Systems Analyst
           </p>
 
           <div className="mt-8">
@@ -44,13 +44,13 @@ export function Hero() {
             </Button>
             <a
               href="#"
-              className="mt-4 block text-sm text-muted-foreground/86 hover:text-foreground/98"
+              className="mt-3.5 block text-sm text-muted-foreground/60 transition-colors duration-500 hover:text-muted-foreground/90"
             >
               Watch 3-minute platform overview&ensp;&rarr;
             </a>
             <a
               href="#"
-              className="mt-2.5 block font-mono text-xs text-muted-foreground/74 hover:text-muted-foreground/86"
+              className="mt-2 block font-mono text-xs text-muted-foreground/45 transition-colors duration-500 hover:text-muted-foreground/60"
             >
               Download capabilities overview (PDF)
             </a>
