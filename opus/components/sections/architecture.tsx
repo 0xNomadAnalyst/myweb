@@ -69,14 +69,7 @@ export function Architecture() {
           </div>
 
           <div
-            className="rounded-lg px-5 pb-6 pt-5 md:px-8 md:pb-8 md:pt-7"
-            style={{
-              background:
-                "linear-gradient(180deg, rgba(19, 33, 58, 0.86) 0%, rgba(13, 24, 45, 0.82) 100%)",
-              border: "1px solid rgba(124, 158, 196, 0.3)",
-              boxShadow:
-                "0 0 0 1px rgba(116, 150, 188, 0.14), 0 10px 32px rgba(1, 8, 20, 0.34), 0 0 24px rgba(53, 95, 148, 0.14)",
-            }}
+            className="card-interactive rounded-lg border bg-none px-5 pb-6 pt-5 [background:linear-gradient(180deg,rgba(19,33,58,0.86)_0%,rgba(13,24,45,0.82)_100%)] [border-color:rgba(124,158,196,0.3)] shadow-[0_0_0_1px_rgba(116,150,188,0.14),0_10px_32px_rgba(1,8,20,0.34),0_0_24px_rgba(53,95,148,0.14)] hover:bg-accent/35 hover:shadow-[0_0_0_1px_rgba(143,178,219,0.28),0_0_34px_4px_rgba(88,132,186,0.26),0_20px_38px_rgba(1,8,20,0.44)] md:px-8 md:pb-8 md:pt-7"
           >
             <SystemDiagram />
           </div>

@@ -95,7 +95,7 @@ export function Dashboard() {
 
           {/* Dashboard showcase – fade carousel */}
           <div className="md:-ml-3 md:pr-5">
-            <p className="section-label mb-5 text-muted-foreground/90">
+            <p className="section-label mb-6 text-muted-foreground/90">
               Operational Views
             </p>
             <div className="card-interactive overflow-hidden rounded-xl border border-border/55 bg-[#0f192d] bg-none shadow-[0_0_0_1px_rgba(128,162,198,0.16),0_0_22px_1px_rgba(82,114,150,0.2),0_12px_30px_rgba(1,8,20,0.34)] hover:bg-accent/35 hover:shadow-[0_0_0_1px_rgba(143,178,219,0.28),0_0_30px_4px_rgba(88,132,186,0.26),0_18px_36px_rgba(1,8,20,0.42)]">
@@ -120,7 +120,7 @@ export function Dashboard() {
                     className="col-start-1 row-start-1 h-full w-full object-contain object-center saturate-[0.98] contrast-[0.99] transition-[opacity,transform] duration-[900ms] ease-in-out"
                     style={{
                       opacity: i === activeIndex ? 0.95 : 0,
-                      transform: "scale(0.99)",
+                      transform: "scale(0.9)",
                     }}
                   />
                 ))}
