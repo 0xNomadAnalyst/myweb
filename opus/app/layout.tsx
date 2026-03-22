@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Opus — Financial Data Infrastructure",
+  title: "Opus – Financial Data Infrastructure",
   description:
     "Realtime financial infrastructure for environments where operational visibility is non-negotiable.",
 };
@@ -31,3 +31,6 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+

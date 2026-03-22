@@ -5,7 +5,7 @@ const principles = [
   {
     title: "Principal-Led Delivery",
     description:
-      "You work directly with the person defining analysis, models, and operational systems — without delivery layers or handoffs.",
+      "You work directly with the person defining analysis, models, and operational systems – without delivery layers or handoffs.",
   },
   {
     title: "Integrated Advisory & Build",
@@ -44,7 +44,7 @@ export function Engagement() {
         <div className="grid gap-4 md:grid-cols-3">
           {principles.map((item, i) => (
             <FadeIn key={item.title} delay={i * 0.09} className="h-full">
-              <div className="card-interactive flex h-full flex-col rounded-lg border border-border/70 bg-card p-5">
+              <div className="card-interactive flex h-full flex-col rounded-lg border border-border-strong bg-card p-5">
                 <h3 className="card-title">{item.title}</h3>
                 <p className="card-body">
                   {item.description}
@@ -57,3 +57,6 @@ export function Engagement() {
     </SectionShell>
   );
 }
+
+
+

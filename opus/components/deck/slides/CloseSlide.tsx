@@ -6,7 +6,7 @@ const principles = [
   {
     title: "Principal-led delivery",
     description:
-      "Direct work with the practitioner defining analysis, models, and systems — no delivery layers or handoffs.",
+      "Direct work with the practitioner defining analysis, models, and systems – no delivery layers or handoffs.",
   },
   {
     title: "Integrated advisory + build",
@@ -70,3 +70,5 @@ export function CloseSlide() {
     </Slide>
   );
 }
+
+

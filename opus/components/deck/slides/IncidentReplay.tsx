@@ -5,7 +5,7 @@ import { BulletList, TagRow } from "@/components/deck/blocks";
 const bullets = [
   "Historical event store across covered protocols to support fast investigation when something breaks.",
   "Rapid ad hoc diagnostics: shorten the path from \u201csomething happened\u201d to \u201cwe understand why\u201d.",
-  "Root-cause analysis across venues: connect liquidity, execution conditions, and protocol exposures to identify mechanisms — not just correlations.",
+  "Root-cause analysis across venues: connect liquidity, execution conditions, and protocol exposures to identify mechanisms – not just correlations.",
   "Accelerate the learning loop: refine operational playbooks, policies, and thresholds based on observed outcomes.",
   "Supports governance and reporting: clear post-event narratives grounded in measurable evidence.",
 ];
@@ -18,7 +18,7 @@ export function IncidentReplay() {
       <SlideTitle
         eyebrow="Premium Workflow"
         title="Incident Replay & Root-Cause Analysis"
-        subtitle="A historical event store turns stress events into measurable lessons — reducing time-to-understanding and accelerating policy refinement."
+        subtitle="A historical event store turns stress events into measurable lessons – reducing time-to-understanding and accelerating policy refinement."
       />
       <BulletList items={bullets} className="flex-1" />
       <div className="mt-auto pt-8">
@@ -30,3 +30,5 @@ export function IncidentReplay() {
     </Slide>
   );
 }
+
+

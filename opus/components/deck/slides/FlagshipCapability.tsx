@@ -3,7 +3,7 @@ import { SlideTitle, TwoCol } from "@/components/deck/layouts";
 import { BulletList, InsetPanel } from "@/components/deck/blocks";
 
 const bullets = [
-  "Unified operational picture across DEX pricing/liquidity, lending exposure, and yield positions — with consistent metrics and definitions.",
+  "Unified operational picture across DEX pricing/liquidity, lending exposure, and yield positions – with consistent metrics and definitions.",
   "Decision-grade monitoring built around actions ops teams can actually take (intervene, rebalance liquidity, revise policies, renegotiate partners).",
   "Cross-protocol risk surfaces that aggregate signal across venues rather than relying on fragmented official UIs and partial third-party tools.",
   "Historical event store to accelerate ad hoc investigation and post-stress diagnosis.",
@@ -16,7 +16,7 @@ export function FlagshipCapability() {
       <SlideTitle
         eyebrow="Flagship Capability"
         title="Realtime DeFi Monitoring Station"
-        subtitle="Continuous operational visibility across pricing, exposure, and counterparties — in one place."
+        subtitle="Continuous operational visibility across pricing, exposure, and counterparties – in one place."
       />
       <TwoCol split="3fr 2fr" className="flex-1">
         <BulletList items={bullets} />
@@ -42,3 +42,5 @@ export function FlagshipCapability() {
     </Slide>
   );
 }
+
+

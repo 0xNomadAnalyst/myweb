@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 import { SectionShell } from "@/components/shared/section-shell";
 import { FadeIn } from "@/components/shared/fade-in";
 
@@ -38,23 +39,23 @@ export function Dashboard() {
         <div className="grid items-start gap-10 md:grid-cols-[9fr_11fr] md:gap-14">
           {/* Capability positioning */}
           <div>
-            <p className="section-label mb-3 text-muted-foreground/82">
+            <p className="section-label mb-3">
               Operational Intelligence Platform
             </p>
-            <p className="body-measure mb-8 text-sm leading-relaxed text-muted-foreground/88">
+            <p className="body-measure mb-8 text-sm leading-relaxed text-muted-foreground/90">
               I design operational intelligence environments providing
               continuous visibility into liquidity, execution quality, and
-              protocol risk — structured for real-time decision support.
+              protocol risk – structured for real-time decision support.
             </p>
 
-            <p className="section-label mb-3 text-muted-foreground/70">
+            <p className="section-label mb-3">
               Core Capabilities
             </p>
             <ul className="mb-10 space-y-2">
               {capabilities.map((item) => (
                 <li
                   key={item}
-                  className="flex gap-2.5 text-sm leading-snug text-muted-foreground/88"
+                  className="flex gap-2.5 text-sm leading-snug text-muted-foreground/90"
                 >
                   <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/62" />
                   {item}
@@ -62,24 +63,24 @@ export function Dashboard() {
               ))}
             </ul>
 
-            <hr className="mb-6 border-border/45" />
-            <div className="rounded-lg border border-border/68 bg-accent/32 px-5 py-4">
-              <p className="mb-2.5 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/82">
+            <hr className="mb-6 border-border" />
+            <div className="rounded-lg border border-border-strong bg-accent/32 px-5 py-4">
+              <p className="section-label mb-2.5">
                 Deployment Readiness
               </p>
               <p className="text-sm leading-relaxed text-muted-foreground/92">
-                Solana protocols&ensp;&mdash;&ensp;turnkey deployment
+                Solana protocols&ensp;&ndash;&ensp;turnkey deployment
                 <br />
-                EVM environments&ensp;&mdash;&ensp;rapid implementation
+                EVM environments&ensp;&ndash;&ensp;rapid implementation
               </p>
-              <p className="mt-2.5 text-xs text-muted-foreground/72">
+              <p className="mt-2.5 text-xs text-muted-foreground/76">
                 Shared analytical framework, protocol mechanics already
                 modelled.
               </p>
             </div>
           </div>
 
-          {/* Dashboard showcase — fade carousel */}
+          {/* Dashboard showcase – fade carousel */}
           <div className="relative z-0">
             <div
               aria-hidden
@@ -89,18 +90,20 @@ export function Dashboard() {
                   "radial-gradient(ellipse at 50% 45%, rgba(56, 130, 200, 0.055) 0%, transparent 74%)",
               }}
             />
-            <p className="section-label mb-2 text-muted-foreground/72">
+            <p className="section-label mb-2">
               Operational Views
             </p>
             <div className="relative grid aspect-[17/10] overflow-hidden rounded-lg bg-[#0c1425] ring-1 ring-inset ring-white/[0.06]">
               {screenshots.map((img, i) => (
-                <img
+                <Image
                   key={img.src}
                   src={img.src}
                   alt={img.alt}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 58vw"
+                  priority={i === 0}
                   className="col-start-1 row-start-1 h-full w-full object-contain object-center saturate-[0.98] contrast-[0.99] transition-opacity duration-[900ms] ease-in-out"
                   style={{ opacity: i === active ? 0.95 : 0 }}
-                  loading={i === 0 ? "eager" : "lazy"}
                 />
               ))}
 
@@ -128,7 +131,7 @@ export function Dashboard() {
 
             <a
               href="#"
-              className="mt-4 inline-block font-mono text-[11px] text-muted-foreground/72 hover:text-foreground/90"
+              className="mt-4 inline-block font-mono text-[11px] text-muted-foreground/76 hover:text-foreground/90"
             >
               Explore Operational Dashboard&ensp;&rarr;
             </a>
@@ -138,3 +141,7 @@ export function Dashboard() {
     </SectionShell>
   );
 }
+
+
+
+

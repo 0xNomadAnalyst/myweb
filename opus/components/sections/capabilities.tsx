@@ -10,7 +10,7 @@ const domains = [
   {
     title: "Execution Quality & Price Impact",
     description:
-      "Measure execution outcomes versus quotes — slippage, spreads, and impact across venues and regimes.",
+      "Measure execution outcomes versus quotes – slippage, spreads, and impact across venues and regimes.",
   },
   {
     title: "Protocol & Lending Risk Surveillance",
@@ -20,7 +20,7 @@ const domains = [
   {
     title: "Stress Propagation & Contagion",
     description:
-      "Identify how instability spreads across liquidity, lending, and execution venues — before it becomes operational.",
+      "Identify how instability spreads across liquidity, lending, and execution venues – before it becomes operational.",
   },
   {
     title: "Operational Decision Support",
@@ -54,7 +54,7 @@ export function Capabilities() {
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {domains.map((domain, i) => (
             <FadeIn key={domain.title} delay={i * 0.09} className="h-full">
-              <div className="card-interactive flex h-full flex-col rounded-lg border border-border/70 bg-card p-5">
+              <div className="card-interactive flex h-full flex-col rounded-lg border border-border-strong bg-card p-5">
                 <h3 className="card-title">{domain.title}</h3>
                 <p className="card-body">
                   {domain.description}
@@ -67,3 +67,6 @@ export function Capabilities() {
     </SectionShell>
   );
 }
+
+
+

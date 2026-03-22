@@ -15,9 +15,11 @@ export function CrossProtocol() {
     <Slide>
       <SlideTitle
         title="Cross-Protocol Monitoring Station"
-        subtitle="As stablecoins and yield-bearing RWAs span multiple DeFi services, risk becomes system-level — visibility must too."
+        subtitle="As stablecoins and yield-bearing RWAs span multiple DeFi services, risk becomes system-level – visibility must too."
       />
       <BulletList items={bullets} className="flex-1" />
     </Slide>
   );
 }
+
+

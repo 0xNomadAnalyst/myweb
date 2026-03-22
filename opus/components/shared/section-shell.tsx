@@ -37,12 +37,12 @@ export function SectionShell({
         className="scroll-mt-24"
         style={{
           background:
-            "linear-gradient(to bottom, transparent, rgba(17, 29, 50, 0.28) 50%, transparent)",
+            "linear-gradient(to bottom, transparent, rgba(17, 29, 50, 0.36) 50%, transparent)",
         }}
       >
         <div
           className={cn(
-            "mx-auto max-w-[1180px] px-6 py-11 md:px-12 md:py-12",
+            "mx-auto max-w-[1180px] px-6 py-12 md:px-12 md:py-12",
             className,
           )}
         >
@@ -56,7 +56,7 @@ export function SectionShell({
     <section id={id} className="scroll-mt-24 md:px-8">
       <div
         className={cn(
-          "mx-auto bg-surface px-6 py-11 md:rounded-lg md:border md:border-border/80 md:px-12 md:py-12",
+          "mx-auto bg-surface px-6 py-12 md:rounded-lg md:border md:border-border md:px-12 md:py-12",
           variant === "feature" ? "max-w-[1360px]" : "max-w-[1180px]",
           className,
         )}

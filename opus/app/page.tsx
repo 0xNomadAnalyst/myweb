@@ -12,7 +12,7 @@ function SectionDivider() {
   return (
     <div
       aria-hidden
-      className="mx-auto h-px max-w-[800px] bg-gradient-to-r from-transparent via-border/36 to-transparent"
+      className="mx-auto h-px max-w-[800px] bg-gradient-to-r from-transparent via-border-soft to-transparent"
     />
   );
 }
@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex flex-col gap-14 pb-14">
+      <main className="flex flex-col gap-12 pb-12">
         <Hero />
         <Dashboard />
         <SectionDivider />

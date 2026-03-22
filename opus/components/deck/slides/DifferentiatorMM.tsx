@@ -24,7 +24,7 @@ export function DifferentiatorMM() {
       <SlideTitle
         eyebrow="Differentiator"
         title="Independent Market Maker Monitoring"
-        subtitle="Objective oversight of third-party liquidity support — beyond reports, promises, and UI-level impressions."
+        subtitle="Objective oversight of third-party liquidity support – beyond reports, promises, and UI-level impressions."
       />
       <BulletList items={bullets} className="flex-1" />
       <div className="mt-auto pt-8">
@@ -36,3 +36,5 @@ export function DifferentiatorMM() {
     </Slide>
   );
 }
+
+

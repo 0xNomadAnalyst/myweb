@@ -1,7 +1,7 @@
 import "@/styles/deck-print.css";
 
 export const metadata = {
-  title: "Capabilities Deck — Roderick McKinley",
+  title: "Capabilities Deck – Roderick McKinley",
 };
 
 export default function DeckLayout({
@@ -11,3 +11,5 @@ export default function DeckLayout({
 }) {
   return <>{children}</>;
 }
+
+

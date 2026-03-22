@@ -12,7 +12,7 @@ const navLinks = [
 
 export function Header() {
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-border/62 bg-background/88 backdrop-blur-md">
+    <header className="fixed top-0 z-50 w-full border-b border-border-soft bg-background/88 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-[1180px] items-center justify-between px-6 md:px-12">
         <Link
           href="/"

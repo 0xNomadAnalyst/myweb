@@ -25,8 +25,10 @@
   --color-chart-2: var(--chart-2);
   --color-chart-1: var(--chart-1);
   --color-ring: var(--ring);
+  --color-border-soft: var(--border-soft);
   --color-input: var(--input);
   --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
   --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
@@ -67,7 +69,9 @@
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
+  --border-soft: oklch(0.922 0 0);
   --border: oklch(0.922 0 0);
+  --border-strong: oklch(0.88 0 0);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
   --chart-1: oklch(0.646 0.222 41.116);
@@ -89,29 +93,31 @@
 .dark {
   /*
    * 5-step surface hierarchy (tonal separation, no shadows):
-   *   L0  background       #0B1220  — page base (darkest)
-   *   L1  surface          #0F172A  — section bands
-   *   L2  secondary/muted  #111C34  — content containers, tags
-   *   L3  card             #172033  — cards, panels
-   *   L4  accent           #1E293B  — interactive / hover
+   *   L0  background       #0B1220 – page base (darkest)
+   *   L1  surface          #0F172A – section bands
+   *   L2  secondary/muted  #111C34 – content containers, tags
+   *   L3  card             #172033 – cards, panels
+   *   L4  accent           #1E293B – interactive / hover
    */
   --background: #0B1220;
   --foreground: #EDF1F7;
-  --surface: #0F172A;
-  --card: #152033;
+  --surface: #0D1627;
+  --card: #19263B;
   --card-foreground: #EDF1F7;
   --popover: #172033;
   --popover-foreground: #EDF1F7;
   --primary: #FF6B00;
   --primary-foreground: #FFFFFF;
-  --secondary: #111C34;
+  --secondary: #10192E;
   --secondary-foreground: #EDF1F7;
-  --muted: #111C34;
+  --muted: #10192E;
   --muted-foreground: #93A0B7;
-  --accent: #1A263A;
+  --accent: #1E2B42;
   --accent-foreground: #EDF1F7;
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 6%);
+  --border-soft: oklch(1 0 0 / 4%);
+  --border: oklch(1 0 0 / 7%);
+  --border-strong: oklch(1 0 0 / 11%);
   --input: oklch(1 0 0 / 10%);
   --ring: #FF6B00;
   --chart-1: #FF6B00;
@@ -126,7 +132,7 @@
   --sidebar-primary-foreground: #FFFFFF;
   --sidebar-accent: #1E293B;
   --sidebar-accent-foreground: #EDF1F7;
-  --sidebar-border: oklch(1 0 0 / 6%);
+  --sidebar-border: oklch(1 0 0 / 7%);
   --sidebar-ring: #FF6B00;
 }
 
@@ -143,6 +149,10 @@
   }
   html {
     scroll-behavior: smooth;
+  }
+  h1,
+  h2 {
+    text-wrap: balance;
   }
 }
 
@@ -162,20 +172,22 @@
     transform: none;
   }
   .dark .card-interactive:hover {
-    border-color: oklch(1 0 0 / 6%);
+    border-color: var(--border-strong);
     background-color: var(--card);
   }
 
   .section-title {
-    @apply text-[1.9rem] font-medium tracking-tight text-foreground md:text-[2.1rem];
+    font-size: clamp(1.78rem, 1.52rem + 1.1vw, 2.08rem);
+    line-height: 1.12;
+    @apply font-medium tracking-tight text-foreground;
   }
 
   .section-label {
-    @apply mb-2.5 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground/66;
+    @apply mb-2.5 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground/68;
   }
 
   .section-intro {
-    @apply mt-3 max-w-[66ch] text-[15px] leading-7 text-muted-foreground/88;
+    @apply mt-3 max-w-[66ch] text-[15px] leading-7 text-muted-foreground/90;
   }
 
   .body-measure {
@@ -190,3 +202,12 @@
     @apply mt-2 text-sm leading-relaxed text-muted-foreground/90;
   }
 }
+
+@media (min-width: 48rem) {
+  .section-title {
+    line-height: 1.15;
+  }
+}
+
+
+

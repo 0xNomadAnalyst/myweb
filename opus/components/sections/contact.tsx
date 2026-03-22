@@ -17,7 +17,7 @@ export function Contact() {
             Selective engagements where financial systems require analytical
             clarity and operational correctness.
           </p>
-          <p className="mt-1 text-sm text-muted-foreground/72">
+          <p className="mt-1 text-sm text-muted-foreground/76">
             Work typically spans risk analysis, system design, and
             implementation.
           </p>

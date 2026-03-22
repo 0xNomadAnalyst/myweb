@@ -19,7 +19,6 @@ const dash = {
 
 const labelColor = "rgba(156,163,175,0.45)";
 const textColor = "rgba(200, 205, 212, 0.72)";
-const dimColor = "rgba(156,163,175,0.5)";
 
 export function SystemDiagram() {
   return (
@@ -57,7 +56,7 @@ export function SystemDiagram() {
           </marker>
         </defs>
 
-        {/* ── Left group: Lending Market ────────────────── */}
+        {/* – Left group: Lending Market – */}
         <rect x="0" y="0" width="350" height="300" rx="8" {...group} />
         <text
           x="18"
@@ -157,7 +156,7 @@ export function SystemDiagram() {
           collateral
         </text>
 
-        {/* ── Right group: Obligation Accounts ─────────── */}
+        {/* – Right group: Obligation Accounts – */}
         <rect x="455" y="0" width="345" height="300" rx="8" {...group} />
         <text
           x="473"
@@ -215,7 +214,7 @@ export function SystemDiagram() {
           user_n
         </text>
 
-        {/* ── Connections ───────────────────────────────── */}
+        {/* – Connections – */}
         <line x1="455" y1="62" x2="332" y2="62" {...dash} />
         <text
           x="393"
@@ -245,3 +244,4 @@ export function SystemDiagram() {
     </>
   );
 }
+
