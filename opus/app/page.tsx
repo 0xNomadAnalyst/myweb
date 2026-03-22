@@ -12,7 +12,7 @@ function SectionDivider() {
   return (
     <div
       aria-hidden
-      className="mx-auto h-px max-w-[800px] bg-gradient-to-r from-transparent via-border/25 to-transparent"
+      className="mx-auto h-px max-w-[800px] bg-gradient-to-r from-transparent via-border/45 to-transparent"
     />
   );
 }

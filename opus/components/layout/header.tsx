@@ -12,11 +12,11 @@ const navLinks = [
 
 export function Header() {
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-sm">
+    <header className="fixed top-0 z-50 w-full border-b border-border/70 bg-background/88 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-[1180px] items-center justify-between px-6 md:px-12">
         <Link
           href="/"
-          className="font-mono text-sm font-medium tracking-tight"
+          className="font-mono text-sm font-medium tracking-tight text-foreground/92"
         >
           opus
         </Link>
@@ -25,7 +25,7 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="hidden text-sm text-muted-foreground transition-colors hover:text-foreground sm:block"
+              className="hidden text-sm text-muted-foreground/85 hover:text-foreground sm:block"
             >
               {link.label}
             </a>

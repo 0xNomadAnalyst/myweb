@@ -11,12 +11,12 @@ export function Contact() {
     <SectionShell id="contact" variant="open">
       <FadeIn>
         <div className="max-w-md">
-          <h2 className="text-2xl font-medium tracking-tight">Availability</h2>
-          <p className="mt-2 text-muted-foreground">
+          <h2 className="section-title">Availability</h2>
+          <p className="section-intro">
             Selective engagements where financial systems require analytical
             clarity and operational correctness.
           </p>
-          <p className="mt-1 text-sm text-muted-foreground/60">
+          <p className="mt-1 text-sm text-muted-foreground/72">
             Work typically spans risk analysis, system design, and
             implementation.
           </p>
@@ -32,7 +32,7 @@ export function Contact() {
             />
             <Button variant="cta" type="submit">Send Message</Button>
           </form>
-          <p className="mt-6 font-mono text-xs text-muted-foreground">
+          <p className="mt-6 font-mono text-xs text-muted-foreground/82">
             contact@opus-data.dev
           </p>
         </div>

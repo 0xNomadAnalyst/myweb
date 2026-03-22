@@ -41,22 +41,22 @@ export function Background() {
     <div
       style={{
         background:
-          "linear-gradient(to bottom, #0B1220, #0A1321 14%, #0A1321 86%, #0B1220)",
+          "linear-gradient(to bottom, #0B1220, #0C1728 14%, #0C1728 86%, #0B1220)",
       }}
     >
     <SectionShell id="background">
       <FadeIn>
-        <h2 className="text-2xl font-medium tracking-tight">
+        <h2 className="section-title">
           Background & Perspective
         </h2>
-        <p className="mt-2 text-muted-foreground">
+        <p className="section-intro max-w-3xl">
           Strong analytical foundations developed across institutional finance, real
           assets, and digital-asset markets.
         </p>
       </FadeIn>
       <div className="mt-10 grid gap-12 lg:grid-cols-2 lg:gap-16">
         <FadeIn delay={0.09}>
-          <div className="space-y-4 text-sm leading-relaxed text-muted-foreground">
+          <div className="space-y-4 text-sm leading-relaxed text-muted-foreground/88">
             <p>
               Blockchain systems introduce genuinely new financial structures, requiring the ability to reinterpret legacy instruments, institutions and infrastructure, while cutting through narrative, ideology, and conflicting incentives that often obscure economic reality.
             </p>
@@ -87,21 +87,21 @@ export function Background() {
                 key={group.title}
                 className="card-interactive rounded-lg border border-border bg-card p-5"
               >
-                <p className="mb-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/50">
+                <p className="mb-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/62">
                   {group.title}
                 </p>
                 <ul className="space-y-1.5">
                   {group.items.map((item) => (
                     <li
                       key={item}
-                      className="text-sm leading-snug text-foreground/80"
+                      className="text-sm leading-snug text-foreground/88"
                     >
                       {item}
                     </li>
                   ))}
                 </ul>
                 {group.caption && (
-                  <p className="mt-2.5 text-xs text-muted-foreground/40">
+                  <p className="mt-2.5 text-xs text-muted-foreground/52">
                     {group.caption}
                   </p>
                 )}

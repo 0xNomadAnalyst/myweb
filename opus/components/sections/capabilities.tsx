@@ -33,10 +33,10 @@ export function Capabilities() {
   return (
     <SectionShell id="capabilities" variant="open">
       <FadeIn>
-        <h2 className="text-2xl font-medium tracking-tight">
+        <h2 className="section-title">
           Operational Problem Domains
         </h2>
-        <p className="mt-2 max-w-xl text-muted-foreground">
+        <p className="section-intro max-w-xl">
           Where analytical clarity and operational visibility are most often
           required.
         </p>
@@ -47,15 +47,15 @@ export function Capabilities() {
           className="pointer-events-none absolute -inset-8 -z-10 rounded-3xl"
           style={{
             background:
-              "radial-gradient(ellipse at 50% 50%, rgba(56, 130, 200, 0.015) 0%, transparent 70%)",
+              "radial-gradient(ellipse at 50% 50%, rgba(56, 130, 200, 0.03) 0%, transparent 74%)",
           }}
         />
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {domains.map((domain, i) => (
             <FadeIn key={domain.title} delay={i * 0.09} className="h-full">
               <div className="card-interactive flex h-full flex-col rounded-lg border border-border bg-card p-5">
-                <h3 className="font-medium">{domain.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                <h3 className="font-medium text-foreground/95">{domain.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground/90">
                   {domain.description}
                 </p>
               </div>
