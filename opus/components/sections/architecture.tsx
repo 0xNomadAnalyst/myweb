@@ -23,7 +23,7 @@ export function Architecture() {
   return (
     <SectionShell id="approach">
       <FadeIn>
-        <p className="section-label">Method</p>
+        <p className="section-label">How The Work Operates</p>
         <h2 className="section-title">
           Analytical Approach
         </h2>

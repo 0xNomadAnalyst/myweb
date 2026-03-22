@@ -70,7 +70,7 @@ export function Hero() {
               onClick={() => setIsVideoOpen(true)}
               className="mt-3.5 block text-[0.98rem] text-muted-foreground/60 transition-colors duration-500 hover:text-muted-foreground/90"
             >
-              Watch quick platform overview&ensp;&rarr;
+              Watch platform overview video&ensp;&rarr;
             </button>
             <a
               href="/downloads/RMcKinley-FinancialSystemsAnalyst-Capabilities.pdf#view=FitH&page=1"
@@ -79,7 +79,7 @@ export function Hero() {
               type="application/pdf"
               className="mt-2 block font-mono text-[14px] text-muted-foreground/45 transition-colors duration-500 hover:text-muted-foreground/60"
             >
-              Download capabilities overview (PDF)
+              Download advisory capabilities deck (PDF)
             </a>
           </div>
         </div>

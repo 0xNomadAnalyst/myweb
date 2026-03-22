@@ -40,7 +40,7 @@ export function Background() {
   return (
     <SectionShell id="background">
       <FadeIn>
-        <p className="section-label">Professional Background</p>
+        <p className="section-label">Analytical Foundations</p>
         <h2 className="section-title">
           Background & Perspective
         </h2>
