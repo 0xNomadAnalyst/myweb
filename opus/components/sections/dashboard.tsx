@@ -77,7 +77,7 @@ export function Dashboard() {
             </ul>
 
             <hr className="mb-6 border-border md:mr-4" />
-            <div className="rounded-lg border border-border-strong bg-accent/32 px-5 py-4 md:mr-4">
+            <div className="card-interactive rounded-lg border border-border-strong bg-accent/32 bg-none px-5 py-4 hover:bg-accent/44 md:mr-4">
               <p className="section-label mb-2.5 text-muted-foreground/90">
                 Deployment Readiness
               </p>
