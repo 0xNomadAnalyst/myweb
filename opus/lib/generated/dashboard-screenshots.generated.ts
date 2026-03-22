@@ -9,8 +9,11 @@ export type DashboardScreenshot = {
 export const dashboardScreenshots: DashboardScreenshot[] = [
   { src: "/dashboard/carousel/exponent-divergence-mkt2_1700x1000.webp", alt: "exponent divergence mkt2 1700x1000 dashboard view" },
   { src: "/dashboard/carousel/exponent-pt-swap-flows-mkt2_1700x1000.webp", alt: "exponent pt swap flows mkt2 1700x1000 dashboard view" },
+  { src: "/dashboard/carousel/ge-activity-share_1700x1000.webp", alt: "ge activity share 1700x1000 dashboard view" },
   { src: "/dashboard/carousel/ge-yields-vs-time_1700x1000.webp", alt: "ge yields vs time 1700x1000 dashboard view" },
+  { src: "/dashboard/carousel/kamino-liability-flows_1700x1000.webp", alt: "kamino liability flows 1700x1000 dashboard view" },
   { src: "/dashboard/carousel/kamino-loan-size-dist_1700x1000.webp", alt: "kamino loan size dist 1700x1000 dashboard view" },
+  { src: "/dashboard/carousel/kamino-rate-curve_1700x1000.webp", alt: "kamino rate curve 1700x1000 dashboard view" },
   { src: "/dashboard/carousel/ra-cascade_1700x1000.webp", alt: "ra cascade 1700x1000 dashboard view" },
   { src: "/dashboard/carousel/ra-liq-dist-orca_1700x1000.webp", alt: "ra liq dist orca 1700x1000 dashboard view" },
   { src: "/dashboard/carousel/ra-stress-test_1700x1000.webp", alt: "ra stress test 1700x1000 dashboard view" },

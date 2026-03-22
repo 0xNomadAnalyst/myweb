@@ -16,9 +16,13 @@ export function Header() {
       <div className="mx-auto flex h-14 max-w-[1180px] items-center justify-between px-6 md:px-12">
         <Link
           href="/"
-          className="font-mono text-sm font-medium tracking-tight text-foreground/98"
+          className="inline-flex items-center rounded-sm transition-opacity hover:opacity-90"
         >
-          opus
+          <span
+            aria-hidden
+            className="h-[26px] w-[26px] bg-white drop-shadow-[0_0_8px_rgba(248,169,74,0.34)] [-webkit-mask-image:url('/TokenDesign_Icon_White.png')] [-webkit-mask-position:center] [-webkit-mask-repeat:no-repeat] [-webkit-mask-size:contain] [mask-image:url('/TokenDesign_Icon_White.png')] [mask-position:center] [mask-repeat:no-repeat] [mask-size:contain]"
+          />
+          <span className="sr-only">Opus</span>
         </Link>
         <nav className="flex items-center gap-6">
           {navLinks.map((link) => (

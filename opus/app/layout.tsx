@@ -13,9 +13,28 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Opus – Financial Data Infrastructure",
+  title: "Opus - Financial Data Infrastructure",
   description:
     "Realtime financial infrastructure for environments where operational visibility is non-negotiable.",
+  manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon-16x16.png", type: "image/png", sizes: "16x16" },
+      { url: "/favicon-32x32.png", type: "image/png", sizes: "32x32" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", type: "image/png", sizes: "180x180" },
+    ],
+    other: [
+      {
+        rel: "mask-icon",
+        url: "/safari-pinned-tab.svg",
+        color: "#FF6B00",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -31,6 +50,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-
-
