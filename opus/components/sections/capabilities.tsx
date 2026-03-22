@@ -54,7 +54,7 @@ export function Capabilities() {
           return (
             <FadeIn key={domain.title} delay={i * 0.08} className={cardSpan(i)}>
               <div
-                className={`card-interactive flex h-full flex-col rounded-lg border border-border-strong bg-card ${
+                className={`card-interactive flex h-full flex-col rounded-lg border border-border-strong bg-card hover:bg-accent ${
                   isLead ? "p-6 md:p-7" : "p-5"
                 }`}
               >

@@ -80,7 +80,7 @@ export function Background() {
             {credentialGroups.map((group) => (
               <div
                 key={group.title}
-                className="card-interactive rounded-lg border border-border-strong bg-card p-5"
+                className="card-interactive rounded-lg border border-border-strong bg-card p-5 hover:bg-accent"
               >
                 <p className="section-label mb-3">
                   {group.title}
