@@ -166,14 +166,16 @@
     box-shadow:
       inset 0 1px 0 oklch(1 0 0 / 6%),
       0 10px 26px oklch(0 0 0 / 18%);
-    transition: none;
+    transition:
+      transform 220ms ease,
+      border-color 220ms ease,
+      background-color 220ms ease;
   }
   .card-interactive:hover {
-    transform: none;
+    transform: translateY(-1px);
   }
   .dark .card-interactive:hover {
-    border-color: var(--border-strong);
-    background-color: var(--card);
+    border-color: oklch(1 0 0 / 14%);
   }
 
   .section-title {

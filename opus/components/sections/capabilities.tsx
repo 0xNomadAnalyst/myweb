@@ -5,27 +5,27 @@ const domains = [
   {
     title: "Liquidity & Market Structure Visibility",
     description:
-      "Understand true depth, concentration risk, and venue dependency under real trading conditions.",
+      "Understand true depth, concentration risk, and venue dependency under live trading conditions.",
   },
   {
-    title: "Execution Quality & Price Impact",
+    title: "Market Maker Visibility & Accountability",
     description:
-      "Measure execution outcomes versus quotes - slippage, spreads, and impact across venues and regimes.",
+      "Measure third-party liquidity support against explicit KPIs, stress-period behaviour, and replacement thresholds.",
   },
   {
-    title: "Protocol & Lending Risk Surveillance",
+    title: "Cross-Protocol Risk & Exposure Monitoring",
     description:
-      "Track leverage, utilisation, liquidations, and collateral dynamics across onchain money markets.",
+      "Monitor dependencies across liquidity, lending, and yield venues through normalized metrics and unified risk surfaces.",
   },
   {
-    title: "Stress Propagation & Contagion",
+    title: "Incident Replay & Root-Cause Analysis",
     description:
-      "Identify how instability spreads across liquidity, lending, and execution venues - before it becomes operational.",
+      "Use historical event data to explain stress episodes, isolate mechanisms, and refine playbooks.",
   },
   {
-    title: "Operational Decision Support",
+    title: "Simulation & Risk Policy Modelling",
     description:
-      "Turn fragmented market data into actionable signals for risk and trading teams.",
+      "Test thresholds, liquidity buffers, and design choices before they become operational risk.",
   },
 ];
 
@@ -39,13 +39,13 @@ export function Capabilities() {
   return (
     <SectionShell id="capabilities" variant="open">
       <FadeIn>
-        <p className="section-label">Problem Domains</p>
+        <p className="section-label">Where Visibility Breaks</p>
         <h2 className="section-title">
           Operational Problem Domains
         </h2>
-        <p className="section-intro max-w-xl">
-          Where analytical clarity and operational visibility are most often
-          required.
+        <p className="section-intro max-w-[72ch]">
+          Where visibility gaps, accountability questions, and system-level
+          risk matter most.
         </p>
       </FadeIn>
       <div className="mt-8 grid gap-4 md:grid-cols-12">

@@ -25,7 +25,7 @@ export function Engagement() {
       <div className="grid gap-10 lg:grid-cols-[minmax(0,6fr)_minmax(0,6fr)] lg:gap-14">
         <FadeIn>
           <div className="max-w-xl">
-            <p className="section-label">Engagement Model</p>
+            <p className="section-label">Delivery Structure</p>
             <h2 className="section-title">
               Ways of Working
             </h2>
@@ -34,9 +34,15 @@ export function Engagement() {
               structure.
             </p>
             <p className="mt-5 text-[0.98rem] leading-relaxed text-muted-foreground/92">
-              The model stays compact by design: direct accountability, minimal
-              communication loss, and implementation choices grounded in
-              analytical intent.
+              The model stays compact by design: close to stakeholder
+              requirements, with no loss in translation between problem
+              framing, analysis, and implementation, and faster iteration as
+              priorities evolve.
+            </p>
+            <p className="mt-4 text-[0.98rem] leading-relaxed text-muted-foreground/90">
+              Work typically begins with problem framing and decision
+              priorities, then moves into analytical definition and
+              implementation without a handoff between stages.
             </p>
           </div>
         </FadeIn>
@@ -45,7 +51,7 @@ export function Engagement() {
           <div className="absolute bottom-6 left-[18px] top-6 hidden w-px bg-border-soft lg:block" />
           {principles.map((item, i) => (
             <FadeIn key={item.title} delay={0.08 * (i + 1)}>
-              <div className="relative rounded-lg border border-border-strong bg-card px-5 py-5 pl-14">
+              <div className="card-interactive relative rounded-lg border border-border-strong bg-card px-5 py-5 pl-14">
                 <p className="absolute left-5 top-5 font-mono text-[12px] text-cta/84">
                   {String(i + 1).padStart(2, "0")}
                 </p>
