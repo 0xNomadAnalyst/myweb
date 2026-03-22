@@ -38,12 +38,6 @@ const credentialGroups = [
 
 export function Background() {
   return (
-    <div
-      style={{
-        background:
-          "linear-gradient(to bottom, #0B1220, #0C1728 14%, #0C1728 86%, #0B1220)",
-      }}
-    >
     <SectionShell id="background">
       <FadeIn>
         <p className="section-label">Professional Background</p>
@@ -112,9 +106,7 @@ export function Background() {
         </FadeIn>
       </div>
     </SectionShell>
-    </div>
   );
 }
-
 
 

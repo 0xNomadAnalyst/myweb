@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "generate:dashboard-screenshots": "node scripts/generate-dashboard-screenshots.mjs",
+    "predev": "npm run generate:dashboard-screenshots",
+    "prebuild": "npm run generate:dashboard-screenshots",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

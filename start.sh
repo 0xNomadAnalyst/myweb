@@ -9,4 +9,7 @@ if [ -n "$pid" ]; then
 fi
 
 cd "$(dirname "$0")/opus" || exit 1
+node scripts/generate-dashboard-screenshots.mjs --watch &
+watcher_pid=$!
+trap 'kill "$watcher_pid" 2>/dev/null' EXIT
 npx next dev --turbopack -p 3001

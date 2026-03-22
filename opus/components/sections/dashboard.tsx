@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { SectionShell } from "@/components/shared/section-shell";
 import { FadeIn } from "@/components/shared/fade-in";
+import { dashboardScreenshots } from "@/lib/generated/dashboard-screenshots.generated";
 
 const capabilities = [
   "Liquidity and market structure visibility across venues",
@@ -13,25 +14,39 @@ const capabilities = [
   "Operational decision support for trading and risk teams",
 ];
 
-const screenshots = [
+const fallbackScreenshots = [
   { src: "/dashboard/pt-swaps.png", alt: "Swap flow and trade count monitoring" },
   { src: "/dashboard/loans-hf.png", alt: "Loan distribution and health factor analysis" },
   { src: "/dashboard/ohlcv.png", alt: "OHLCV price and volume analysis" },
   { src: "/dashboard/fixed-spread.png", alt: "Fixed vs variable rate spread monitoring" },
 ];
 
+const screenshots = dashboardScreenshots.length > 0
+  ? dashboardScreenshots
+  : fallbackScreenshots;
+
 export function Dashboard() {
   const [active, setActive] = useState(0);
+  const [failedSrcs, setFailedSrcs] = useState<Set<string>>(new Set());
+
+  const visibleScreenshots = screenshots.filter((img) => !failedSrcs.has(img.src));
+  const carouselScreenshots = visibleScreenshots.length > 0
+    ? visibleScreenshots
+    : fallbackScreenshots.filter((img) => !failedSrcs.has(img.src));
+  const activeIndex = carouselScreenshots.length > 0
+    ? active % carouselScreenshots.length
+    : 0;
 
   const goTo = useCallback((i: number) => setActive(i), []);
 
   useEffect(() => {
+    if (carouselScreenshots.length <= 1) return;
     const id = setInterval(
-      () => setActive((prev) => (prev + 1) % screenshots.length),
+      () => setActive((prev) => (prev + 1) % carouselScreenshots.length),
       5000,
     );
     return () => clearInterval(id);
-  }, [active]);
+  }, [carouselScreenshots.length]);
 
   return (
     <SectionShell id="system" variant="feature" className="py-14 md:py-14">
@@ -81,57 +96,63 @@ export function Dashboard() {
           </div>
 
           {/* Dashboard showcase – fade carousel */}
-          <div className="relative z-0">
-            <div
-              aria-hidden
-              className="pointer-events-none absolute -inset-10 -z-10 rounded-3xl"
-              style={{
-                background:
-                  "radial-gradient(ellipse at 50% 45%, rgba(56, 130, 200, 0.055) 0%, transparent 74%)",
-              }}
-            />
-            <p className="section-label mb-2">
+          <div>
+            <p className="section-label mb-5">
               Operational Views
             </p>
-            <div className="relative grid aspect-[17/10] overflow-hidden rounded-lg bg-[#0c1425] ring-1 ring-inset ring-white/[0.06]">
-              {screenshots.map((img, i) => (
-                <Image
-                  key={img.src}
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 58vw"
-                  priority={i === 0}
-                  className="col-start-1 row-start-1 h-full w-full object-contain object-center saturate-[0.98] contrast-[0.99] transition-opacity duration-[900ms] ease-in-out"
-                  style={{ opacity: i === active ? 0.95 : 0 }}
-                />
-              ))}
-
-              {/* Bottom grounding gradient + edge softening */}
-              <div className="pointer-events-none col-start-1 row-start-1 relative z-10 h-full w-full">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent from-60% to-black/[0.16]" />
-              </div>
-
-              {/* Progress indicators */}
-              <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 gap-1.5">
-                {screenshots.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => goTo(i)}
-                    className={`h-1 rounded-full ${
-                      i === active
-                        ? "w-5 bg-white/58"
-                        : "w-1.5 bg-white/24"
-                    }`}
-                    aria-label={`View screenshot ${i + 1}`}
+            <div className="overflow-hidden rounded-xl border border-border/55 bg-[#0f192d] shadow-[0_0_0_1px_rgba(56,130,200,0.2),0_0_26px_2px_rgba(56,130,200,0.26)]">
+              <div className="relative grid aspect-[17/10] overflow-hidden bg-[#0f192d]">
+                {carouselScreenshots.map((img, i) => (
+                  <Image
+                    key={img.src}
+                    src={img.src}
+                    alt={img.alt}
+                    fill
+                    unoptimized
+                    sizes="(max-width: 1024px) 100vw, 58vw"
+                    priority={i === 0}
+                    onError={() => {
+                      setFailedSrcs((prev) => {
+                        if (prev.has(img.src)) return prev;
+                        const next = new Set(prev);
+                        next.add(img.src);
+                        return next;
+                      });
+                    }}
+                    className="col-start-1 row-start-1 h-full w-full object-contain object-center saturate-[0.98] contrast-[0.99] transition-[opacity,transform] duration-[900ms] ease-in-out"
+                    style={{
+                      opacity: i === activeIndex ? 0.95 : 0,
+                      transform: "scale(0.95)",
+                    }}
                   />
                 ))}
+
+                {/* Bottom grounding gradient + edge softening */}
+                <div className="pointer-events-none col-start-1 row-start-1 relative z-10 h-full w-full">
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent from-60% to-black/[0.16]" />
+                </div>
+
+                {/* Progress indicators */}
+                <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 gap-1.5">
+                  {carouselScreenshots.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => goTo(i)}
+                      className={`h-1 rounded-full ${
+                        i === activeIndex
+                          ? "w-5 bg-white/58"
+                          : "w-1.5 bg-white/24"
+                      }`}
+                      aria-label={`View screenshot ${i + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
             </div>
 
             <a
               href="#"
-              className="mt-4 inline-block font-mono text-[11px] text-muted-foreground/76 hover:text-foreground/90"
+              className="mt-4 inline-block font-mono text-[11px] text-cta/91 transition-[color,filter] duration-600 ease-in-out hover:text-cta/93 hover:drop-shadow-[0_0_1px_rgba(248,169,74,0.9)] hover:[filter:drop-shadow(0_0_1px_rgba(248,169,74,0.9))_drop-shadow(0_0_3px_rgba(248,169,74,0.3))]"
             >
               Explore Operational Dashboard&ensp;&rarr;
             </a>
@@ -141,7 +162,3 @@ export function Dashboard() {
     </SectionShell>
   );
 }
-
-
-
-

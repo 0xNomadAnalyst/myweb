@@ -32,15 +32,7 @@ export function Engagement() {
           structure.
         </p>
       </FadeIn>
-      <div className="relative z-0 mt-10">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -inset-8 -z-10 rounded-3xl"
-          style={{
-            background:
-              "radial-gradient(ellipse at 50% 50%, rgba(56, 130, 200, 0.03) 0%, transparent 74%)",
-          }}
-        />
+      <div className="mt-10">
         <div className="grid gap-4 md:grid-cols-3">
           {principles.map((item, i) => (
             <FadeIn key={item.title} delay={i * 0.09} className="h-full">

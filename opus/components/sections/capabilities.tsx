@@ -42,15 +42,7 @@ export function Capabilities() {
           required.
         </p>
       </FadeIn>
-      <div className="relative z-0 mt-8">
-        <div
-          aria-hidden
-          className="pointer-events-none absolute -inset-8 -z-10 rounded-3xl"
-          style={{
-            background:
-              "radial-gradient(ellipse at 50% 50%, rgba(56, 130, 200, 0.03) 0%, transparent 74%)",
-          }}
-        />
+      <div className="mt-8">
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {domains.map((domain, i) => (
             <FadeIn key={domain.title} delay={i * 0.09} className="h-full">

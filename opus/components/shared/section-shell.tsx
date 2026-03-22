@@ -35,10 +35,6 @@ export function SectionShell({
       <section
         id={id}
         className="scroll-mt-24"
-        style={{
-          background:
-            "linear-gradient(to bottom, transparent, rgba(17, 29, 50, 0.36) 50%, transparent)",
-        }}
       >
         <div
           className={cn(
