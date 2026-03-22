@@ -58,13 +58,13 @@ export function Capabilities() {
                   isLead ? "p-6 md:p-7" : "p-5"
                 }`}
               >
-                <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground/86">
+                <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground/86">
                   {String(i + 1).padStart(2, "0")}
                 </p>
                 <h3 className={isLead ? "mt-3 text-xl font-medium tracking-tight text-foreground/98" : "mt-3 text-base font-medium tracking-tight text-foreground/96"}>
                   {domain.title}
                 </h3>
-                <p className={isLead ? "mt-3 max-w-[60ch] text-[15px] leading-relaxed text-muted-foreground/96" : "mt-2 text-sm leading-relaxed text-muted-foreground/95"}>
+                <p className={isLead ? "mt-3 max-w-[60ch] text-[16px] leading-relaxed text-muted-foreground/96" : "mt-2 text-[0.98rem] leading-relaxed text-muted-foreground/95"}>
                   {domain.description}
                 </p>
               </div>

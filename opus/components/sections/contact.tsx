@@ -24,7 +24,7 @@ export function Contact() {
               Selective engagements where financial systems require analytical
               clarity and operational correctness.
             </p>
-            <p className="mt-1 text-sm text-muted-foreground/90">
+            <p className="mt-1 text-[0.98rem] text-muted-foreground/90">
               Work typically spans risk analysis, system design, and
               implementation.
             </p>
@@ -49,7 +49,7 @@ export function Contact() {
               <p className="section-label mb-3">Typical Scope</p>
               <ul className="space-y-2.5">
                 {topics.map((topic) => (
-                  <li key={topic} className="flex gap-2.5 text-sm text-muted-foreground/94">
+                  <li key={topic} className="flex gap-2.5 text-[0.98rem] text-muted-foreground/94">
                     <span className="mt-[8px] h-1 w-1 rounded-full bg-muted-foreground/80" />
                     {topic}
                   </li>
@@ -58,8 +58,8 @@ export function Contact() {
             </div>
             <div className="rounded-lg border border-border-strong bg-card/85 px-5 py-4">
               <p className="section-label mb-2.5">Direct Channel</p>
-              <p className="font-mono text-sm text-muted-foreground/93">contact@opus-data.dev</p>
-              <p className="mt-2 text-xs leading-relaxed text-muted-foreground/90">
+              <p className="font-mono text-[0.98rem] text-muted-foreground/93">contact@opus-data.dev</p>
+              <p className="mt-2 text-[0.88rem] leading-relaxed text-muted-foreground/90">
                 Include current operating context, monitored protocols, and the
                 decision problem you are prioritising.
               </p>

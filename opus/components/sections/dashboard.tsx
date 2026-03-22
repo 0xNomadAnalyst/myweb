@@ -54,10 +54,10 @@ export function Dashboard() {
         <div className="grid items-start gap-10 md:grid-cols-[9fr_11fr] md:gap-14">
           {/* Capability positioning */}
           <div>
-            <p className="section-label mb-3">
+            <p className="mb-3 font-mono text-xs uppercase tracking-wider text-muted-foreground">
               Operational Intelligence Platform
             </p>
-            <p className="body-measure mb-8 text-sm leading-relaxed text-muted-foreground/96">
+            <p className="body-measure mb-8 text-[1.02rem] leading-relaxed text-muted-foreground/96">
               I design operational intelligence environments providing
               continuous visibility into liquidity, execution quality, and
               protocol risk – structured for real-time decision support.
@@ -70,7 +70,7 @@ export function Dashboard() {
               {capabilities.map((item) => (
                 <li
                   key={item}
-                  className="flex gap-2.5 text-sm leading-snug text-muted-foreground/95"
+                  className="flex gap-2.5 text-[1.01rem] leading-snug text-muted-foreground/95"
                 >
                   <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />
                   {item}
@@ -83,12 +83,12 @@ export function Dashboard() {
               <p className="section-label mb-2.5">
                 Deployment Readiness
               </p>
-              <p className="text-sm leading-relaxed text-muted-foreground/97">
+              <p className="text-[1.01rem] leading-relaxed text-muted-foreground/97">
                 Solana protocols&ensp;&ndash;&ensp;turnkey deployment
                 <br />
                 EVM environments&ensp;&ndash;&ensp;rapid implementation
               </p>
-              <p className="mt-2.5 text-xs text-muted-foreground/86">
+              <p className="mt-2.5 text-[0.88rem] text-muted-foreground/86">
                 Shared analytical framework, protocol mechanics already
                 modelled.
               </p>
@@ -152,7 +152,7 @@ export function Dashboard() {
 
             <a
               href="#"
-              className="mt-4 inline-block font-mono text-[11px] text-cta/91 transition-[color,filter] duration-600 ease-in-out hover:text-cta/93 hover:drop-shadow-[0_0_1px_rgba(248,169,74,0.9)] hover:[filter:drop-shadow(0_0_1px_rgba(248,169,74,0.9))_drop-shadow(0_0_3px_rgba(248,169,74,0.3))]"
+              className="mt-4 inline-block font-mono text-[12px] text-cta/91 transition-[color,filter] duration-600 ease-in-out hover:text-cta/93 hover:drop-shadow-[0_0_1px_rgba(248,169,74,0.9)] hover:[filter:drop-shadow(0_0_1px_rgba(248,169,74,0.9))_drop-shadow(0_0_3px_rgba(248,169,74,0.3))]"
             >
               Explore Operational Dashboard&ensp;&rarr;
             </a>

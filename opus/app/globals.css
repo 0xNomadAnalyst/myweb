@@ -183,11 +183,11 @@
   }
 
   .section-label {
-    @apply mb-2.5 font-mono text-[10px] uppercase tracking-[0.16em] text-muted-foreground/90;
+    @apply mb-2.5 font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground/90;
   }
 
   .section-intro {
-    @apply mt-3 max-w-[66ch] text-[15px] leading-7 text-muted-foreground/96;
+    @apply mt-3 max-w-[66ch] text-[16px] leading-7 text-muted-foreground/96;
   }
 
   .body-measure {
@@ -195,11 +195,11 @@
   }
 
   .card-title {
-    @apply font-medium tracking-tight text-foreground/95;
+    @apply text-[1.03rem] font-medium tracking-tight text-foreground/95;
   }
 
   .card-body {
-    @apply mt-2 text-sm leading-relaxed text-muted-foreground/95;
+    @apply mt-2 text-[0.98rem] leading-relaxed text-muted-foreground/95;
   }
 }
 

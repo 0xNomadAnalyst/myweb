@@ -33,7 +33,7 @@ export function Engagement() {
               Engagements adapt to the operational problem and internal team
               structure.
             </p>
-            <p className="mt-5 text-sm leading-relaxed text-muted-foreground/92">
+            <p className="mt-5 text-[0.98rem] leading-relaxed text-muted-foreground/92">
               The model stays compact by design: direct accountability, minimal
               communication loss, and implementation choices grounded in
               analytical intent.
@@ -46,13 +46,13 @@ export function Engagement() {
           {principles.map((item, i) => (
             <FadeIn key={item.title} delay={0.08 * (i + 1)}>
               <div className="relative rounded-lg border border-border-strong bg-card px-5 py-5 pl-14">
-                <p className="absolute left-5 top-5 font-mono text-[11px] text-cta/84">
+                <p className="absolute left-5 top-5 font-mono text-[12px] text-cta/84">
                   {String(i + 1).padStart(2, "0")}
                 </p>
                 <h3 className="text-base font-medium tracking-tight text-foreground/97">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground/95">
+                <p className="mt-2 text-[0.98rem] leading-relaxed text-muted-foreground/95">
                   {item.description}
                 </p>
               </div>
