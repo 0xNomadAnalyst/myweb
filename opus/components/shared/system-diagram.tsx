@@ -32,7 +32,7 @@ export function SystemDiagram() {
         </p>
       </div>
       <svg
-        viewBox="0 0 800 300"
+        viewBox="0 0 800 314"
         fill="none"
         className="w-full"
         role="img"
@@ -55,6 +55,7 @@ export function SystemDiagram() {
             />
           </marker>
         </defs>
+        <g transform="translate(0 8)">
 
         {/* – Left group: Lending Market – */}
         <rect x="0" y="0" width="350" height="300" rx="8" {...group} />
@@ -240,6 +241,7 @@ export function SystemDiagram() {
         >
           positions
         </text>
+        </g>
       </svg>
     </>
   );

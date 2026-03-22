@@ -28,11 +28,11 @@ export function OrcaDiagram() {
           Concentrated Liquidity Architecture
         </p>
         <p className="font-mono text-[10px] text-muted-foreground/88">
-          DEX
+          Orca / Raydium
         </p>
       </div>
       <svg
-        viewBox="0 0 800 340"
+        viewBox="0 0 800 300"
         fill="none"
         className="w-full"
         role="img"
@@ -50,6 +50,7 @@ export function OrcaDiagram() {
             <path d="M0,0 L7,3.5 L0,7 z" fill="rgba(156,163,175,0.45)" />
           </marker>
         </defs>
+        <g transform="translate(0 10)">
 
         {/* Left column: vaults */}
         <rect x="14" y="20" width="220" height="118" rx="8" {...group} />
@@ -332,6 +333,7 @@ export function OrcaDiagram() {
           fill="none"
           markerEnd="url(#dex-arr)"
         />
+        </g>
       </svg>
     </>
   );

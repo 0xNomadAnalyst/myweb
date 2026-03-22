@@ -32,7 +32,7 @@ export function ExponentDiagram() {
         </p>
       </div>
       <svg
-        viewBox="0 0 800 300"
+        viewBox="0 0 800 314"
         fill="none"
         className="w-full"
         role="img"
@@ -51,6 +51,7 @@ export function ExponentDiagram() {
           </marker>
         </defs>
 
+        <g transform="translate(0 8)">
         <rect x="0" y="0" width="228" height="300" rx="8" {...group} />
         <text
           x="18"
@@ -306,6 +307,7 @@ export function ExponentDiagram() {
         >
           PT to AMM
         </text>
+        </g>
       </svg>
     </>
   );
