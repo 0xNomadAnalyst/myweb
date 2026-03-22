@@ -1,33 +1,33 @@
 const node = {
-  fill: "#172033",
-  stroke: "rgba(255,255,255,0.08)",
+  fill: "#1b2942",
+  stroke: "rgba(235,245,255,0.14)",
   strokeWidth: 1,
 };
 
 const group = {
   fill: "none",
-  stroke: "rgba(255,255,255,0.05)",
+  stroke: "rgba(192,214,238,0.12)",
   strokeWidth: 1,
 };
 
 const dash = {
-  stroke: "rgba(156,163,175,0.3)",
-  strokeWidth: 1,
+  stroke: "rgba(176,191,209,0.42)",
+  strokeWidth: 1.1,
   strokeDasharray: "5 4",
   fill: "none",
 };
 
-const labelColor = "rgba(166,180,200,0.66)";
-const textColor = "rgba(226, 234, 244, 0.9)";
+const labelColor = "rgba(183,202,224,0.82)";
+const textColor = "rgba(237, 244, 252, 0.97)";
 
 export function SystemDiagram() {
   return (
     <>
       <div className="mb-5 flex items-baseline justify-between">
-        <p className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground/86">
+        <p className="font-mono text-[11px] uppercase tracking-widest text-muted-foreground/90">
           Protocol Account Architecture
         </p>
-        <p className="font-mono text-[9px] text-muted-foreground/86">
+        <p className="font-mono text-[10px] text-muted-foreground/88">
           Kamino Lending
         </p>
       </div>
@@ -62,7 +62,7 @@ export function SystemDiagram() {
           x="18"
           y="24"
           fontFamily="monospace"
-          fontSize="8.5"
+          fontSize="9"
           fill={labelColor}
           letterSpacing="0.12em"
         >
@@ -74,7 +74,7 @@ export function SystemDiagram() {
           x="175"
           y="67"
           fontFamily="sans-serif"
-          fontSize="12"
+          fontSize="13"
           fill={textColor}
           textAnchor="middle"
         >
@@ -94,7 +94,7 @@ export function SystemDiagram() {
           x="189"
           y="106"
           fontFamily="monospace"
-          fontSize="8"
+          fontSize="8.5"
           fill={labelColor}
         >
           owns
@@ -104,7 +104,7 @@ export function SystemDiagram() {
           x="18"
           y="140"
           fontFamily="monospace"
-          fontSize="8"
+          fontSize="8.5"
           fill={labelColor}
           letterSpacing="0.1em"
         >
@@ -112,14 +112,14 @@ export function SystemDiagram() {
         </text>
 
         <rect x="18" y="150" width="314" height="34" rx="4" {...node} />
-        <text x="32" y="172" fontFamily="sans-serif" fontSize="11" fill={textColor}>
+        <text x="32" y="172" fontFamily="sans-serif" fontSize="11.5" fill={textColor}>
           Reserve: USDG
         </text>
         <text
           x="318"
           y="172"
           fontFamily="monospace"
-          fontSize="8"
+          fontSize="8.5"
           fill={labelColor}
           textAnchor="end"
         >
@@ -127,14 +127,14 @@ export function SystemDiagram() {
         </text>
 
         <rect x="18" y="190" width="314" height="34" rx="4" {...node} />
-        <text x="32" y="212" fontFamily="sans-serif" fontSize="11" fill={textColor}>
+        <text x="32" y="212" fontFamily="sans-serif" fontSize="11.5" fill={textColor}>
           Reserve: USDC
         </text>
         <text
           x="318"
           y="212"
           fontFamily="monospace"
-          fontSize="8"
+          fontSize="8.5"
           fill={labelColor}
           textAnchor="end"
         >
@@ -142,14 +142,14 @@ export function SystemDiagram() {
         </text>
 
         <rect x="18" y="230" width="314" height="34" rx="4" {...node} />
-        <text x="32" y="252" fontFamily="sans-serif" fontSize="11" fill={textColor}>
+        <text x="32" y="252" fontFamily="sans-serif" fontSize="11.5" fill={textColor}>
           Reserve: SOL
         </text>
         <text
           x="318"
           y="252"
           fontFamily="monospace"
-          fontSize="8"
+          fontSize="8.5"
           fill={labelColor}
           textAnchor="end"
         >
@@ -162,7 +162,7 @@ export function SystemDiagram() {
           x="473"
           y="24"
           fontFamily="monospace"
-          fontSize="8.5"
+          fontSize="9"
           fill={labelColor}
           letterSpacing="0.12em"
         >
@@ -170,14 +170,14 @@ export function SystemDiagram() {
         </text>
 
         <rect x="473" y="50" width="309" height="44" rx="6" {...node} />
-        <text x="487" y="77" fontFamily="sans-serif" fontSize="12" fill={textColor}>
+        <text x="487" y="77" fontFamily="sans-serif" fontSize="13" fill={textColor}>
           Obligation
         </text>
         <text
           x="768"
           y="77"
           fontFamily="monospace"
-          fontSize="9"
+          fontSize="9.5"
           fill={labelColor}
           textAnchor="end"
         >
@@ -185,14 +185,14 @@ export function SystemDiagram() {
         </text>
 
         <rect x="473" y="110" width="309" height="44" rx="6" {...node} />
-        <text x="487" y="137" fontFamily="sans-serif" fontSize="12" fill={textColor}>
+        <text x="487" y="137" fontFamily="sans-serif" fontSize="13" fill={textColor}>
           Obligation
         </text>
         <text
           x="768"
           y="137"
           fontFamily="monospace"
-          fontSize="9"
+          fontSize="9.5"
           fill={labelColor}
           textAnchor="end"
         >
@@ -200,14 +200,14 @@ export function SystemDiagram() {
         </text>
 
         <rect x="473" y="170" width="309" height="44" rx="6" {...node} />
-        <text x="487" y="197" fontFamily="sans-serif" fontSize="12" fill={textColor}>
+        <text x="487" y="197" fontFamily="sans-serif" fontSize="13" fill={textColor}>
           Obligation
         </text>
         <text
           x="768"
           y="197"
           fontFamily="monospace"
-          fontSize="9"
+          fontSize="9.5"
           fill={labelColor}
           textAnchor="end"
         >
@@ -220,8 +220,8 @@ export function SystemDiagram() {
           x="393"
           y="54"
           fontFamily="monospace"
-          fontSize="7.5"
-          fill="rgba(156,163,175,0.55)"
+          fontSize="8"
+          fill="rgba(188,203,221,0.74)"
           textAnchor="middle"
         >
           belongs to
@@ -234,8 +234,8 @@ export function SystemDiagram() {
           x="393"
           y="155"
           fontFamily="monospace"
-          fontSize="7.5"
-          fill="rgba(156,163,175,0.55)"
+          fontSize="8"
+          fill="rgba(188,203,221,0.74)"
           textAnchor="middle"
         >
           positions

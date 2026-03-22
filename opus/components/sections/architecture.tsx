@@ -27,7 +27,7 @@ export function Architecture() {
         <h2 className="section-title">
           Analytical Approach
         </h2>
-        <p className="section-intro">
+        <p className="section-intro text-[1.08rem]">
           Operational systems work best when analytical understanding and
           implementation are developed together. I translate market behaviour
           into measurable structure - so teams can observe, test, and operate
@@ -36,21 +36,14 @@ export function Architecture() {
         </p>
       </FadeIn>
 
-      <div className="mt-10 grid gap-4 md:grid-cols-12">
+      <div className="mt-10 grid gap-4 md:grid-cols-3">
         {principles.map((item, i) => (
-          <FadeIn
-            key={item.title}
-            delay={i * 0.08}
-            className={i === 2 ? "md:col-span-12" : "md:col-span-6"}
-          >
+          <FadeIn key={item.title} delay={i * 0.08}>
             <div className="card-interactive h-full rounded-lg border border-border-strong bg-card p-5">
-              <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground/84">
-                Principle {String(i + 1).padStart(2, "0")}
-              </p>
-              <h3 className="mt-3 text-base font-medium tracking-tight text-foreground/97">
+              <h3 className="card-title">
                 {item.title}
               </h3>
-              <p className="mt-2 text-[0.98rem] leading-relaxed text-muted-foreground/95">
+              <p className="card-body">
                 {item.description}
               </p>
             </div>
@@ -78,9 +71,11 @@ export function Architecture() {
           <div
             className="rounded-lg px-5 pb-6 pt-5 md:px-8 md:pb-8 md:pt-7"
             style={{
-              background: "rgba(15, 23, 42, 0.62)",
-              border: "1px solid var(--border-strong)",
-              boxShadow: "0 8px 30px rgba(0, 0, 0, 0.16)",
+              background:
+                "linear-gradient(180deg, rgba(19, 33, 58, 0.86) 0%, rgba(13, 24, 45, 0.82) 100%)",
+              border: "1px solid rgba(124, 158, 196, 0.3)",
+              boxShadow:
+                "0 0 0 1px rgba(116, 150, 188, 0.14), 0 10px 32px rgba(1, 8, 20, 0.34), 0 0 24px rgba(53, 95, 148, 0.14)",
             }}
           >
             <SystemDiagram />

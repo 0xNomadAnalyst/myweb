@@ -183,7 +183,7 @@
   }
 
   .section-label {
-    @apply mb-2.5 font-mono text-[11px] uppercase tracking-[0.15em] text-muted-foreground/90;
+    @apply mb-2.5 font-mono text-[11px] uppercase tracking-[0.15em] text-foreground/90;
   }
 
   .section-intro {

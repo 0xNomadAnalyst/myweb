@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { SectionShell } from "@/components/shared/section-shell";
 import { FadeIn } from "@/components/shared/fade-in";
@@ -37,8 +37,6 @@ export function Dashboard() {
     ? active % carouselScreenshots.length
     : 0;
 
-  const goTo = useCallback((i: number) => setActive(i), []);
-
   useEffect(() => {
     if (carouselScreenshots.length <= 1) return;
     const id = setInterval(
@@ -51,10 +49,10 @@ export function Dashboard() {
   return (
     <SectionShell id="system" variant="feature" className="py-14 md:py-14">
       <FadeIn>
-        <div className="grid items-start gap-10 md:grid-cols-[9fr_11fr] md:gap-14">
+        <div className="grid items-start gap-10 md:grid-cols-[2fr_3fr] md:gap-10">
           {/* Capability positioning */}
-          <div>
-            <p className="mb-3 font-mono text-xs uppercase tracking-wider text-muted-foreground">
+          <div className="md:pr-6">
+            <p className="mb-3 font-mono text-xs uppercase tracking-wider text-foreground/90">
               Operational Intelligence Platform
             </p>
             <p className="body-measure mb-8 text-[1.02rem] leading-relaxed text-muted-foreground/96">
@@ -63,7 +61,7 @@ export function Dashboard() {
               protocol risk – structured for real-time decision support.
             </p>
 
-            <p className="section-label mb-3">
+            <p className="section-label mb-3 text-muted-foreground/90">
               Core Capabilities
             </p>
             <ul className="mb-10 space-y-2">
@@ -78,9 +76,9 @@ export function Dashboard() {
               ))}
             </ul>
 
-            <hr className="mb-6 border-border" />
-            <div className="rounded-lg border border-border-strong bg-accent/32 px-5 py-4">
-              <p className="section-label mb-2.5">
+            <hr className="mb-6 border-border md:mr-4" />
+            <div className="rounded-lg border border-border-strong bg-accent/32 px-5 py-4 md:mr-4">
+              <p className="section-label mb-2.5 text-muted-foreground/90">
                 Deployment Readiness
               </p>
               <p className="text-[1.01rem] leading-relaxed text-muted-foreground/97">
@@ -88,7 +86,7 @@ export function Dashboard() {
                 <br />
                 EVM environments&ensp;&ndash;&ensp;rapid implementation
               </p>
-              <p className="mt-2.5 text-[0.88rem] text-muted-foreground/86">
+              <p className="mt-2.5 text-[0.88rem] font-[300] text-muted-foreground/86">
                 Shared analytical framework, protocol mechanics already
                 modelled.
               </p>
@@ -96,8 +94,8 @@ export function Dashboard() {
           </div>
 
           {/* Dashboard showcase – fade carousel */}
-          <div>
-            <p className="section-label mb-5">
+          <div className="md:-ml-3 md:pr-5">
+            <p className="section-label mb-5 text-muted-foreground/90">
               Operational Views
             </p>
             <div className="overflow-hidden rounded-xl border border-border/55 bg-[#0f192d] shadow-[0_0_0_1px_rgba(128,162,198,0.16),0_0_22px_1px_rgba(82,114,150,0.2),0_12px_30px_rgba(1,8,20,0.34)]">
@@ -109,7 +107,7 @@ export function Dashboard() {
                     alt={img.alt}
                     fill
                     unoptimized
-                    sizes="(max-width: 1024px) 100vw, 58vw"
+                    sizes="(max-width: 1024px) 100vw, 61vw"
                     priority={i === 0}
                     onError={() => {
                       setFailedSrcs((prev) => {
@@ -122,7 +120,7 @@ export function Dashboard() {
                     className="col-start-1 row-start-1 h-full w-full object-contain object-center saturate-[0.98] contrast-[0.99] transition-[opacity,transform] duration-[900ms] ease-in-out"
                     style={{
                       opacity: i === activeIndex ? 0.95 : 0,
-                      transform: "scale(0.95)",
+                      transform: "scale(0.99)",
                     }}
                   />
                 ))}
@@ -132,27 +130,12 @@ export function Dashboard() {
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent from-60% to-black/[0.16]" />
                 </div>
 
-                {/* Progress indicators */}
-                <div className="absolute bottom-3 left-1/2 z-10 flex -translate-x-1/2 gap-1.5">
-                  {carouselScreenshots.map((_, i) => (
-                    <button
-                      key={i}
-                      onClick={() => goTo(i)}
-                      className={`h-1 rounded-full ${
-                        i === activeIndex
-                          ? "w-5 bg-white/58"
-                          : "w-1.5 bg-white/24"
-                      }`}
-                      aria-label={`View screenshot ${i + 1}`}
-                    />
-                  ))}
-                </div>
               </div>
             </div>
 
             <a
               href="#"
-              className="mt-4 inline-block font-mono text-[12px] text-cta/91 transition-[color,filter] duration-600 ease-in-out hover:text-cta/93 hover:drop-shadow-[0_0_1px_rgba(248,169,74,0.9)] hover:[filter:drop-shadow(0_0_1px_rgba(248,169,74,0.9))_drop-shadow(0_0_3px_rgba(248,169,74,0.3))]"
+              className="mt-[1.375rem] inline-block font-mono text-[12px] text-cta/91 transition-[color,filter] duration-600 ease-in-out hover:text-cta/93 hover:drop-shadow-[0_0_1px_rgba(248,169,74,0.9)] hover:[filter:drop-shadow(0_0_1px_rgba(248,169,74,0.9))_drop-shadow(0_0_3px_rgba(248,169,74,0.3))]"
             >
               Explore Operational Dashboard&ensp;&rarr;
             </a>
