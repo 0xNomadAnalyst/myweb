@@ -63,9 +63,13 @@ export function Hero() {
           {domains.map((domain) => (
             <div
               key={domain}
-              className="rounded-md border border-border-soft/80 bg-secondary/48 px-2.5 py-1"
+              className="group rounded-md border border-border-soft/80 bg-secondary/48 px-2.5 py-1 hover:-translate-y-px hover:border-border-soft hover:bg-secondary/66 hover:shadow-[0_0_0_1px_rgba(128,162,198,0.12),0_0_16px_rgba(82,114,150,0.2)]"
+              style={{
+                transition:
+                  "box-shadow 750ms ease-in-out, border-color 750ms ease-in-out, background-color 750ms ease-in-out, transform 1550ms cubic-bezier(0.33,0,0.2,1)",
+              }}
             >
-              <p className="font-mono text-[11px] leading-snug tracking-[0.04em] text-muted-foreground/91">
+              <p className="font-mono text-[11px] leading-snug tracking-[0.04em] text-muted-foreground/91 transition-colors duration-750 ease-in-out group-hover:text-foreground/96">
                 {domain}
               </p>
             </div>
