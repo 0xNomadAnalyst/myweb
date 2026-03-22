@@ -79,7 +79,7 @@ export function Hero() {
               type="application/pdf"
               className="mt-2 block font-mono text-xs text-muted-foreground/45 transition-colors duration-500 hover:text-muted-foreground/60"
             >
-              See advisory capabilties deck (PDF)
+              View advisory capabilities deck (PDF)
             </a>
           </div>
         </div>
