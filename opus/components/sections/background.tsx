@@ -41,7 +41,7 @@ export function Background() {
     <div
       style={{
         background:
-          "linear-gradient(to bottom, #0B1220, #091320 12%, #091320 88%, #0B1220)",
+          "linear-gradient(to bottom, #0B1220, #0A1321 14%, #0A1321 86%, #0B1220)",
       }}
     >
     <SectionShell id="background">
@@ -82,12 +82,10 @@ export function Background() {
         </FadeIn>
         <FadeIn delay={0.18}>
           <div className="space-y-4">
-            {credentialGroups.map((group, i) => (
+            {credentialGroups.map((group) => (
               <div
                 key={group.title}
-                className={`card-interactive rounded-lg border border-border bg-card p-5 hover:bg-accent${
-                  i === 0 ? " brightness-[1.05]" : ""
-                }`}
+                className="card-interactive rounded-lg border border-border bg-card p-5"
               >
                 <p className="mb-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/50">
                   {group.title}

@@ -38,13 +38,13 @@ export function Hero() {
             </Button>
             <a
               href="#"
-              className="mt-3.5 block text-sm text-muted-foreground/60 transition-colors duration-500 hover:text-muted-foreground/90"
+              className="mt-3.5 block text-sm text-muted-foreground/60 hover:text-muted-foreground/90"
             >
               Watch 3-minute platform overview&ensp;&rarr;
             </a>
             <a
               href="#"
-              className="mt-2 block font-mono text-xs text-muted-foreground/45 transition-colors duration-500 hover:text-muted-foreground/60"
+              className="mt-2 block font-mono text-xs text-muted-foreground/45 hover:text-muted-foreground/60"
             >
               Download capabilities overview (PDF)
             </a>

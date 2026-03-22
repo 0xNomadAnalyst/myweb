@@ -63,7 +63,7 @@ export function Dashboard() {
             </ul>
 
             <hr className="mb-6 border-border/30" />
-            <div className="rounded-md border border-border/50 bg-accent/40 px-5 py-4">
+            <div className="rounded-md border border-border/50 bg-accent/26 px-5 py-4">
               <p className="mb-2.5 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/75">
                 Deployment Readiness
               </p>
@@ -86,19 +86,19 @@ export function Dashboard() {
               className="pointer-events-none absolute -inset-10 -z-10 rounded-3xl"
               style={{
                 background:
-                  "radial-gradient(ellipse at 50% 45%, rgba(56, 130, 200, 0.07) 0%, transparent 65%)",
+                  "radial-gradient(ellipse at 50% 45%, rgba(56, 130, 200, 0.04) 0%, transparent 72%)",
               }}
             />
             <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground/65">
               Operational Views
             </p>
-            <div className="relative grid aspect-[17/10] overflow-hidden rounded-lg bg-[#0c1425] ring-1 ring-inset ring-white/[0.05]">
+            <div className="relative grid aspect-[17/10] overflow-hidden rounded-lg bg-[#0c1425] ring-1 ring-inset ring-white/[0.035]">
               {screenshots.map((img, i) => (
                 <img
                   key={img.src}
                   src={img.src}
                   alt={img.alt}
-                  className="col-start-1 row-start-1 h-full w-full object-contain object-center saturate-[0.95] contrast-[0.97] transition-opacity duration-[1500ms] ease-in-out"
+                  className="col-start-1 row-start-1 h-full w-full object-contain object-center saturate-[0.95] contrast-[0.97] transition-opacity duration-[1100ms] ease-in-out"
                   style={{ opacity: i === active ? 0.92 : 0 }}
                   loading={i === 0 ? "eager" : "lazy"}
                 />
@@ -106,7 +106,7 @@ export function Dashboard() {
 
               {/* Bottom grounding gradient + edge softening */}
               <div className="pointer-events-none col-start-1 row-start-1 relative z-10 h-full w-full">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent from-60% to-black/[0.18]" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent from-60% to-black/[0.12]" />
               </div>
 
               {/* Progress indicators */}
@@ -115,10 +115,10 @@ export function Dashboard() {
                   <button
                     key={i}
                     onClick={() => goTo(i)}
-                    className={`h-1 rounded-full transition-all duration-500 ${
+                    className={`h-1 rounded-full ${
                       i === active
                         ? "w-5 bg-white/40"
-                        : "w-1.5 bg-white/15 hover:bg-white/25"
+                        : "w-1.5 bg-white/15"
                     }`}
                     aria-label={`View screenshot ${i + 1}`}
                   />
@@ -128,7 +128,7 @@ export function Dashboard() {
 
             <a
               href="#"
-              className="mt-4 inline-block font-mono text-[11px] text-cta/50 transition-colors duration-500 hover:text-cta/80"
+              className="mt-4 inline-block font-mono text-[11px] text-cta/48 hover:text-cta/72"
             >
               Explore Operational Dashboard&ensp;&rarr;
             </a>

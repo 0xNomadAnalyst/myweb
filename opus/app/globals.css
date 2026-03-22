@@ -96,20 +96,20 @@
    *   L4  accent           #1E293B  — interactive / hover
    */
   --background: #0B1220;
-  --foreground: #E5E7EB;
+  --foreground: #EDF1F7;
   --surface: #0F172A;
-  --card: #172033;
-  --card-foreground: #E5E7EB;
+  --card: #152033;
+  --card-foreground: #EDF1F7;
   --popover: #172033;
-  --popover-foreground: #E5E7EB;
+  --popover-foreground: #EDF1F7;
   --primary: #FF6B00;
   --primary-foreground: #FFFFFF;
   --secondary: #111C34;
-  --secondary-foreground: #E5E7EB;
+  --secondary-foreground: #EDF1F7;
   --muted: #111C34;
-  --muted-foreground: #9CA3AF;
-  --accent: #1E293B;
-  --accent-foreground: #E5E7EB;
+  --muted-foreground: #93A0B7;
+  --accent: #1A263A;
+  --accent-foreground: #EDF1F7;
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 6%);
   --input: oklch(1 0 0 / 10%);
@@ -121,11 +121,11 @@
   --chart-5: oklch(0.645 0.246 16.439);
   --cta: #f8a94a;
   --sidebar: #0F172A;
-  --sidebar-foreground: #E5E7EB;
+  --sidebar-foreground: #EDF1F7;
   --sidebar-primary: #FF6B00;
   --sidebar-primary-foreground: #FFFFFF;
   --sidebar-accent: #1E293B;
-  --sidebar-accent-foreground: #E5E7EB;
+  --sidebar-accent-foreground: #EDF1F7;
   --sidebar-border: oklch(1 0 0 / 6%);
   --sidebar-ring: #FF6B00;
 }
@@ -148,13 +148,14 @@
 
 @layer components {
   .card-interactive {
-    transition: transform 220ms ease, border-color 220ms ease,
-      background-color 220ms ease;
+    box-shadow: inset 0 1px 0 oklch(1 0 0 / 3%);
+    transition: none;
   }
   .card-interactive:hover {
-    transform: translateY(-1px);
+    transform: none;
   }
   .dark .card-interactive:hover {
-    border-color: oklch(1 0 0 / 14%);
+    border-color: oklch(1 0 0 / 6%);
+    background-color: var(--card);
   }
 }
