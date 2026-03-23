@@ -6,18 +6,17 @@ const credentialGroups = [
     title: "Digital Asset & OnChain Work",
     items: [
       "Operational Risk Infrastructure - Solstice USX Stablecoin (~$300M AUM)",
-      "Token Economy Modelling & Treasury Management Support",
-      "ICO / Utility Token Fundraising Support (~$60M raised)",
+      "Public Token Economy Dashboard - Token LaunchPad with 250k users",
+      "ICO / Utility Token Fundraising Support - (~$60M raised)",
     ],
   },
   {
     title: "Institutional Finance Experience",
     items: [
       "Bloomberg - Analytical Research & Financial Modelling",
-      "M&A Analyst - UK Renewable Energy",
-      "Project Finance Modelling - Utility-Scale Renewables (Chile)",
+      "M&A Analyst - UK Renewable Energy Assets",
+      "Project Finance Modelling - Private Equity Sponsored Renewables (Chile)",
     ],
-    caption: "Private-equity sponsored infrastructure and capital structuring.",
   },
   {
     title: "Professional Credentials",
@@ -32,6 +31,20 @@ const credentialGroups = [
   },
 ];
 
+function splitCredential(item: string) {
+  const divider = " - ";
+  const idx = item.indexOf(divider);
+
+  if (idx === -1) {
+    return { l1: item, l2: null as string | null };
+  }
+
+  return {
+    l1: item.slice(0, idx).trim(),
+    l2: item.slice(idx + divider.length).trim(),
+  };
+}
+
 
 export function Background() {
   return (
@@ -44,15 +57,15 @@ export function Background() {
         <p className="section-label">Analytical Foundations</p>
         <h2 className="section-title">Background & Perspective</h2>
         <p className="section-intro max-w-[62ch]">
-          Strong analytical foundations developed across institutional finance,
+          Strong analytical foundations and experience developed across institutional finance,
           real assets, and digital-asset markets.
         </p>
       </FadeIn>
 
-      <div className="relative mt-9 grid gap-12 lg:grid-cols-[minmax(0,6.15fr)_minmax(0,5.85fr)] lg:gap-10">
+      <div className="relative mt-9 grid gap-12 lg:grid-cols-[minmax(0,6.2fr)_minmax(0,5.8fr)] lg:gap-6 xl:grid-cols-[minmax(0,6.1fr)_minmax(0,5.9fr)]">
         <FadeIn delay={0.09}>
           <div className="space-y-7">
-            <div className="body-measure max-w-[58ch] space-y-4 text-[1rem] leading-[1.72] text-muted-foreground/95">
+            <div className="body-measure max-w-[60ch] space-y-4 text-[1rem] leading-[1.72] text-muted-foreground/95">
               <p>
                 Blockchain systems introduce genuinely new financial structures,
                 requiring the ability to reinterpret legacy instruments,
@@ -75,7 +88,7 @@ export function Background() {
               </p>
             </div>
 
-            <div className="body-measure max-w-[58ch] space-y-4 text-[1rem] leading-[1.72] text-muted-foreground/95">
+            <div className="body-measure max-w-[60ch] space-y-4 text-[1rem] leading-[1.72] text-muted-foreground/95">
               <p>
                 Success depends on treating blockchain networks as observable
                 financial systems - making full use of the public data they expose,
@@ -97,7 +110,7 @@ export function Background() {
               </p>
             </div>
 
-            <blockquote className="body-measure max-w-[58ch] border-l-2 border-cta/45 pl-5 text-[1.03rem] leading-[1.7] text-foreground/88">
+            <blockquote className="body-measure relative max-w-[60ch] pl-[1.125rem] text-[1.02rem] leading-[1.68] text-foreground/86 before:absolute before:bottom-[0.18rem] before:left-0 before:top-[0.18rem] before:w-[1.5px] before:bg-cta/57 before:content-['']">
               My work today applies that accumulated understanding alongside teams
               operating complex digital-asset environments safely and with clarity
               - designing operational intelligence and risk infrastructure for the
@@ -107,7 +120,7 @@ export function Background() {
         </FadeIn>
 
         <FadeIn delay={0.18}>
-          <div className="relative overflow-hidden rounded-xl border border-border-strong/72 bg-card/48 shadow-[0_10px_24px_rgba(0,0,0,0.18)] lg:mt-1">
+          <div className="relative overflow-hidden rounded-xl border border-border-strong/66 bg-card/48 shadow-[0_10px_24px_rgba(0,0,0,0.18)] lg:mt-1">
             <div
               aria-hidden
               className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"
@@ -117,16 +130,16 @@ export function Background() {
               className="pointer-events-none absolute inset-y-0 left-0 w-[2px] bg-gradient-to-b from-transparent via-cta/55 to-transparent"
             />
 
-            <div className="divide-y divide-border/45">
+            <div>
               {credentialGroups.map((group) => (
                 <div
                   key={group.title}
-                  className="grid gap-3 px-6 py-5 md:grid-cols-[132px_minmax(0,1fr)] md:gap-6 md:px-7 md:py-5"
+                  className="relative grid gap-3 py-5 pl-6 pr-2 before:pointer-events-none before:absolute before:inset-x-4 before:top-0 before:h-px before:[background:linear-gradient(90deg,transparent_0%,transparent_14%,rgba(255,255,255,0.018)_22%,rgba(255,255,255,0.03)_30%,rgba(255,255,255,0.04)_38%,rgba(255,255,255,0.05)_45%,rgba(255,255,255,0.05)_55%,rgba(255,255,255,0.04)_62%,rgba(255,255,255,0.03)_70%,rgba(255,255,255,0.018)_78%,transparent_86%,transparent_100%)] first:before:hidden md:grid-cols-[138px_minmax(0,1fr)] md:gap-6 md:py-5 md:pl-7 md:pr-3 md:before:inset-x-6"
                 >
                   <div className="flex items-start gap-2.5 pt-0.5">
                     <span
                       aria-hidden
-                      className="mt-[4px] h-[7px] w-[7px] flex-none rounded-full bg-cta/70"
+                      className="mt-[5px] h-[6px] w-[6px] flex-none rounded-full bg-cta/58"
                     />
                     <p className="font-mono text-[11.5px] uppercase tracking-[0.14em] leading-snug text-foreground/92">
                       {group.title}
@@ -134,19 +147,26 @@ export function Background() {
                   </div>
 
                   <div>
-                    <ul className="space-y-2">
-                      {group.items.map((item) => (
-                        <li
-                          key={item}
-                          className="relative pl-3.5 text-[0.99rem] leading-[1.45] text-foreground/86"
-                        >
-                          <span
-                            aria-hidden
-                            className="absolute left-0 top-[0.61rem] h-[4px] w-[4px] rounded-full bg-muted-foreground/58"
-                          />
-                          {item}
-                        </li>
-                      ))}
+                    <ul className="space-y-3">
+                      {group.items.map((item) => {
+                        const split = splitCredential(item);
+                        return (
+                          <li key={item} className="relative pl-3.5">
+                            <span
+                              aria-hidden
+                              className="absolute left-0 top-[0.56rem] h-[3px] w-[3px] rounded-full bg-muted-foreground/46"
+                            />
+                            <p className="text-[0.97rem] leading-[1.28] text-foreground/88">
+                              {split.l1}
+                            </p>
+                            {split.l2 && (
+                              <p className="mt-1 text-[0.875rem] leading-[1.3] text-foreground/82">
+                                {split.l2}
+                              </p>
+                            )}
+                          </li>
+                        );
+                      })}
                     </ul>
                     {group.caption && (
                       <p className="mt-3 text-[0.875rem] leading-[1.55] text-muted-foreground/82">
