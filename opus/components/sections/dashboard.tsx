@@ -7,11 +7,11 @@ import { FadeIn } from "@/components/shared/fade-in";
 import { dashboardScreenshots } from "@/lib/generated/dashboard-screenshots.generated";
 
 const capabilities = [
-  "Liquidity and market structure visibility across venues",
-  "Execution quality and price-impact monitoring",
-  "Protocol and lending risk surveillance",
-  "Stress propagation and scenario analysis",
-  "Operational decision support for trading and risk teams",
+  "Unified monitoring across DEX, lending, and issuer contracts",
+  "Normalized metrics across protocol domains",
+  "Historical event storage and replay",
+  "Cross-protocol risk surfaces",
+  "Decision-support outputs for live operations",
 ];
 
 const fallbackScreenshots = [
@@ -51,20 +51,20 @@ export function Dashboard() {
       <FadeIn>
         <div className="grid items-start gap-10 md:grid-cols-[2fr_3fr] md:gap-10">
           {/* Capability positioning */}
-          <div className="md:pr-6">
+          <div className="md:pl-1 md:pr-6">
             <p className="mb-3 font-mono text-xs uppercase tracking-wider text-foreground/90">
-              Operational Intelligence Platform
+              Core Intelligence Platform
             </p>
             <p className="body-measure mb-8 text-[1.02rem] leading-relaxed text-muted-foreground/96">
-              I design operational intelligence environments providing
-              continuous visibility into liquidity, execution quality, and
-              protocol risk – structured for real-time decision support.
+              I design operational intelligence environments that turn complex
+              protocol activity into visibility across liquidity, 
+              execution quality, and risk – enabling realtime decision support.
             </p>
 
             <p className="section-label mb-3 text-muted-foreground/90">
-              Core Capabilities
+              Key Capabilities
             </p>
-            <ul className="mb-10 space-y-2">
+            <ul className="mb-7 space-y-2">
               {capabilities.map((item) => (
                 <li
                   key={item}
@@ -94,9 +94,9 @@ export function Dashboard() {
           </div>
 
           {/* Dashboard showcase – fade carousel */}
-          <div className="md:-ml-3 md:pr-5">
+          <div className="md:-ml-3 md:pr-2">
             <p className="section-label mb-6 text-muted-foreground/90">
-              Operational Views
+              Selected Platform Views
             </p>
             <div className="card-interactive overflow-hidden rounded-xl border border-border/55 bg-[#0f192d] bg-none shadow-[0_0_0_1px_rgba(128,162,198,0.16),0_0_22px_1px_rgba(82,114,150,0.2),0_12px_30px_rgba(1,8,20,0.34)] hover:bg-accent/35 hover:shadow-[0_0_0_1px_rgba(143,178,219,0.28),0_0_30px_4px_rgba(88,132,186,0.26),0_18px_36px_rgba(1,8,20,0.42)]">
               <div className="relative grid aspect-[17/10] overflow-hidden bg-[#0f192d]">
