@@ -25,24 +25,18 @@ export function Engagement() {
       <div className="grid gap-10 lg:grid-cols-[minmax(0,6fr)_minmax(0,6fr)] lg:gap-14">
         <FadeIn>
           <div className="max-w-xl">
-            <p className="section-label">Delivery Structure</p>
+            <p className="section-label">Working Together</p>
             <h2 className="section-title">
-              Ways of Working
+              What Engagement Looks Like
             </h2>
-            <p className="section-intro max-w-[56ch]">
-              Engagements adapt to the operational problem and internal team
-              structure.
+            <p className="section-intro mt-5 max-w-[56ch]">
+              A compact, principal-led model designed to stay close to operating realities and avoid fragmentation between analysis, implementation, and handover.
             </p>
             <p className="mt-5 text-[0.98rem] leading-relaxed text-muted-foreground/92">
-              The model stays compact by design: close to stakeholder
-              requirements, with no loss in translation between problem
-              framing, analysis, and implementation, and faster iteration as
-              priorities evolve.
+              Engagements are shaped around the specific operational problem, internal team structure, and level of support required. Some begin with diagnostic analysis, policy review, or strategic advisory; others extend into monitoring design, implementation, or refinement of an existing system.
             </p>
-            <p className="mt-4 text-[0.98rem] leading-relaxed text-muted-foreground/90">
-              Work typically begins with problem framing and decision
-              priorities, then moves into analytical definition and
-              implementation without a handoff between stages.
+            <p className="mt-5 text-[0.98rem] leading-relaxed text-muted-foreground/90">
+              The aim is to keep analytical definition, technical execution, and operational context aligned throughout – so useful work happens quickly and internal teams can take ownership without unnecessary delivery layers.
             </p>
           </div>
         </FadeIn>
