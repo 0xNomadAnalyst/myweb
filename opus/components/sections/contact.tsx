@@ -11,15 +11,13 @@ export function Contact() {
     <SectionShell id="contact" variant="open">
       <FadeIn>
         <div className="max-w-lg">
-          <p className="section-label">Availability & Fit</p>
-          <h2 className="section-title">Availability</h2>
+          <p className="section-label">Engagements & Fit</p>
+          <h2 className="section-title">Start a Conversation</h2>
           <p className="section-intro text-[1.12rem] leading-8">
-            Selective engagements where financial systems require analytical
-            clarity and operational correctness.
+            Selective work with teams operating financial systems where visibility, operational clarity, or technical rigor matter.
           </p>
           <p className="mt-1 text-[1.01rem] font-light text-muted-foreground/88">
-            Work typically spans risk analysis, system design, and
-            implementation.
+            Useful starting points include monitoring requirements, market structure concerns, protocol risk questions, or platform and infrastructure buildout.
           </p>
           <form
             className="mt-8 space-y-4"
@@ -36,7 +34,7 @@ export function Contact() {
             />
             <Textarea
               className="text-[1.03rem] md:text-[1.03rem]"
-              placeholder="Describe your environment or infrastructure requirement"
+              placeholder="Describe the system, problem, or infrastructure requirement"
               rows={5}
             />
             <Button className="text-[1.03rem] md:text-[1.03rem]" variant="cta" type="submit">
