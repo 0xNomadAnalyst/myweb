@@ -14,7 +14,7 @@ const principles = [
       "Analysis designed for decisions, monitoring, and control - not slideware.",
   },
   {
-    title: "End-to-End Ownership",
+    title: "End-to-End Responsibility",
     description: "From problem definition through deployment and handover.",
   },
 ];
@@ -23,17 +23,17 @@ export function Architecture() {
   return (
     <SectionShell id="approach">
       <FadeIn>
-        <p className="section-label">How The Work Operates</p>
+        <p className="section-label">Working Principles</p>
         <h2 className="section-title">
-          Analytical Approach
+          Analytical Discipline in Practice
         </h2>
-        <p className="section-intro text-[1.08rem]">
-          Operational systems work best when analytical understanding and
-          implementation are developed together. I translate market behaviour
-          into measurable structure - so teams can observe, test, and operate
-          under real conditions. The aim is decision-grade visibility, not
-          reporting.
-        </p>
+        <div className="mt-3 grid gap-6 md:grid-cols-1">
+          <p className="text-[1.08rem] leading-7 text-muted-foreground/96">
+            My approach combines empirical discipline, operational flexibility, 
+            and direct implementation responsibility – allowing complex problems 
+            to be handled rigorously, adapted to the client's operating context, and carried through without loss of translation.
+          </p>
+        </div>
       </FadeIn>
 
       <div className="mt-10 grid gap-4 md:grid-cols-3">
@@ -56,15 +56,14 @@ export function Architecture() {
           <div>
             <hr className="border-border-strong" />
             <h3 className="mt-7 text-lg font-medium tracking-tight text-foreground/96">
-              Protocol-Level Resolution
+              Protocol-Level Understanding
             </h3>
             <p className="mt-3 text-[0.98rem] leading-relaxed text-muted-foreground/96">
-              Onchain financial systems and data must be understood as operating
-              structures - mapped through protocol mechanics, capital flows, and
-              system dependencies.
+              Onchain systems must be understood at protocol level, with data ingestion 
+              and analytics engineered to reflect underlying mechanics, capital flows, and edge cases accurately.
             </p>
             <p className="mt-6 font-mono text-[0.88rem] tracking-wide text-muted-foreground/88">
-              Operational systems are designed, not assembled.
+              That precision makes analysis accurate and monitoring reliable.
             </p>
           </div>
 
