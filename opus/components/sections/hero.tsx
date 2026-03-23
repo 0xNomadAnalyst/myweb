@@ -50,7 +50,7 @@ export function Hero() {
             I work with teams facing complex financial environments - combining analytical judgement and technical implementation as a single principal practitioner.
           </p>
           <p className="mt-3 max-w-[80ch] text-[0.98rem] leading-relaxed text-muted-foreground/70">
-            Independent practice spanning financial risk analysis, empirical modelling, and realtime infrastructure across digital-asset markets - from problem definition to deployment.
+            This independent practice spans financial risk analysis, empirical modelling, and realtime infrastructure across digital-asset markets - from problem definition to deployment.
           </p>
 
           <hr className="my-7 border-muted-foreground/24" />
@@ -70,7 +70,7 @@ export function Hero() {
               onClick={() => setIsVideoOpen(true)}
               className="mt-3.5 block text-sm text-muted-foreground/60 transition-colors duration-500 hover:text-muted-foreground/90"
             >
-              Watch platform overview video&ensp;&rarr;
+              Watch dashboard introduction video&ensp;&rarr;
             </button>
             <a
               href="/downloads/RMcKinley-FinancialSystemsAnalyst-Capabilities.pdf#view=FitH&page=1"
