@@ -5,7 +5,7 @@ const credentialGroups = [
   {
     title: "Digital Asset & Token Economy Work",
     items: [
-      "Operational Risk Infrastructure – Solstice Stablecoin (~$300M AUM)",
+      "Operational Risk Infrastructure - Solstice Stablecoin (~$300M AUM)",
       "Token Economy Modelling & Treasury Management Support",
       "ICO / Utility Token Fundraising Support (~$60M raised)",
     ],
@@ -13,24 +13,21 @@ const credentialGroups = [
   {
     title: "Financial & Investment Experience",
     items: [
-      "Bloomberg – Analytical Research & Financial Modelling",
-      "M&A Analyst – UK Renewable Energy",
-      "Project Finance Modelling – Utility-Scale Renewables (Chile)",
+      "Bloomberg - Analytical Research & Financial Modelling",
+      "M&A Analyst - UK Renewable Energy",
+      "Project Finance Modelling - Utility-Scale Renewables (Chile)",
     ],
     caption: "Private-equity sponsored infrastructure and capital structuring.",
   },
   {
     title: "Professional Certifications",
-    items: [
-      "CFA Charterholder",
-      "Financial Risk Manager (FRM)",
-    ],
+    items: ["CFA Charterholder", "Financial Risk Manager (FRM)"],
   },
   {
     title: "Education",
     items: [
-      "MSc Economic Policy – University College London",
-      "BSc Economics & Philosophy – University of Bristol (First Class Honours)",
+      "MSc Economic Policy - University College London",
+      "BSc Economics & Philosophy - University of Bristol (First Class Honours)",
     ],
     caption: "Economic training applied to market structure and incentive design.",
   },
@@ -38,70 +35,125 @@ const credentialGroups = [
 
 export function Background() {
   return (
-    <SectionShell id="background">
+    <SectionShell id="background" className="relative overflow-hidden">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 hidden md:block [background:radial-gradient(880px_360px_at_83%_14%,rgba(128,162,198,0.13),transparent_62%),linear-gradient(180deg,transparent_0%,rgba(255,255,255,0.02)_48%,transparent_100%)]"
+      />
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-y-12 right-[44%] hidden w-px bg-gradient-to-b from-transparent via-border-soft to-transparent lg:block"
+      />
+
       <FadeIn>
         <p className="section-label">Analytical Foundations</p>
-        <h2 className="section-title">
-          Background & Perspective
-        </h2>
+        <h2 className="section-title">Background & Perspective</h2>
         <p className="section-intro max-w-3xl">
-          Strong analytical foundations developed across institutional finance, real
-          assets, and digital-asset markets.
+          Strong analytical foundations developed across institutional finance,
+          real assets, and digital-asset markets.
         </p>
       </FadeIn>
-      <div className="mt-10 grid gap-12 lg:grid-cols-2 lg:gap-16">
+
+      <div className="relative mt-10 grid gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-16">
         <FadeIn delay={0.09}>
-          <div className="body-measure space-y-4 text-[0.98rem] leading-relaxed text-muted-foreground/96">
-            <p>
-              Blockchain systems introduce genuinely new financial structures, requiring the ability to reinterpret legacy instruments, institutions and infrastructure, while cutting through narrative, ideology, and conflicting incentives that often obscure economic reality.
-            </p>
-            <p>
-              A strong foundation in traditional finance and economic reasoning provides the grounding to do this clearly, while remaining open to the structural possibilities that programmable onchain systems genuinely create.
-            </p>
-            <p>
-              Success hinges on treating blockchain networks as observable financial systems – making full use of the public data they expose, although often only accessible with substantial analytical and infrastructure development.
-            </p>
-            <p>
-              My career has consistently centred on enabling data-driven decision-making under uncertainty – building analytical frameworks that translate complex facts into insights and decision-guidance relied upon by senior stakeholders.
-            </p>
-            <p>
-              This experience was developed in institutional finance roles and later extended through independent consulting, supporting capital allocation, operational planning, and strategic decisions in environments carrying material financial risk.
-            </p>
-            <p>
-              Early exposure to digital-asset fundraising cycles highlighted the structural fragility of crypto financial systems, often lacking operational and risk visibilities. This prompted a deliberate shift toward empirical analysis and formal risk discipline.
-            </p>
-            <p>
-              My work today centres on applying this accumulated understanding alongside teams committed to operating complex digital-asset environments safely and with clarity – designing operational intelligence and risk infrastructure for the next generation of financial systems.
-            </p>
+          <div className="space-y-7">
+            <div className="body-measure space-y-4 text-[0.98rem] leading-relaxed text-muted-foreground/96">
+              <p>
+                Blockchain systems introduce genuinely new financial structures,
+                requiring the ability to reinterpret legacy instruments,
+                institutions and infrastructure, while cutting through narrative,
+                ideology, and conflicting incentives that often obscure economic
+                reality.
+              </p>
+              <p>
+                A strong foundation in traditional finance and economic reasoning
+                provides the grounding to do this clearly, while remaining open
+                to the structural possibilities that programmable onchain systems
+                genuinely create.
+              </p>
+            </div>
+
+            <div className="body-measure space-y-4 text-[0.98rem] leading-relaxed text-muted-foreground/96">
+              <p>
+                Success hinges on treating blockchain networks as observable
+                financial systems - making full use of the public data they
+                expose, although often only accessible with substantial
+                analytical and infrastructure development.
+              </p>
+              <p>
+                My career has consistently centred on enabling data-driven
+                decision-making under uncertainty - building analytical
+                frameworks that translate complex facts into insights and
+                decision guidance relied upon by senior stakeholders.
+              </p>
+              <p>
+                This experience was developed in institutional finance roles and
+                later extended through independent consulting, supporting capital
+                allocation, operational planning, and strategic decisions in
+                environments carrying material financial risk.
+              </p>
+              <p>
+                Early exposure to digital-asset fundraising cycles highlighted
+                the structural fragility of crypto financial systems, often
+                lacking operational and risk visibilities. This prompted a
+                deliberate shift toward empirical analysis and formal risk
+                discipline.
+              </p>
+            </div>
+
+            <blockquote className="body-measure border-l border-cta/45 pl-4 text-[1.01rem] leading-relaxed text-foreground/92">
+              My work today applies this accumulated understanding alongside
+              teams committed to operating complex digital-asset environments
+              safely and with clarity.
+            </blockquote>
           </div>
         </FadeIn>
+
         <FadeIn delay={0.18}>
-          <div className="space-y-4">
-            {credentialGroups.map((group) => (
-              <div
-                key={group.title}
-                className="card-interactive rounded-lg border border-border-strong bg-card p-5 hover:bg-accent"
-              >
-                <p className="section-label mb-3">
-                  {group.title}
-                </p>
-                <ul className="space-y-1.5">
-                  {group.items.map((item) => (
-                    <li
-                      key={item}
-                      className="text-[0.98rem] leading-snug text-foreground/96"
-                    >
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                {group.caption && (
-                  <p className="mt-2.5 text-[0.88rem] text-muted-foreground/88">
-                    {group.caption}
+          <div className="relative overflow-hidden rounded-xl border border-border-strong/90 bg-card/52 px-5 py-5 shadow-[0_10px_26px_rgba(0,0,0,0.2)] md:px-7 md:py-6">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-y-0 left-0 w-[2px] bg-gradient-to-b from-transparent via-cta/55 to-transparent"
+            />
+
+            <div className="space-y-5">
+              {credentialGroups.map((group) => (
+                <div
+                  key={group.title}
+                  className="grid gap-3 border-t border-border/70 pt-5 first:border-t-0 first:pt-0 md:grid-cols-[minmax(0,3fr)_minmax(0,7fr)] md:gap-6"
+                >
+                  <p className="section-label mb-0 text-foreground/88">
+                    {group.title}
                   </p>
-                )}
-              </div>
-            ))}
+
+                  <div>
+                    <ul className="space-y-2">
+                      {group.items.map((item) => (
+                        <li
+                          key={item}
+                          className="relative pl-3.5 text-[0.98rem] leading-snug text-foreground/96"
+                        >
+                          <span
+                            aria-hidden
+                            className="absolute left-0 top-[0.56rem] h-1 w-1 rounded-full bg-muted-foreground/72"
+                          />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    {group.caption && (
+                      <p className="mt-3 text-[0.88rem] leading-relaxed text-muted-foreground/88">
+                        {group.caption}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </FadeIn>
       </div>
