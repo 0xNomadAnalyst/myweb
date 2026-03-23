@@ -22,6 +22,7 @@ export function Contact() {
           <form
             className="mt-8 space-y-4"
             onSubmit={(e) => e.preventDefault()}
+            suppressHydrationWarning
           >
             <Input
               className="h-10 text-[1.03rem] md:text-[1.03rem]"
