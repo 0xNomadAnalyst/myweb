@@ -7,11 +7,11 @@ export type DashboardScreenshot = {
 };
 
 export const dashboardScreenshots: DashboardScreenshot[] = [
-  { src: "/dashboard/carousel/ecosystem.webp", alt: "ecosystem dashboard view" },
-  { src: "/dashboard/carousel/exponent-yields.webp", alt: "exponent yields dashboard view" },
-  { src: "/dashboard/carousel/kam-book_stress.webp", alt: "kam book stress dashboard view" },
-  { src: "/dashboard/carousel/kamino-reserves.webp", alt: "kamino reserves dashboard view" },
-  { src: "/dashboard/carousel/risk-dexdownside.webp", alt: "risk dexdownside dashboard view" },
-  { src: "/dashboard/carousel/swap-cards.webp", alt: "swap cards dashboard view" },
-  { src: "/dashboard/carousel/swap-dist.webp", alt: "swap dist dashboard view" },
+  { src: "/dashboard/carousel/01_ecosystem.webp", alt: "01 ecosystem dashboard view" },
+  { src: "/dashboard/carousel/01_kam-book_stress-v2.webp", alt: "01 kam book stress v2 dashboard view" },
+  { src: "/dashboard/carousel/01_swap-dist-v2.webp", alt: "01 swap dist v2 dashboard view" },
+  { src: "/dashboard/carousel/03_exponent-yields.webp", alt: "03 exponent yields dashboard view" },
+  { src: "/dashboard/carousel/04_kamino-reserves-v2.webp", alt: "04 kamino reserves v2 dashboard view" },
+  { src: "/dashboard/carousel/05_swap-cards.webp", alt: "05 swap cards dashboard view" },
+  { src: "/dashboard/carousel/06_risk-dexdownside.webp", alt: "06 risk dexdownside dashboard view" },
 ];
