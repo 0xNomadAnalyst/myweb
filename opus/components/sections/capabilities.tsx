@@ -15,7 +15,7 @@ const domains = [
   {
     title: "Cross-Protocol Risk & Exposure Monitoring",
     description:
-      "Monitor dependencies across liquidity, lending, and yield venues through normalized metrics and unified risk surfaces.",
+      "Monitor dependencies across liquidity, lending, and yield venues through normalized metrics and unified risk views.",
   },
   {
     title: "Incident Replay & Root-Cause Analysis",
@@ -39,13 +39,12 @@ export function Capabilities() {
   return (
     <SectionShell id="capabilities" variant="open">
       <FadeIn>
-        <p className="section-label">Where Visibility Breaks</p>
+        <p className="section-label">Key Operational Domains</p>
         <h2 className="section-title">
-          Operational Problem Domains
+          Where Visibility Matters Most
         </h2>
-        <p className="section-intro max-w-[72ch]">
-          Where visibility gaps, accountability questions, and system-level
-          risk matter most.
+        <p className="section-intro max-w-none">
+          The operational domains where better monitoring, accountability, and system-level understanding have the greatest impact.
         </p>
       </FadeIn>
       <div className="mt-8 grid gap-4 md:grid-cols-12">
