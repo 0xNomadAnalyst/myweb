@@ -111,7 +111,7 @@ export function Hero() {
             <button
               type="button"
               onClick={openVideo}
-              className="mt-3.5 flex items-center gap-2 text-sm text-muted-foreground/60 transition-colors duration-500 hover:text-muted-foreground/90"
+              className="mt-3.5 flex items-center gap-2 text-sm text-muted-foreground/60 transition-colors duration-700 ease-out hover:text-foreground/80"
             >
               Watch dashboard introduction video
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3.01 3.01 0 0 0-2.12-2.13C19.54 3.6 12 3.6 12 3.6s-7.54 0-9.38.47A3.01 3.01 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.01 3.01 0 0 0 2.12 2.13C4.46 20.4 12 20.4 12 20.4s7.54 0 9.38-.47a3.01 3.01 0 0 0 2.12-2.13A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8zM9.75 15.52V8.48L15.86 12l-6.11 3.52z"/></svg>
@@ -121,7 +121,7 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               type="application/pdf"
-              className="mt-2 block font-mono text-xs text-muted-foreground/45 transition-colors duration-500 hover:text-muted-foreground/60"
+              className="mt-2 block font-mono text-xs text-muted-foreground/45 transition-colors duration-700 ease-out hover:text-muted-foreground/67"
             >
               View advisory capabilities deck (PDF)
             </a>
