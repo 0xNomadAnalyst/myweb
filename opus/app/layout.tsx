@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Financial Systems Infrastructure & Advisory",
+  title: "Financial Systems Advisory",
   description:
     "Realtime financial infrastructure for environments where operational visibility is non-negotiable.",
   manifest: "/site.webmanifest",
