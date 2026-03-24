@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { SectionShell } from "@/components/shared/section-shell";
 import { FadeIn } from "@/components/shared/fade-in";
@@ -14,16 +14,20 @@ const domains = [
 ];
 
 const COVER_VIDEO_ID = "0wgPh78PwAs";
-const COVER_VIDEO_EMBED_URL = `https://www.youtube-nocookie.com/embed/${COVER_VIDEO_ID}?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&vq=hd1080`;
+const COVER_VIDEO_EMBED_URL = `https://www.youtube-nocookie.com/embed/${COVER_VIDEO_ID}?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&vq=hd1080&enablejsapi=1`;
+const COVER_VIDEO_THUMB = `/video-posters/${COVER_VIDEO_ID}.png`;
+const COVER_VIDEO_THUMB_HQ = `https://img.youtube.com/vi/${COVER_VIDEO_ID}/hqdefault.jpg`;
 
 export function Hero() {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
 
   useEffect(() => {
     if (!isVideoOpen) return;
 
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setIsVideoOpen(false);
+      if (event.key === "Escape") closeVideo();
     };
 
     const originalOverflow = document.body.style.overflow;
@@ -35,6 +39,45 @@ export function Hero() {
       document.removeEventListener("keydown", onKeyDown);
     };
   }, [isVideoOpen]);
+
+  useEffect(() => {
+    if (!isVideoOpen) return;
+
+    const onMessage = (event: MessageEvent) => {
+      if (event.origin !== "https://www.youtube-nocookie.com") return;
+      try {
+        const data = JSON.parse(event.data as string);
+        if (data.event === "onReady") {
+          iframeRef.current?.contentWindow?.postMessage(
+            JSON.stringify({ event: "command", func: "addEventListener", args: ["onStateChange"] }),
+            "https://www.youtube-nocookie.com"
+          );
+        } else if (data.event === "onStateChange" && data.info === 2) {
+          if (iframeRef.current) iframeRef.current.src = "about:blank";
+          setIsPlaying(false);
+        }
+      } catch {}
+    };
+
+    window.addEventListener("message", onMessage);
+    return () => window.removeEventListener("message", onMessage);
+  }, [isVideoOpen]);
+
+  function openVideo() {
+    setIsPlaying(false);
+    setIsVideoOpen(true);
+  }
+
+  function closeVideo() {
+    if (iframeRef.current) iframeRef.current.src = "about:blank";
+    setIsVideoOpen(false);
+    setIsPlaying(false);
+  }
+
+  function handlePlay() {
+    if (iframeRef.current) iframeRef.current.src = COVER_VIDEO_EMBED_URL;
+    setIsPlaying(true);
+  }
 
   return (
     <SectionShell variant="hero">
@@ -67,7 +110,7 @@ export function Hero() {
             </Button>
             <button
               type="button"
-              onClick={() => setIsVideoOpen(true)}
+              onClick={openVideo}
               className="mt-3.5 flex items-center gap-2 text-sm text-muted-foreground/60 transition-colors duration-500 hover:text-muted-foreground/90"
             >
               Watch dashboard introduction video
@@ -109,7 +152,7 @@ export function Hero() {
         <div
           className="fixed inset-0 z-[1200] flex items-center justify-center bg-[rgba(7,12,23,0.84)] px-4"
           role="presentation"
-          onClick={() => setIsVideoOpen(false)}
+          onClick={closeVideo}
         >
           <section
             className="relative w-full max-w-[960px] overflow-hidden rounded-xl border-[0.5px] border-cta/58 bg-black shadow-[0_0_0_0.75px_rgba(248,169,74,0.32),0_0_17px_rgba(248,169,74,0.25),0_0_37px_rgba(248,169,74,0.14),0_12px_48px_rgba(0,0,0,0.62)]"
@@ -121,17 +164,40 @@ export function Hero() {
             <button
               type="button"
               className="absolute right-3 top-3 z-10 rounded-md border border-white/20 bg-black/45 px-2 py-1 text-xs text-white/88 transition-colors duration-300 hover:bg-black/72 hover:text-white"
-              onClick={() => setIsVideoOpen(false)}
+              onClick={closeVideo}
               aria-label="Close video"
             >
               Close
             </button>
             <div className="relative aspect-video w-full">
+              {!isPlaying && (
+                <button
+                  type="button"
+                  className="absolute inset-0 z-10 flex h-full w-full cursor-pointer items-center justify-center"
+                  aria-label="Play video"
+                  onClick={handlePlay}
+                >
+                  <img
+                    src={COVER_VIDEO_THUMB}
+                    onError={(e) => { (e.target as HTMLImageElement).src = COVER_VIDEO_THUMB_HQ; }}
+                    alt=""
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                  <svg
+                    viewBox="0 0 68 48"
+                    width="68"
+                    height="48"
+                    className="relative z-10 opacity-85 transition-[opacity,transform] duration-150 hover:scale-[1.08] hover:opacity-100"
+                  >
+                    <path d="M66.5 7.4C65.7 4.4 63.3 2 60.3 1.2 55 0 34 0 34 0S13 0 7.7 1.2C4.7 2 2.3 4.4 1.5 7.4 0 12.8 0 24 0 24s0 11.2 1.5 16.6c.8 3 3.2 5.4 6.2 6.2C13 48 34 48 34 48s21 0 26.3-1.2c3-.8 5.4-3.2 6.2-6.2C68 35.2 68 24 68 24s0-11.2-1.5-16.6z" fill="rgba(0,0,0,0.55)" />
+                    <path d="M45 24 27 14v20z" fill="#fff" />
+                  </svg>
+                </button>
+              )}
               <iframe
+                ref={iframeRef}
                 className="h-full w-full"
-                src={COVER_VIDEO_EMBED_URL}
                 title="3-minute platform overview"
-                loading="lazy"
                 allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen

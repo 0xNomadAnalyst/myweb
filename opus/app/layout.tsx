@@ -44,6 +44,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <link rel="preload" as="image" href="/video-posters/0wgPh78PwAs.png" />
+      </head>
       <body className={`${inter.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>

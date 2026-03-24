@@ -10,7 +10,7 @@ export function Contact() {
   return (
     <SectionShell id="contact" variant="open">
       <FadeIn>
-        <div className="max-w-lg">
+        <div className="max-w-lg" suppressHydrationWarning>
           <p className="section-label">Engagements & Fit</p>
           <h2 className="section-title">Start a Conversation</h2>
           <p className="section-intro text-[1.12rem] leading-8">
