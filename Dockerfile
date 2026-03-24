@@ -1,6 +1,10 @@
 FROM node:20-alpine AS builder
 WORKDIR /app
 
+# prebuild runs `python scripts/generate-favicons.py` (Pillow); Alpine image has no Python by default
+RUN apk add --no-cache python3 py3-pillow \
+  && ln -sf python3 /usr/bin/python
+
 COPY opus/package.json opus/package-lock.json ./
 RUN npm ci
 
