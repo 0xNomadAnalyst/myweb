@@ -1,7 +1,13 @@
 import { SectionShell } from "@/components/shared/section-shell";
 import { FadeIn } from "@/components/shared/fade-in";
 
-const credentialGroups = [
+type CredentialGroup = {
+  title: string;
+  items: string[];
+  caption?: string;
+};
+
+const credentialGroups: CredentialGroup[] = [
   {
     title: "Digital Asset & OnChain Work",
     items: [
