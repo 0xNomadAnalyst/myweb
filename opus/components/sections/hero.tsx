@@ -150,12 +150,12 @@ export function Hero() {
 
       {isVideoOpen && (
         <div
-          className="fixed inset-0 z-[1200] flex items-center justify-center bg-[rgba(7,12,23,0.84)] px-4"
+          className="fixed inset-0 z-[1200] flex items-center justify-center bg-[rgba(7,12,23,0.84)] px-4 animate-in fade-in duration-200"
           role="presentation"
           onClick={closeVideo}
         >
           <section
-            className="relative w-full max-w-[960px] overflow-hidden rounded-xl border-[0.5px] border-cta/58 bg-black shadow-[0_0_0_0.75px_rgba(248,169,74,0.32),0_0_17px_rgba(248,169,74,0.25),0_0_37px_rgba(248,169,74,0.14),0_12px_48px_rgba(0,0,0,0.62)]"
+            className="relative w-full max-w-[960px] overflow-hidden rounded-xl border-[0.5px] border-cta/58 bg-black shadow-[0_0_0_0.75px_rgba(248,169,74,0.32),0_0_17px_rgba(248,169,74,0.25),0_0_37px_rgba(248,169,74,0.14),0_12px_48px_rgba(0,0,0,0.62)] animate-in fade-in zoom-in-95 duration-250"
             role="dialog"
             aria-modal="true"
             aria-label="Platform overview video"
