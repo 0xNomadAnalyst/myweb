@@ -106,7 +106,7 @@ export function Hero() {
 
           <div className="mt-8">
             <Button variant="cta" asChild>
-              <a href="#system">Explore Operational Dashboard</a>
+              <a href="https://demo.rmckinley.net">Explore Operational Dashboard</a>
             </Button>
             <button
               type="button"

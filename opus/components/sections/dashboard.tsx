@@ -133,7 +133,7 @@ export function Dashboard() {
             </div>
 
             <a
-              href="#"
+              href="https://demo.rmckinley.net"
               className="mt-[1.375rem] inline-block font-mono text-[12px] text-cta/91 transition-[color,filter] duration-600 ease-in-out hover:text-cta/93 hover:drop-shadow-[0_0_1px_rgba(248,169,74,0.9)] hover:[filter:drop-shadow(0_0_1px_rgba(248,169,74,0.9))_drop-shadow(0_0_3px_rgba(248,169,74,0.3))]"
             >
               Explore Operational Dashboard&ensp;&rarr;
