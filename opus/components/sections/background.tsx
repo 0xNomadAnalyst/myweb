@@ -56,13 +56,12 @@ export function Background() {
       <FadeIn>
         <p className="section-label">Analytical Foundations</p>
         <h2 className="section-title">Background & Perspective</h2>
-        <p className="section-intro max-w-[62ch]">
-          Strong analytical foundations and experience developed across institutional finance,
-          real assets, and digital-asset markets.
+        <p className="section-intro max-w-[75ch] text-foreground/92 lg:max-w-none lg:whitespace-nowrap">
+          Judgment shaped across institutional finance, real assets, and digital-asset markets.
         </p>
       </FadeIn>
 
-      <div className="relative mt-9 grid gap-12 lg:grid-cols-[minmax(0,6.2fr)_minmax(0,5.8fr)] lg:gap-6 xl:grid-cols-[minmax(0,6.1fr)_minmax(0,5.9fr)]">
+      <div className="relative mt-[2.125rem] grid gap-12 lg:grid-cols-[minmax(0,6.2fr)_minmax(0,5.8fr)] lg:gap-6 xl:grid-cols-[minmax(0,6.1fr)_minmax(0,5.9fr)]">
         <FadeIn delay={0.09}>
           <div className="space-y-7">
             <div className="body-measure max-w-[60ch] space-y-4 text-[1rem] leading-[1.72] text-muted-foreground/95">
@@ -70,37 +69,44 @@ export function Background() {
                 Blockchain systems introduce genuinely new financial structures,
                 requiring the ability to reinterpret legacy instruments,
                 institutions, and infrastructure while cutting through narrative,
-                ideology, and conflicting incentives that often obscure economic
-                reality.
+                ideology, and conflicting incentives that obscure economic reality.
               </p>
               <p>
                 A strong foundation in traditional finance and economic reasoning
                 provides the grounding to do this clearly, while remaining open to
-                the structural possibilities that programmable onchain systems
-                create.
+                the structural possibilities programmable onchain systems create.
               </p>
             </div>
 
             <div className="flex items-center gap-3.5 py-0.5 pt-1">
               <span className="h-px w-8 flex-none bg-cta/58" />
               <p className="font-mono text-[11px] uppercase tracking-[0.16em] text-cta/78">
-                Applied Perspective
+                Disciplined Reasoning
+                {/* Alternatives:
+                    Empirical Analysis
+                    Grounded Analysis
+                    Disciplined Analysis
+                    Evidence-Led Analysis
+                    Critical Reasoning
+                    Disciplined Reasoning
+                    Grounded Critical Thinking
+                */}
               </p>
             </div>
 
             <div className="body-measure max-w-[60ch] space-y-4 text-[1rem] leading-[1.72] text-muted-foreground/95">
               <p>
                 Success depends on treating blockchain networks as observable
-                financial systems - making full use of the public data they expose,
+                financial systems - drawing on the public data they expose,
                 though often only through substantial analytical and infrastructure
-                development.
+                work.
               </p>
               <p>
-                My career has centred on data-driven decision-making under
-                uncertainty, first in institutional finance and later through
+                My career has centred on enabling data-driven decision-making,
+                first in institutional finance and later through
                 independent consulting - building analytical frameworks for capital
                 allocation, operational planning, and strategic decisions in
-                environments carrying material financial risk.
+                materially risky environments.
               </p>
               <p>
                 Early exposure to digital-asset fundraising cycles highlighted the
@@ -113,8 +119,8 @@ export function Background() {
             <blockquote className="body-measure relative max-w-[60ch] pl-[1.125rem] text-[1.02rem] leading-[1.68] text-foreground/86 before:absolute before:bottom-[0.18rem] before:left-0 before:top-[0.18rem] before:w-[1.5px] before:bg-cta/57 before:content-['']">
               My work today applies that accumulated understanding alongside teams
               operating complex digital-asset environments safely and with clarity
-              - designing operational intelligence and risk infrastructure for the
-              next generation of financial systems.
+              - designing operational intelligence and risk infrastructure for a
+              new generation of financial systems.
             </blockquote>
           </div>
         </FadeIn>
