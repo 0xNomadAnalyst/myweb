@@ -41,7 +41,7 @@ export function ProtocolDiagramCarousel() {
 
   return (
     <div>
-      <div className="relative h-[340px] sm:h-[300px] md:h-[270px]">
+      <div className="relative h-[186px] sm:h-[232px] md:h-[270px]">
         {DIAGRAMS.map((diagram, index) => {
           const isActive = index === activeIndex;
           return (
@@ -55,8 +55,8 @@ export function ProtocolDiagramCarousel() {
               )}
               aria-hidden={!isActive}
             >
-              <div className="h-full overflow-x-auto">
-                <div className="min-h-full min-w-[760px] md:min-w-0">
+              <div className="h-full overflow-hidden">
+                <div className="h-full min-w-0">
                   {diagram.render()}
                 </div>
               </div>
