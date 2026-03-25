@@ -215,5 +215,33 @@
   }
 }
 
+@media (max-width: 47.99rem) {
+  .section-title {
+    font-size: clamp(1.56rem, 1.35rem + 1.1vw, 1.84rem);
+    line-height: 1.14;
+  }
+
+  .section-label {
+    margin-bottom: 0.5rem;
+    font-size: 10px;
+    letter-spacing: 0.13em;
+  }
+
+  .section-intro {
+    margin-top: 0.7rem;
+    font-size: 0.98rem;
+    line-height: 1.56;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-body {
+    margin-top: 0.44rem;
+    font-size: 0.94rem;
+    line-height: 1.56;
+  }
+}
 
 

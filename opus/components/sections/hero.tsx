@@ -23,6 +23,22 @@ export function Hero() {
   const [isPlaying, setIsPlaying] = useState(false);
   const iframeRef = useRef<HTMLIFrameElement>(null);
 
+  function openVideo() {
+    setIsPlaying(false);
+    setIsVideoOpen(true);
+  }
+
+  function closeVideo() {
+    if (iframeRef.current) iframeRef.current.src = "about:blank";
+    setIsVideoOpen(false);
+    setIsPlaying(false);
+  }
+
+  function handlePlay() {
+    if (iframeRef.current) iframeRef.current.src = COVER_VIDEO_EMBED_URL;
+    setIsPlaying(true);
+  }
+
   useEffect(() => {
     if (!isVideoOpen) return;
 
@@ -63,55 +79,39 @@ export function Hero() {
     return () => window.removeEventListener("message", onMessage);
   }, [isVideoOpen]);
 
-  function openVideo() {
-    setIsPlaying(false);
-    setIsVideoOpen(true);
-  }
-
-  function closeVideo() {
-    if (iframeRef.current) iframeRef.current.src = "about:blank";
-    setIsVideoOpen(false);
-    setIsPlaying(false);
-  }
-
-  function handlePlay() {
-    if (iframeRef.current) iframeRef.current.src = COVER_VIDEO_EMBED_URL;
-    setIsPlaying(true);
-  }
-
   return (
     <SectionShell variant="hero">
       <FadeIn>
         <div className="max-w-[980px]">
-          <h1 className="text-[2.2rem] font-medium leading-[1.14] tracking-tight text-foreground md:text-[2.9rem] md:leading-tight">
+          <h1 className="text-[1.9rem] font-medium leading-[1.16] tracking-tight text-foreground sm:text-[2.2rem] md:text-[2.9rem] md:leading-tight">
             Understand and operate complex
             <br />
             financial systems in realtime environments.
           </h1>
 
-          <p className="body-measure mt-5 text-[1.08rem] leading-7 text-foreground/90">
+          <p className="body-measure mt-4 text-[1rem] leading-[1.68] text-foreground/90 sm:mt-5 sm:text-[1.08rem] sm:leading-7">
             I work with teams facing complex financial environments - combining analytical judgement and technical implementation as a single principal practitioner.
           </p>
-          <p className="mt-3 max-w-[80ch] text-[0.98rem] leading-relaxed text-muted-foreground/70">
+          <p className="mt-2.5 max-w-[80ch] text-[0.95rem] leading-relaxed text-muted-foreground/70 sm:mt-3 sm:text-[0.98rem]">
             This independent practice spans financial risk analysis, empirical modelling, and realtime infrastructure across digital-asset markets - from problem definition to deployment.
           </p>
 
-          <hr className="my-7 border-muted-foreground/24" />
+          <hr className="my-6 border-muted-foreground/24 sm:my-7" />
 
-          <p className="text-[0.98rem] text-muted-foreground/50">
+          <p className="text-[0.93rem] text-muted-foreground/50 sm:text-[0.98rem]">
             Roderick McKinley, CFA, FRM
             <br />
             Independent Financial Systems Analyst
           </p>
 
-          <div className="mt-8">
-            <Button variant="cta" asChild>
+          <div className="mt-7 sm:mt-8">
+            <Button variant="cta" className="w-full justify-center sm:w-auto" asChild>
               <a href="https://demo.rmckinley.net">Explore Operational Dashboard</a>
             </Button>
             <button
               type="button"
               onClick={openVideo}
-              className="mt-3.5 flex items-center gap-2 text-sm text-muted-foreground/60 transition-colors duration-700 ease-out hover:text-foreground/80"
+              className="mt-3.5 flex items-center gap-2 text-[0.83rem] text-muted-foreground/60 transition-colors duration-700 ease-out hover:text-foreground/80 sm:text-sm"
             >
               Watch dashboard introduction video
               <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3.01 3.01 0 0 0-2.12-2.13C19.54 3.6 12 3.6 12 3.6s-7.54 0-9.38.47A3.01 3.01 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.01 3.01 0 0 0 2.12 2.13C4.46 20.4 12 20.4 12 20.4s7.54 0 9.38-.47a3.01 3.01 0 0 0 2.12-2.13A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8zM9.75 15.52V8.48L15.86 12l-6.11 3.52z"/></svg>
@@ -130,7 +130,7 @@ export function Hero() {
       </FadeIn>
 
       <FadeIn delay={0.2}>
-        <div className="mt-11 flex flex-wrap gap-2">
+        <div className="mt-9 flex flex-wrap gap-2 sm:mt-11">
           {domains.map((domain) => (
             <div
               key={domain}

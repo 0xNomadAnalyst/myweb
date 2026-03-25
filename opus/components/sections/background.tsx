@@ -67,10 +67,10 @@ export function Background() {
         </p>
       </FadeIn>
 
-      <div className="relative mt-[2.125rem] grid gap-12 lg:grid-cols-[minmax(0,6.2fr)_minmax(0,5.8fr)] lg:gap-6 xl:grid-cols-[minmax(0,6.1fr)_minmax(0,5.9fr)]">
+      <div className="relative mt-7 grid gap-9 sm:mt-[2.125rem] sm:gap-12 lg:grid-cols-[minmax(0,6.2fr)_minmax(0,5.8fr)] lg:gap-6 xl:grid-cols-[minmax(0,6.1fr)_minmax(0,5.9fr)]">
         <FadeIn delay={0.09}>
-          <div className="space-y-7">
-            <div className="body-measure max-w-[60ch] space-y-4 text-[1rem] leading-[1.72] text-muted-foreground/95">
+          <div className="space-y-6 sm:space-y-7">
+            <div className="body-measure max-w-[60ch] space-y-3.5 text-[0.95rem] leading-[1.66] text-muted-foreground/95 sm:space-y-4 sm:text-[1rem] sm:leading-[1.72]">
               <p>
                 Blockchain systems introduce genuinely new financial structures,
                 requiring the ability to reinterpret legacy instruments,
@@ -100,7 +100,7 @@ export function Background() {
               </p>
             </div>
 
-            <div className="body-measure max-w-[60ch] space-y-4 text-[1rem] leading-[1.72] text-muted-foreground/95">
+            <div className="body-measure max-w-[60ch] space-y-3.5 text-[0.95rem] leading-[1.66] text-muted-foreground/95 sm:space-y-4 sm:text-[1rem] sm:leading-[1.72]">
               <p>
                 Success depends on treating blockchain networks as observable
                 financial systems - drawing on the public data they expose,
@@ -122,7 +122,7 @@ export function Background() {
               </p>
             </div>
 
-            <blockquote className="body-measure relative max-w-[60ch] pl-[1.125rem] text-[1.02rem] leading-[1.68] text-foreground/86 before:absolute before:bottom-[0.18rem] before:left-0 before:top-[0.18rem] before:w-[1.5px] before:bg-cta/57 before:content-['']">
+            <blockquote className="body-measure relative max-w-[60ch] pl-[0.9rem] text-[0.95rem] leading-[1.62] text-foreground/86 before:absolute before:bottom-[0.18rem] before:left-0 before:top-[0.18rem] before:w-[1.5px] before:bg-cta/57 before:content-[''] sm:pl-[1.125rem] sm:text-[1.02rem] sm:leading-[1.68]">
               My work today applies that accumulated understanding alongside teams
               operating complex digital-asset environments safely and with clarity
               - designing operational intelligence and risk infrastructure for a
@@ -146,7 +146,7 @@ export function Background() {
               {credentialGroups.map((group) => (
                 <div
                   key={group.title}
-                  className="relative grid gap-3 py-5 pl-6 pr-2 before:pointer-events-none before:absolute before:inset-x-4 before:top-0 before:h-px before:[background:linear-gradient(90deg,transparent_0%,transparent_14%,rgba(255,255,255,0.018)_22%,rgba(255,255,255,0.03)_30%,rgba(255,255,255,0.04)_38%,rgba(255,255,255,0.05)_45%,rgba(255,255,255,0.05)_55%,rgba(255,255,255,0.04)_62%,rgba(255,255,255,0.03)_70%,rgba(255,255,255,0.018)_78%,transparent_86%,transparent_100%)] first:before:hidden md:grid-cols-[138px_minmax(0,1fr)] md:gap-6 md:py-5 md:pl-7 md:pr-3 md:before:inset-x-6"
+                  className="relative grid gap-3 py-4 pl-4 pr-3 before:pointer-events-none before:absolute before:inset-x-4 before:top-0 before:h-px before:[background:linear-gradient(90deg,transparent_0%,transparent_14%,rgba(255,255,255,0.018)_22%,rgba(255,255,255,0.03)_30%,rgba(255,255,255,0.04)_38%,rgba(255,255,255,0.05)_45%,rgba(255,255,255,0.05)_55%,rgba(255,255,255,0.04)_62%,rgba(255,255,255,0.03)_70%,rgba(255,255,255,0.018)_78%,transparent_86%,transparent_100%)] first:before:hidden sm:py-5 sm:pl-6 sm:pr-2 md:grid-cols-[138px_minmax(0,1fr)] md:gap-6 md:py-5 md:pl-7 md:pr-3 md:before:inset-x-6"
                 >
                   <div className="flex items-start gap-2.5 pt-0.5">
                     <span
@@ -159,7 +159,7 @@ export function Background() {
                   </div>
 
                   <div>
-                    <ul className="space-y-3">
+                    <ul className="space-y-2.5 sm:space-y-3">
                       {group.items.map((item) => {
                         const split = splitCredential(item);
                         return (
@@ -168,11 +168,11 @@ export function Background() {
                               aria-hidden
                               className="absolute left-0 top-[0.56rem] h-[3px] w-[3px] rounded-full bg-muted-foreground/46"
                             />
-                            <p className="text-[0.97rem] leading-[1.28] text-foreground/88">
+                            <p className="text-[0.92rem] leading-[1.28] text-foreground/88 sm:text-[0.97rem]">
                               {split.l1}
                             </p>
                             {split.l2 && (
-                              <p className="mt-1 text-[0.875rem] leading-[1.3] text-foreground/82">
+                              <p className="mt-1 text-[0.82rem] leading-[1.3] text-foreground/82 sm:text-[0.875rem]">
                                 {split.l2}
                               </p>
                             )}

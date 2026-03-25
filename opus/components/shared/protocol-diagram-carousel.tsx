@@ -41,21 +41,25 @@ export function ProtocolDiagramCarousel() {
 
   return (
     <div>
-      <div className="relative h-[270px]">
+      <div className="relative h-[340px] sm:h-[300px] md:h-[270px]">
         {DIAGRAMS.map((diagram, index) => {
           const isActive = index === activeIndex;
           return (
             <div
               key={diagram.id}
               className={cn(
-                "transition-opacity duration-700 ease-out",
+                "h-full transition-opacity duration-700 ease-out",
                 isActive
                   ? "relative opacity-100"
                   : "pointer-events-none absolute inset-0 opacity-0",
               )}
               aria-hidden={!isActive}
             >
-              {diagram.render()}
+              <div className="h-full overflow-x-auto">
+                <div className="min-h-full min-w-[760px] md:min-w-0">
+                  {diagram.render()}
+                </div>
+              </div>
             </div>
           );
         })}

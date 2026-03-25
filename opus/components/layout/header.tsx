@@ -15,14 +15,14 @@ const brandName = "Roderick McKinley, CFA, FRM";
 export function Header() {
   return (
     <header className="fixed top-0 z-50 w-full border-b border-border-soft bg-background/88 backdrop-blur-md">
-      <div className="mx-auto flex h-14 max-w-[1180px] items-center justify-between px-6 md:px-12">
+      <div className="mx-auto flex h-14 max-w-[1180px] items-center justify-between px-4 sm:px-6 md:px-12">
         <Link
           href="/"
-          className="inline-flex items-center rounded-sm font-sans text-[14px] font-medium tracking-[0.01em] text-muted-foreground/74 transition-colors hover:text-muted-foreground/90"
+          className="inline-flex min-w-0 max-w-[62vw] items-center truncate rounded-sm font-sans text-[12px] font-medium tracking-[0.01em] text-muted-foreground/74 transition-colors hover:text-muted-foreground/90 sm:max-w-none sm:text-[14px]"
         >
           {brandName}
         </Link>
-        <nav className="flex items-center gap-6">
+        <nav className="flex items-center gap-2 sm:gap-6">
           {navLinks.map((link) => (
             <a
               key={link.href}

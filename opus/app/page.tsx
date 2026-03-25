@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="flex flex-col gap-12 pb-12">
+      <main className="flex flex-col gap-10 pb-10 md:gap-12 md:pb-12">
         <Hero />
         <Dashboard />
         <SectionDivider />

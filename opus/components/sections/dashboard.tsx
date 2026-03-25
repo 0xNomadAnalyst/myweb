@@ -47,15 +47,15 @@ export function Dashboard() {
   }, [carouselScreenshots.length]);
 
   return (
-    <SectionShell id="system" variant="feature" className="py-14 md:py-14">
+    <SectionShell id="system" variant="feature" className="py-10 md:py-14">
       <FadeIn>
-        <div className="grid items-start gap-10 md:grid-cols-[2fr_3fr] md:gap-10">
+        <div className="grid items-start gap-9 md:grid-cols-[2fr_3fr] md:gap-10">
           {/* Capability positioning */}
           <div className="md:pl-1 md:pr-6">
             <p className="mb-3 font-mono text-xs uppercase tracking-wider text-foreground/90">
               Core Intelligence Platform
             </p>
-            <p className="body-measure mb-8 text-[1.02rem] leading-relaxed text-muted-foreground/96">
+            <p className="body-measure mb-7 text-[0.98rem] leading-relaxed text-muted-foreground/96 sm:mb-8 sm:text-[1.02rem]">
               I design operational intelligence environments that turn complex
               protocol activity into visibility across liquidity, 
               execution quality, and risk – enabling realtime decision support.
@@ -64,11 +64,11 @@ export function Dashboard() {
             <p className="section-label mb-3 text-muted-foreground/90">
               Key Capabilities
             </p>
-            <ul className="mb-7 space-y-2">
+            <ul className="mb-6 space-y-2 sm:mb-7">
               {capabilities.map((item) => (
                 <li
                   key={item}
-                  className="flex gap-2.5 text-[1.01rem] leading-snug text-muted-foreground/95"
+                  className="flex gap-2.5 text-[0.96rem] leading-snug text-muted-foreground/95 sm:text-[1.01rem]"
                 >
                   <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />
                   {item}
@@ -76,12 +76,12 @@ export function Dashboard() {
               ))}
             </ul>
 
-            <hr className="mb-6 border-border md:mr-4" />
-            <div className="card-interactive rounded-lg border border-border-strong bg-accent/32 bg-none px-5 py-4 hover:bg-accent/44 md:mr-4">
+            <hr className="mb-5 border-border md:mb-6 md:mr-4" />
+            <div className="card-interactive rounded-lg border border-border-strong bg-accent/32 bg-none px-4 py-4 hover:bg-accent/44 sm:px-5 md:mr-4">
               <p className="section-label mb-2.5 text-muted-foreground/90">
                 Deployment Readiness
               </p>
-              <p className="text-[1.01rem] leading-relaxed text-muted-foreground/97">
+              <p className="text-[0.96rem] leading-relaxed text-muted-foreground/97 sm:text-[1.01rem]">
                 Solana protocols&ensp;&ndash;&ensp;turnkey deployment
                 <br />
                 EVM environments&ensp;&ndash;&ensp;rapid implementation
@@ -95,7 +95,7 @@ export function Dashboard() {
 
           {/* Dashboard showcase – fade carousel */}
           <div className="md:-ml-3 md:pr-2">
-            <p className="section-label mb-6 text-muted-foreground/90">
+            <p className="section-label mb-4 text-muted-foreground/90 sm:mb-6">
               Selected Platform Views
             </p>
             <div className="card-interactive overflow-hidden rounded-xl border border-border/55 bg-[#0a1020] bg-none shadow-[0_0_0_1px_rgba(128,162,198,0.16),0_0_22px_1px_rgba(82,114,150,0.2),0_12px_30px_rgba(1,8,20,0.34)] hover:bg-accent/35 hover:shadow-[0_0_0_1px_rgba(143,178,219,0.28),0_0_30px_4px_rgba(88,132,186,0.26),0_18px_36px_rgba(1,8,20,0.42)]">
@@ -134,7 +134,7 @@ export function Dashboard() {
 
             <a
               href="https://demo.rmckinley.net"
-              className="mt-[1.375rem] inline-block font-mono text-[12px] text-cta/91 transition-[color,filter] duration-600 ease-in-out hover:text-cta/93 hover:drop-shadow-[0_0_1px_rgba(248,169,74,0.9)] hover:[filter:drop-shadow(0_0_1px_rgba(248,169,74,0.9))_drop-shadow(0_0_3px_rgba(248,169,74,0.3))]"
+              className="mt-5 inline-block font-mono text-[11px] text-cta/91 transition-[color,filter] duration-600 ease-in-out hover:text-cta/93 hover:drop-shadow-[0_0_1px_rgba(248,169,74,0.9)] hover:[filter:drop-shadow(0_0_1px_rgba(248,169,74,0.9))_drop-shadow(0_0_3px_rgba(248,169,74,0.3))] sm:mt-[1.375rem] sm:text-[12px]"
             >
               Explore Operational Dashboard&ensp;&rarr;
             </a>

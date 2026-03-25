@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useSyncExternalStore } from "react";
 import { Turnstile } from "@marsidev/react-turnstile";
 import { SectionShell } from "@/components/shared/section-shell";
 import { FadeIn } from "@/components/shared/fade-in";
@@ -14,6 +14,11 @@ export function Contact() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
   const [turnstileToken, setTurnstileToken] = useState("");
+  const isMounted = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
   const formRef = useRef<HTMLFormElement>(null);
 
   async function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
@@ -76,30 +81,32 @@ export function Contact() {
   return (
     <SectionShell id="contact" variant="open">
       <FadeIn>
-        <div className="max-w-lg" suppressHydrationWarning>
+        <div className="max-w-lg">
           <p className="section-label">Engagements & Fit</p>
           <h2 className="section-title">Start a Conversation</h2>
-          <p className="section-intro text-[1.12rem] leading-8">
+          <p className="section-intro text-[1rem] leading-[1.68] sm:text-[1.12rem] sm:leading-8">
             Selective work with teams operating financial systems where visibility, operational clarity, or technical rigor matter.
           </p>
-          <p className="mt-1 text-[1.01rem] font-light text-muted-foreground/88">
+          <p className="mt-1 text-[0.95rem] font-light text-muted-foreground/88 sm:text-[1.01rem]">
             Useful starting points include monitoring requirements, market structure concerns, protocol risk questions, or platform and infrastructure buildout.
           </p>
+          {!isMounted ? (
+            <div className="mt-7 h-[20rem] sm:mt-8" aria-hidden />
+          ) : (
           <form
             ref={formRef}
-            className="mt-8 space-y-4"
+            className="mt-7 space-y-3.5 sm:mt-8 sm:space-y-4"
             onSubmit={handleSubmit}
-            suppressHydrationWarning
           >
             <Input
-              className="h-10 text-[1.03rem] md:text-[1.03rem]"
+              className="h-10 text-[0.98rem] sm:text-[1.03rem] md:text-[1.03rem]"
               name="name"
               placeholder="Name"
               required
               maxLength={100}
             />
             <Input
-              className="h-10 text-[1.03rem] md:text-[1.03rem]"
+              className="h-10 text-[0.98rem] sm:text-[1.03rem] md:text-[1.03rem]"
               name="email"
               type="email"
               placeholder="Email"
@@ -107,30 +114,32 @@ export function Contact() {
               maxLength={254}
             />
             <Input
-              className="h-10 text-[1.03rem] md:text-[1.03rem]"
+              className="h-10 text-[0.98rem] sm:text-[1.03rem] md:text-[1.03rem]"
               name="subject"
               placeholder="Subject"
               required
               maxLength={200}
             />
             <Textarea
-              className="text-[1.03rem] md:text-[1.03rem]"
+              className="text-[0.98rem] sm:text-[1.03rem] md:text-[1.03rem]"
               name="message"
               placeholder="Describe the system, problem, or infrastructure requirement"
               rows={5}
               required
               maxLength={5000}
             />
-            <Turnstile
-              siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? ""}
-              onSuccess={setTurnstileToken}
-              options={{ theme: "dark" }}
-            />
+            <div className="w-full overflow-x-auto">
+              <Turnstile
+                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? ""}
+                onSuccess={setTurnstileToken}
+                options={{ theme: "dark" }}
+              />
+            </div>
             {status === "error" && errorMsg && (
               <p className="text-sm text-destructive">{errorMsg}</p>
             )}
             <Button
-              className="text-[1.03rem] md:text-[1.03rem]"
+              className="w-full text-[0.98rem] sm:w-auto sm:text-[1.03rem] md:text-[1.03rem]"
               variant="cta"
               type="submit"
               disabled={status === "loading"}
@@ -138,6 +147,7 @@ export function Contact() {
               {status === "loading" ? "Sending…" : "Send Message"}
             </Button>
           </form>
+          )}
         </div>
       </FadeIn>
     </SectionShell>
