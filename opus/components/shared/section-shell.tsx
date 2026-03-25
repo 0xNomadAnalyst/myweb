@@ -20,7 +20,7 @@ export function SectionShell({
       <section id={id} className="scroll-mt-24">
         <div
           className={cn(
-            "mx-auto max-w-[1180px] px-4 pb-12 pt-24 sm:px-6 md:px-12 md:pb-20 md:pt-36",
+            "mx-auto max-w-[1180px] px-6 pb-12 pt-24 sm:px-7 md:px-12 md:pb-20 md:pt-36",
             className,
           )}
         >
@@ -38,7 +38,7 @@ export function SectionShell({
       >
         <div
           className={cn(
-            "mx-auto max-w-[1180px] px-4 py-9 sm:px-6 md:px-12 md:py-12",
+            "mx-auto max-w-[1180px] px-6 py-9 sm:px-7 md:px-12 md:py-12",
             className,
           )}
         >
@@ -52,7 +52,7 @@ export function SectionShell({
     <section id={id} className="scroll-mt-24 md:px-8">
       <div
         className={cn(
-          "mx-auto bg-surface px-4 py-9 sm:px-6 md:rounded-lg md:border md:border-border md:px-12 md:py-12",
+          "mx-auto bg-surface px-6 py-9 sm:px-7 md:rounded-lg md:border md:border-border md:px-12 md:py-12",
           variant === "feature" ? "max-w-[1360px]" : "max-w-[1180px]",
           className,
         )}
