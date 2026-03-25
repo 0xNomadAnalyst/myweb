@@ -7,6 +7,7 @@ import { Architecture } from "@/components/sections/architecture";
 import { Engagement } from "@/components/sections/engagement";
 import { Background } from "@/components/sections/background";
 import { Contact } from "@/components/sections/contact";
+import { ScrollTopButton } from "@/components/shared/scroll-top-button";
 
 function SectionDivider() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
         <SectionDivider />
         <Contact />
       </main>
+      <ScrollTopButton />
       <Footer />
     </>
   );

@@ -57,12 +57,12 @@ export function Header() {
             aria-expanded={isNavOpen}
             aria-controls="mobile-sections-nav"
             onClick={() => setIsNavOpen((current) => !current)}
-            className="inline-flex h-6 items-center gap-1 rounded-md px-1.5 text-[12px] font-medium leading-none text-foreground/92 transition-colors hover:text-foreground sm:hidden"
+            className="relative -top-0.5 inline-flex h-6 items-center gap-1 rounded-md px-1.5 text-[12px] font-medium leading-none text-foreground/92 transition-colors hover:text-foreground sm:hidden"
           >
-            <span className="inline-block translate-y-[-0.5px] leading-none">Explore</span>
+            <span className="inline-block leading-none">Explore</span>
             <span
               aria-hidden
-              className="h-[15px] w-[15px] translate-y-[-0.5px] bg-white/96 drop-shadow-[0_0_5px_rgba(248,169,74,0.32)] [-webkit-mask-image:url('/TokenDesign_Icon_White.png')] [-webkit-mask-position:center] [-webkit-mask-repeat:no-repeat] [-webkit-mask-size:contain] [mask-image:url('/TokenDesign_Icon_White.png')] [mask-position:center] [mask-repeat:no-repeat] [mask-size:contain]"
+              className="h-[14px] w-[14px] bg-white/96 drop-shadow-[0_0_5px_rgba(248,169,74,0.32)] [-webkit-mask-image:url('/TokenDesign_Icon_White.png')] [-webkit-mask-position:center] [-webkit-mask-repeat:no-repeat] [-webkit-mask-size:contain] [mask-image:url('/TokenDesign_Icon_White.png')] [mask-position:center] [mask-repeat:no-repeat] [mask-size:contain]"
             />
           </button>
           <div className="hidden items-center gap-2.5 sm:inline-flex">
