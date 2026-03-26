@@ -9,6 +9,12 @@ COPY opus/package.json opus/package-lock.json ./
 RUN npm ci
 
 COPY opus/ .
+
+# NEXT_PUBLIC_ vars are inlined at build time — must be declared as ARG so
+# Railway (or any Docker host) can pass them in during `docker build`.
+ARG NEXT_PUBLIC_TURNSTILE_SITE_KEY
+ENV NEXT_PUBLIC_TURNSTILE_SITE_KEY=$NEXT_PUBLIC_TURNSTILE_SITE_KEY
+
 RUN npm run build
 
 # ---- runner ----
