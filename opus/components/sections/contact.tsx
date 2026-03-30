@@ -85,11 +85,22 @@ export function Contact() {
           <p className="section-label">Engagements & Fit</p>
           <h2 className="section-title">Start a Conversation</h2>
           <p className="section-intro text-[1rem] leading-[1.68] sm:text-[1.12rem] sm:leading-8">
-            Selective work with teams operating financial systems where visibility, operational clarity, or technical rigor matter.
+            <span className="md:hidden">
+              For teams operating token, treasury, and market-structure systems where visibility and execution quality matter.
+            </span>
+            <span className="hidden md:inline">
+              Selective work with teams operating financial systems where visibility, operational clarity, or technical rigor matter.
+            </span>
           </p>
-          <p className="mt-1 text-[0.95rem] font-light text-muted-foreground/88 sm:text-[1.01rem]">
+          <p className="mt-1 hidden text-[0.95rem] font-light text-muted-foreground/88 sm:text-[1.01rem] md:block">
             Useful starting points include monitoring requirements, market structure concerns, protocol risk questions, or platform and infrastructure buildout.
           </p>
+          <ul className="mt-3 space-y-1.5 text-[0.9rem] leading-relaxed text-muted-foreground/86 md:hidden">
+            <li>Stablecoin or treasury monitoring</li>
+            <li>Market-maker oversight</li>
+            <li>Live risk visibility gaps</li>
+            <li>Post-incident analysis</li>
+          </ul>
           {!isMounted ? (
             <div className="mt-7 h-[20rem] sm:mt-8" aria-hidden />
           ) : (

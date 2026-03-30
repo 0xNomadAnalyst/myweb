@@ -22,58 +22,75 @@ const principles = [
 export function Architecture() {
   return (
     <SectionShell id="approach">
-      <FadeIn>
-        <p className="section-label">Working Principles</p>
-        <h2 className="section-title">
-          Analytical Discipline in Practice
-        </h2>
-        <div className="mt-3 grid gap-6 md:grid-cols-1">
-          <p className="text-[0.99rem] leading-[1.66] text-muted-foreground/96 sm:text-[1.08rem] sm:leading-7">
-            My approach combines empirical discipline, operational flexibility, 
-            and direct implementation responsibility – allowing complex problems 
-            to be handled rigorously, adapted to the client&apos;s operating context, and carried through without loss of translation.
+      <div className="md:hidden">
+        <FadeIn>
+          <p className="section-label">System architecture</p>
+          <h2 className="section-title">Built for End-to-End Operational Visibility</h2>
+          <p className="section-intro">
+            A protocol-level monitoring stack that joins ingestion, analytics, and decision support across domains.
           </p>
-        </div>
-      </FadeIn>
-
-      <div className="mt-8 grid gap-3.5 sm:mt-10 sm:gap-4 md:grid-cols-3">
-        {principles.map((item, i) => (
-          <FadeIn key={item.title} delay={i * 0.08}>
-            <div className="card-interactive h-full rounded-lg border border-border-strong bg-card p-5 hover:bg-accent">
-              <h3 className="card-title">
-                {item.title}
-              </h3>
-              <p className="card-body">
-                {item.description}
-              </p>
-            </div>
-          </FadeIn>
-        ))}
-      </div>
-
-      <FadeIn delay={0.12}>
-        <div className="mt-9 grid gap-7 sm:mt-11 sm:gap-8 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:items-start">
-          <div>
-            <hr className="border-border-strong" />
-            <h3 className="mt-6 text-[1.02rem] font-medium tracking-tight text-foreground/96 sm:mt-7 sm:text-lg">
-              Protocol-Level Understanding
-            </h3>
-            <p className="mt-2.5 text-[0.93rem] leading-relaxed text-muted-foreground/96 sm:mt-3 sm:text-[0.98rem]">
-              Onchain systems must be understood at protocol level, with data ingestion 
-              and analytics engineered to reflect underlying mechanics, capital flows, and edge cases accurately.
-            </p>
-            <p className="mt-5 font-mono text-[0.82rem] tracking-wide text-muted-foreground/88 sm:mt-6 sm:text-[0.88rem]">
-              That precision makes analysis accurate and monitoring reliable.
-            </p>
-          </div>
-
-          <div
-            className="card-interactive rounded-lg border bg-none px-4 pb-3 pt-4 [background:linear-gradient(180deg,rgba(19,33,58,0.86)_0%,rgba(13,24,45,0.82)_100%)] [border-color:rgba(124,158,196,0.3)] shadow-[0_0_0_1px_rgba(116,150,188,0.14),0_10px_32px_rgba(1,8,20,0.34),0_0_24px_rgba(53,95,148,0.14)] hover:bg-accent/35 hover:shadow-[0_0_0_1px_rgba(143,178,219,0.28),0_0_34px_4px_rgba(88,132,186,0.26),0_20px_38px_rgba(1,8,20,0.44)] sm:px-5 sm:pb-6 sm:pt-5 md:px-8 md:pb-8 md:pt-7"
-          >
+        </FadeIn>
+        <FadeIn delay={0.08}>
+          <div className="mt-5 card-interactive rounded-lg border bg-none px-4 pb-3 pt-4 [background:linear-gradient(180deg,rgba(19,33,58,0.86)_0%,rgba(13,24,45,0.82)_100%)] [border-color:rgba(124,158,196,0.3)] shadow-[0_0_0_1px_rgba(116,150,188,0.14),0_10px_32px_rgba(1,8,20,0.34),0_0_24px_rgba(53,95,148,0.14)]">
             <ProtocolDiagramCarousel />
           </div>
+        </FadeIn>
+      </div>
+
+      <div className="hidden md:block">
+        <FadeIn>
+          <p className="section-label">Working Principles</p>
+          <h2 className="section-title">
+            Analytical Discipline in Practice
+          </h2>
+          <div className="mt-3 grid gap-6 md:grid-cols-1">
+            <p className="text-[0.99rem] leading-[1.66] text-muted-foreground/96 sm:text-[1.08rem] sm:leading-7">
+              My approach combines empirical discipline, operational flexibility,
+              and direct implementation responsibility - allowing complex problems
+              to be handled rigorously, adapted to the client&apos;s operating context, and carried through without loss of translation.
+            </p>
+          </div>
+        </FadeIn>
+
+        <div className="mt-8 grid gap-3.5 sm:mt-10 sm:gap-4 md:grid-cols-3">
+          {principles.map((item, i) => (
+            <FadeIn key={item.title} delay={i * 0.08}>
+              <div className="card-interactive h-full rounded-lg border border-border-strong bg-card p-5 hover:bg-accent">
+                <h3 className="card-title">
+                  {item.title}
+                </h3>
+                <p className="card-body">
+                  {item.description}
+                </p>
+              </div>
+            </FadeIn>
+          ))}
         </div>
-      </FadeIn>
+
+        <FadeIn delay={0.12}>
+          <div className="mt-9 grid gap-7 sm:mt-11 sm:gap-8 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:items-start">
+            <div>
+              <hr className="border-border-strong" />
+              <h3 className="mt-6 text-[1.02rem] font-medium tracking-tight text-foreground/96 sm:mt-7 sm:text-lg">
+                Protocol-Level Understanding
+              </h3>
+              <p className="mt-2.5 text-[0.93rem] leading-relaxed text-muted-foreground/96 sm:mt-3 sm:text-[0.98rem]">
+                Onchain systems must be understood at protocol level, with data ingestion
+                and analytics engineered to reflect underlying mechanics, capital flows, and edge cases accurately.
+              </p>
+              <p className="mt-5 font-mono text-[0.82rem] tracking-wide text-muted-foreground/88 sm:mt-6 sm:text-[0.88rem]">
+                That precision makes analysis accurate and monitoring reliable.
+              </p>
+            </div>
+
+            <div
+              className="card-interactive rounded-lg border bg-none px-4 pb-3 pt-4 [background:linear-gradient(180deg,rgba(19,33,58,0.86)_0%,rgba(13,24,45,0.82)_100%)] [border-color:rgba(124,158,196,0.3)] shadow-[0_0_0_1px_rgba(116,150,188,0.14),0_10px_32px_rgba(1,8,20,0.34),0_0_24px_rgba(53,95,148,0.14)] hover:bg-accent/35 hover:shadow-[0_0_0_1px_rgba(143,178,219,0.28),0_0_34px_4px_rgba(88,132,186,0.26),0_20px_38px_rgba(1,8,20,0.44)] sm:px-5 sm:pb-6 sm:pt-5 md:px-8 md:pb-8 md:pt-7"
+            >
+              <ProtocolDiagramCarousel />
+            </div>
+          </div>
+        </FadeIn>
+      </div>
     </SectionShell>
   );
 }

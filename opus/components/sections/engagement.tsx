@@ -22,7 +22,28 @@ const principles = [
 export function Engagement() {
   return (
     <SectionShell id="engagement" variant="open">
-      <div className="grid gap-8 sm:gap-10 lg:grid-cols-[minmax(0,6fr)_minmax(0,6fr)] lg:gap-14">
+      <div className="md:hidden">
+        <FadeIn>
+          <p className="section-label">How I work</p>
+          <h2 className="section-title">Principal-Led Analysis and Implementation</h2>
+          <p className="section-intro">
+            I work directly with teams on the monitoring, analysis, and implementation required for their operating environment.
+          </p>
+        </FadeIn>
+        <FadeIn delay={0.08}>
+          <ul className="mt-4 space-y-2 text-[0.94rem] leading-relaxed text-muted-foreground/94">
+            <li className="flex gap-2.5"><span className="mt-[0.55rem] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />Monitoring deployment or adaptation</li>
+            <li className="flex gap-2.5"><span className="mt-[0.55rem] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />Liquidity and market-structure analysis</li>
+            <li className="flex gap-2.5"><span className="mt-[0.55rem] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />Market-maker oversight and incident diagnostics</li>
+            <li className="flex gap-2.5"><span className="mt-[0.55rem] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />Risk-policy support and new protocol coverage</li>
+          </ul>
+          <p className="mt-4 text-[0.92rem] leading-relaxed text-muted-foreground/86">
+            Analysis and implementation stay aligned end to end.
+          </p>
+        </FadeIn>
+      </div>
+
+      <div className="hidden md:grid gap-8 sm:gap-10 lg:grid-cols-[minmax(0,6fr)_minmax(0,6fr)] lg:gap-14">
         <FadeIn>
           <div className="max-w-xl">
             <p className="section-label">Working Together</p>
@@ -36,7 +57,7 @@ export function Engagement() {
               Engagements are shaped around the specific operational problem, internal team structure, and level of support required. Some begin with diagnostic analysis, policy review, or strategic advisory; others extend into monitoring design, implementation, or refinement of an existing system.
             </p>
             <p className="mt-4 text-[0.93rem] leading-relaxed text-muted-foreground/90 sm:mt-5 sm:text-[0.98rem]">
-              The aim is to keep analytical definition, technical execution, and operational context aligned throughout – so useful work happens quickly and internal teams can take ownership without unnecessary delivery layers.
+              The aim is to keep analytical definition, technical execution, and operational context aligned throughout - so useful work happens quickly and internal teams can take ownership without unnecessary delivery layers.
             </p>
           </div>
         </FadeIn>

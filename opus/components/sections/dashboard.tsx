@@ -41,106 +41,151 @@ export function Dashboard() {
     if (carouselScreenshots.length <= 1) return;
     const id = setInterval(
       () => setActive((prev) => (prev + 1) % carouselScreenshots.length),
-      5000,
+      2000,
     );
     return () => clearInterval(id);
   }, [carouselScreenshots.length]);
 
   return (
     <SectionShell id="system" variant="feature" className="py-10 md:py-14">
-      <FadeIn>
-        <div className="grid items-start gap-9 md:grid-cols-[2fr_3fr] md:gap-10">
-          {/* Capability positioning */}
-          <div className="md:pl-1 md:pr-6">
-            <p className="mb-3 font-mono text-xs uppercase tracking-wider text-foreground/90">
-              Core Intelligence Platform
-            </p>
-            <p className="body-measure mb-7 text-[0.98rem] leading-relaxed text-muted-foreground/96 sm:mb-8 sm:text-[1.02rem]">
-              I design operational intelligence environments that turn complex
-              protocol activity into visibility across liquidity, 
-              execution quality, and risk – enabling realtime decision support.
-            </p>
-
-            <p className="section-label mb-3 text-muted-foreground/90">
-              Key Capabilities
-            </p>
-            <ul className="mb-6 space-y-2 sm:mb-7">
-              {capabilities.map((item) => (
-                <li
-                  key={item}
-                  className="flex gap-2.5 text-[0.96rem] leading-snug text-muted-foreground/95 sm:text-[1.01rem]"
-                >
-                  <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />
-                  {item}
-                </li>
+      <div className="md:hidden">
+        <FadeIn>
+          <p className="section-label">Platform in action</p>
+          <h2 className="section-title">Cross-Protocol Monitoring in One View</h2>
+          <p className="section-intro">
+            Cross-protocol monitoring across DEX, lending, yield, and issuer-controlled contract domains.
+          </p>
+        </FadeIn>
+        <FadeIn delay={0.08}>
+          <div className="mt-5 card-interactive overflow-hidden rounded-xl border border-border/55 bg-[#0a1020] shadow-[0_0_0_1px_rgba(128,162,198,0.16),0_0_22px_1px_rgba(82,114,150,0.2),0_12px_30px_rgba(1,8,20,0.34)]">
+            <div className="relative aspect-[17/10] overflow-hidden bg-[#0a1020]">
+              {carouselScreenshots.map((img, i) => (
+                <Image
+                  key={`mobile-${img.src}`}
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  unoptimized
+                  sizes="100vw"
+                  priority={i === 0}
+                  onError={() => {
+                    setFailedSrcs((prev) => {
+                      if (prev.has(img.src)) return prev;
+                      const next = new Set(prev);
+                      next.add(img.src);
+                      return next;
+                    });
+                  }}
+                  className="absolute inset-0 h-full w-full object-contain object-center saturate-[0.98] contrast-[0.99] transition-opacity duration-[900ms] ease-in-out"
+                  style={{
+                    opacity: i === activeIndex ? 0.95 : 0,
+                  }}
+                />
               ))}
-            </ul>
-
-            <hr className="mb-5 border-border md:mb-6 md:mr-4" />
-            <div className="card-interactive rounded-lg border border-border-strong bg-accent/32 bg-none px-4 py-4 hover:bg-accent/44 sm:px-5 md:mr-4">
-              <p className="section-label mb-2.5 text-muted-foreground/90">
-                Deployment Readiness
-              </p>
-              <p className="text-[0.96rem] leading-relaxed text-muted-foreground/97 sm:text-[1.01rem]">
-                Solana protocols&ensp;&ndash;&ensp;turnkey deployment
-                <br />
-                EVM environments&ensp;&ndash;&ensp;rapid implementation
-              </p>
-              <p className="mt-2.5 text-[0.88rem] font-[300] text-muted-foreground/86">
-                Shared analytical framework, protocol mechanics already
-                modelled.
-              </p>
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent from-60% to-black/[0.16]" />
             </div>
           </div>
+        </FadeIn>
+        <FadeIn delay={0.12}>
+          <a
+            href="https://demo.rmckinley.net"
+            className="mt-4 inline-block font-mono text-[11px] text-cta/91 transition-[color,filter] duration-600 ease-in-out hover:text-cta/93 hover:drop-shadow-[0_0_1px_rgba(248,169,74,0.9)] hover:[filter:drop-shadow(0_0_1px_rgba(248,169,74,0.9))_drop-shadow(0_0_3px_rgba(248,169,74,0.3))]"
+          >
+            View Live Demo&ensp;&rarr;
+          </a>
+        </FadeIn>
+      </div>
 
-          {/* Dashboard showcase – fade carousel */}
-          <div className="md:-ml-3 md:pr-2">
-            <p className="section-label mb-4 text-muted-foreground/90 sm:mb-6">
-              Selected Platform Views
-            </p>
-            <div className="card-interactive overflow-hidden rounded-xl border border-border/55 bg-[#0a1020] bg-none shadow-[0_0_0_1px_rgba(128,162,198,0.16),0_0_22px_1px_rgba(82,114,150,0.2),0_12px_30px_rgba(1,8,20,0.34)] hover:bg-accent/35 hover:shadow-[0_0_0_1px_rgba(143,178,219,0.28),0_0_30px_4px_rgba(88,132,186,0.26),0_18px_36px_rgba(1,8,20,0.42)]">
-              <div className="relative grid aspect-[17/10] overflow-hidden bg-[#0a1020]">
-                {carouselScreenshots.map((img, i) => (
-                  <Image
-                    key={img.src}
-                    src={img.src}
-                    alt={img.alt}
-                    fill
-                    unoptimized
-                    sizes="(max-width: 1024px) 100vw, 61vw"
-                    priority={i === 0}
-                    onError={() => {
-                      setFailedSrcs((prev) => {
-                        if (prev.has(img.src)) return prev;
-                        const next = new Set(prev);
-                        next.add(img.src);
-                        return next;
-                      });
-                    }}
-                    className="col-start-1 row-start-1 h-full w-full object-contain object-center saturate-[0.98] contrast-[0.99] transition-[opacity,transform] duration-[900ms] ease-in-out"
-                    style={{
-                      opacity: i === activeIndex ? 0.95 : 0,
-                    }}
-                  />
+      <div className="hidden md:block">
+        <FadeIn>
+          <div className="grid items-start gap-9 md:grid-cols-[2fr_3fr] md:gap-10">
+            <div className="md:pl-1 md:pr-6">
+              <p className="mb-3 font-mono text-xs uppercase tracking-wider text-foreground/90">
+                Core Intelligence Platform
+              </p>
+              <p className="body-measure mb-7 text-[0.98rem] leading-relaxed text-muted-foreground/96 sm:mb-8 sm:text-[1.02rem]">
+                I design operational intelligence environments that turn complex
+                protocol activity into visibility across liquidity,
+                execution quality, and risk - enabling realtime decision support.
+              </p>
+
+              <p className="section-label mb-3 text-muted-foreground/90">
+                Key Capabilities
+              </p>
+              <ul className="mb-6 space-y-2 sm:mb-7">
+                {capabilities.map((item) => (
+                  <li
+                    key={item}
+                    className="flex gap-2.5 text-[0.96rem] leading-snug text-muted-foreground/95 sm:text-[1.01rem]"
+                  >
+                    <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />
+                    {item}
+                  </li>
                 ))}
+              </ul>
 
-                {/* Bottom grounding gradient + edge softening */}
-                <div className="pointer-events-none col-start-1 row-start-1 relative z-10 h-full w-full">
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent from-60% to-black/[0.16]" />
-                </div>
-
+              <hr className="mb-5 border-border md:mb-6 md:mr-4" />
+              <div className="card-interactive rounded-lg border border-border-strong bg-accent/32 bg-none px-4 py-4 hover:bg-accent/44 sm:px-5 md:mr-4">
+                <p className="section-label mb-2.5 text-muted-foreground/90">
+                  Deployment Readiness
+                </p>
+                <p className="text-[0.96rem] leading-relaxed text-muted-foreground/97 sm:text-[1.01rem]">
+                  Solana protocols&ensp;&ndash;&ensp;turnkey deployment
+                  <br />
+                  EVM environments&ensp;&ndash;&ensp;rapid implementation
+                </p>
+                <p className="mt-2.5 text-[0.88rem] font-[300] text-muted-foreground/86">
+                  Shared analytical framework, protocol mechanics already
+                  modelled.
+                </p>
               </div>
             </div>
 
-            <a
-              href="https://demo.rmckinley.net"
-              className="mt-5 inline-block font-mono text-[11px] text-cta/91 transition-[color,filter] duration-600 ease-in-out hover:text-cta/93 hover:drop-shadow-[0_0_1px_rgba(248,169,74,0.9)] hover:[filter:drop-shadow(0_0_1px_rgba(248,169,74,0.9))_drop-shadow(0_0_3px_rgba(248,169,74,0.3))] sm:mt-[1.375rem] sm:text-[12px]"
-            >
-              Explore Operational Dashboard&ensp;&rarr;
-            </a>
+            <div className="md:-ml-3 md:pr-2">
+              <p className="section-label mb-4 text-muted-foreground/90 sm:mb-6">
+                Selected Platform Views
+              </p>
+              <div className="card-interactive overflow-hidden rounded-xl border border-border/55 bg-[#0a1020] bg-none shadow-[0_0_0_1px_rgba(128,162,198,0.16),0_0_22px_1px_rgba(82,114,150,0.2),0_12px_30px_rgba(1,8,20,0.34)] hover:bg-accent/35 hover:shadow-[0_0_0_1px_rgba(143,178,219,0.28),0_0_30px_4px_rgba(88,132,186,0.26),0_18px_36px_rgba(1,8,20,0.42)]">
+                <div className="relative grid aspect-[17/10] overflow-hidden bg-[#0a1020]">
+                  {carouselScreenshots.map((img, i) => (
+                    <Image
+                      key={img.src}
+                      src={img.src}
+                      alt={img.alt}
+                      fill
+                      unoptimized
+                      sizes="(max-width: 1024px) 100vw, 61vw"
+                      priority={i === 0}
+                      onError={() => {
+                        setFailedSrcs((prev) => {
+                          if (prev.has(img.src)) return prev;
+                          const next = new Set(prev);
+                          next.add(img.src);
+                          return next;
+                        });
+                      }}
+                      className="col-start-1 row-start-1 h-full w-full object-contain object-center saturate-[0.98] contrast-[0.99] transition-[opacity,transform] duration-[900ms] ease-in-out"
+                      style={{
+                        opacity: i === activeIndex ? 0.95 : 0,
+                      }}
+                    />
+                  ))}
+                  <div className="pointer-events-none col-start-1 row-start-1 relative z-10 h-full w-full">
+                    <div className="absolute inset-0 bg-gradient-to-b from-transparent from-60% to-black/[0.16]" />
+                  </div>
+                </div>
+              </div>
+
+              <a
+                href="https://demo.rmckinley.net"
+                className="mt-5 inline-block font-mono text-[11px] text-cta/91 transition-[color,filter] duration-600 ease-in-out hover:text-cta/93 hover:drop-shadow-[0_0_1px_rgba(248,169,74,0.9)] hover:[filter:drop-shadow(0_0_1px_rgba(248,169,74,0.9))_drop-shadow(0_0_3px_rgba(248,169,74,0.3))] sm:mt-[1.375rem] sm:text-[12px]"
+              >
+                Explore Operational Dashboard&ensp;&rarr;
+              </a>
+            </div>
           </div>
-        </div>
-      </FadeIn>
+        </FadeIn>
+      </div>
     </SectionShell>
   );
 }

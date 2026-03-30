@@ -81,72 +81,114 @@ export function Hero() {
 
   return (
     <SectionShell variant="hero">
-      <FadeIn>
-        <div className="max-w-[980px]">
-          <h1 className="text-[1.9rem] font-medium leading-[1.16] tracking-tight text-foreground sm:text-[2.2rem] md:text-[2.9rem] md:leading-tight">
-            Understand and operate complex
-            <br />
-            financial systems in realtime environments.
-          </h1>
-
-          <p className="body-measure mt-4 text-[1rem] leading-[1.68] text-foreground/90 sm:mt-5 sm:text-[1.08rem] sm:leading-7">
-            I work with teams facing complex financial environments - combining analytical judgement and technical implementation as a single principal practitioner.
-          </p>
-          <p className="mt-2.5 max-w-[80ch] text-[0.95rem] leading-relaxed text-muted-foreground/70 sm:mt-3 sm:text-[0.98rem]">
-            This independent practice spans financial risk analysis, empirical modelling, and realtime infrastructure across digital-asset markets - from problem definition to deployment.
-          </p>
-
-          <hr className="my-6 border-muted-foreground/24 sm:my-7" />
-
-          <p className="text-[0.93rem] text-muted-foreground/50 sm:text-[0.98rem]">
-            Roderick McKinley, CFA, FRM
-            <br />
-            Independent Financial Systems Analyst
-          </p>
-
-          <div className="mt-7 sm:mt-8">
-            <Button variant="cta" className="w-full justify-center sm:w-auto" asChild>
-              <a href="https://demo.rmckinley.net">Explore Operational Dashboard</a>
-            </Button>
-            <button
-              type="button"
-              onClick={openVideo}
-              className="mt-3.5 flex items-center gap-2 text-[0.83rem] text-muted-foreground/60 transition-colors duration-700 ease-out hover:text-foreground/80 sm:text-sm"
-            >
-              Watch dashboard introduction video
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3.01 3.01 0 0 0-2.12-2.13C19.54 3.6 12 3.6 12 3.6s-7.54 0-9.38.47A3.01 3.01 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.01 3.01 0 0 0 2.12 2.13C4.46 20.4 12 20.4 12 20.4s7.54 0 9.38-.47a3.01 3.01 0 0 0 2.12-2.13A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8zM9.75 15.52V8.48L15.86 12l-6.11 3.52z"/></svg>
-            </button>
-            <a
-              href="/downloads/RMcKinley-FinancialSystemsAnalyst-Capabilities.pdf#view=FitH&page=1"
-              target="_blank"
-              rel="noopener noreferrer"
-              type="application/pdf"
-              className="mt-2 block font-mono text-xs text-muted-foreground/45 transition-colors duration-700 ease-out hover:text-muted-foreground/67"
-            >
-              View advisory capabilities deck (PDF)
-            </a>
-          </div>
-        </div>
-      </FadeIn>
-
-      <FadeIn delay={0.2}>
-        <div className="mt-9 flex flex-wrap gap-2 sm:mt-11">
-          {domains.map((domain) => (
-            <div
-              key={domain}
-              className="group rounded-md border border-border-soft/80 bg-secondary/48 px-2.5 py-1 hover:border-border-soft hover:bg-secondary/66 hover:shadow-[0_0_0_1px_rgba(128,162,198,0.12),0_0_16px_rgba(82,114,150,0.2)]"
-              style={{
-                transition:
-                  "box-shadow 750ms ease-in-out, border-color 750ms ease-in-out, background-color 750ms ease-in-out",
-              }}
-            >
-              <p className="font-mono text-[11px] leading-snug tracking-[0.04em] text-muted-foreground/91 transition-colors duration-750 ease-in-out group-hover:text-foreground/96">
-                {domain}
-              </p>
+      <div className="md:hidden">
+        <FadeIn>
+          <div className="max-w-[720px]">
+            <h1 className="text-[1.72rem] font-medium leading-[1.16] tracking-tight text-foreground">
+              Operational intelligence for complex onchain systems
+            </h1>
+            <p className="mt-4 text-[0.98rem] leading-[1.6] text-foreground/92">
+              I build monitoring and analytics systems for digital-asset teams operating across DEXs, lending venues, yield markets, and issuer-controlled contracts.
+            </p>
+            <p className="mt-3 text-[0.92rem] leading-relaxed text-muted-foreground/82">
+              Built for environments where liquidity, leverage, counterparties, and execution risk interact across multiple venues in real time.
+            </p>
+            <div className="mt-6 flex flex-col gap-2.5">
+              <Button variant="cta" className="w-full justify-center" asChild>
+                <a href="https://demo.rmckinley.net">Explore Live Platform</a>
+              </Button>
+              <a
+                href="/downloads/RMcKinley-FinancialSystemsAnalyst-Capabilities.pdf#view=FitH&page=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                type="application/pdf"
+                className="inline-flex h-9 items-center justify-center rounded-lg border border-border-strong bg-secondary/45 px-4 text-[0.9rem] text-muted-foreground/95 transition-colors hover:bg-secondary/70 hover:text-foreground"
+              >
+                Download Overview
+              </a>
+              <button
+                type="button"
+                onClick={openVideo}
+                className="inline-flex h-8 items-center justify-center text-[0.82rem] text-muted-foreground/62 transition-colors duration-500 hover:text-foreground/82"
+              >
+                Watch short introduction
+              </button>
             </div>
-          ))}
-        </div>
-      </FadeIn>
+            <p className="mt-4 text-[0.84rem] text-muted-foreground/68">
+              Principal-led build, analysis, and implementation.
+            </p>
+          </div>
+        </FadeIn>
+      </div>
+
+      <div className="hidden md:block">
+        <FadeIn>
+          <div className="max-w-[980px]">
+            <h1 className="text-[1.9rem] font-medium leading-[1.16] tracking-tight text-foreground sm:text-[2.2rem] md:text-[2.9rem] md:leading-tight">
+              Understand and operate complex
+              <br />
+              financial systems in realtime environments.
+            </h1>
+
+            <p className="body-measure mt-4 text-[1rem] leading-[1.68] text-foreground/90 sm:mt-5 sm:text-[1.08rem] sm:leading-7">
+              I work with teams facing complex financial environments - combining analytical judgement and technical implementation as a single principal practitioner.
+            </p>
+            <p className="mt-2.5 max-w-[80ch] text-[0.95rem] leading-relaxed text-muted-foreground/70 sm:mt-3 sm:text-[0.98rem]">
+              This independent practice spans financial risk analysis, empirical modelling, and realtime infrastructure across digital-asset markets - from problem definition to deployment.
+            </p>
+
+            <hr className="my-6 border-muted-foreground/24 sm:my-7" />
+
+            <p className="text-[0.93rem] text-muted-foreground/50 sm:text-[0.98rem]">
+              Roderick McKinley, CFA, FRM
+              <br />
+              Independent Financial Systems Analyst
+            </p>
+
+            <div className="mt-7 sm:mt-8">
+              <Button variant="cta" className="w-full justify-center sm:w-auto" asChild>
+                <a href="https://demo.rmckinley.net">Explore Operational Dashboard</a>
+              </Button>
+              <button
+                type="button"
+                onClick={openVideo}
+                className="mt-3.5 flex items-center gap-2 text-[0.83rem] text-muted-foreground/60 transition-colors duration-700 ease-out hover:text-foreground/80 sm:text-sm"
+              >
+                Watch dashboard introduction video
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3.01 3.01 0 0 0-2.12-2.13C19.54 3.6 12 3.6 12 3.6s-7.54 0-9.38.47A3.01 3.01 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.01 3.01 0 0 0 2.12 2.13C4.46 20.4 12 20.4 12 20.4s7.54 0 9.38-.47a3.01 3.01 0 0 0 2.12-2.13A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8zM9.75 15.52V8.48L15.86 12l-6.11 3.52z"/></svg>
+              </button>
+              <a
+                href="/downloads/RMcKinley-FinancialSystemsAnalyst-Capabilities.pdf#view=FitH&page=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                type="application/pdf"
+                className="mt-2 block font-mono text-xs text-muted-foreground/45 transition-colors duration-700 ease-out hover:text-muted-foreground/67"
+              >
+                View advisory capabilities deck (PDF)
+              </a>
+            </div>
+          </div>
+        </FadeIn>
+
+        <FadeIn delay={0.2}>
+          <div className="mt-9 flex flex-wrap gap-2 sm:mt-11">
+            {domains.map((domain) => (
+              <div
+                key={domain}
+                className="group rounded-md border border-border-soft/80 bg-secondary/48 px-2.5 py-1 hover:border-border-soft hover:bg-secondary/66 hover:shadow-[0_0_0_1px_rgba(128,162,198,0.12),0_0_16px_rgba(82,114,150,0.2)]"
+                style={{
+                  transition:
+                    "box-shadow 750ms ease-in-out, border-color 750ms ease-in-out, background-color 750ms ease-in-out",
+                }}
+              >
+                <p className="font-mono text-[11px] leading-snug tracking-[0.04em] text-muted-foreground/91 transition-colors duration-750 ease-in-out group-hover:text-foreground/96">
+                  {domain}
+                </p>
+              </div>
+            ))}
+          </div>
+        </FadeIn>
+      </div>
 
       {isVideoOpen && (
         <div
