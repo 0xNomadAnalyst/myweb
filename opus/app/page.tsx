@@ -28,7 +28,7 @@ export default function Home() {
         <div className="order-3 md:order-none"><Dashboard /></div>
         <div className="hidden md:block"><SectionDivider /></div>
         <div className="order-2 md:order-none"><Capabilities /></div>
-        <div className="order-4 md:hidden"><Outcomes /></div>
+        <div className="order-4 md:order-none"><Outcomes /></div>
         <div className="hidden md:block"><SectionDivider /></div>
         <div className="order-7 md:order-none"><Architecture /></div>
         <div className="hidden md:block"><SectionDivider /></div>

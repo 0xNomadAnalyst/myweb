@@ -89,11 +89,18 @@ export function Contact() {
               For teams operating token, treasury, and market-structure systems where visibility and execution quality matter.
             </span>
             <span className="hidden md:inline">
-              Selective work with teams operating financial systems where visibility, operational clarity, or technical rigor matter.
+              I work with teams operating token, treasury, and market-structure environments where visibility, execution quality, and cross-protocol understanding are operationally important.
             </span>
           </p>
-          <p className="mt-1 hidden text-[0.95rem] font-light text-muted-foreground/88 sm:text-[1.01rem] md:block">
-            Useful starting points include monitoring requirements, market structure concerns, protocol risk questions, or platform and infrastructure buildout.
+          <ul className="mt-3 hidden space-y-1.5 text-[0.93rem] leading-relaxed text-muted-foreground/88 md:block">
+            <li>Stablecoin or treasury monitoring requirements</li>
+            <li>Market-maker oversight and accountability</li>
+            <li>Live risk-visibility gaps across venues</li>
+            <li>Post-incident investigation and follow-up analysis</li>
+            <li>Extension of an existing monitoring footprint into new domains</li>
+          </ul>
+          <p className="mt-4 hidden text-[0.93rem] leading-relaxed text-muted-foreground/84 md:block">
+            If there is a live system, venue footprint, or operating problem you need to understand more clearly, I&apos;m happy to discuss scope.
           </p>
           <ul className="mt-3 space-y-1.5 text-[0.9rem] leading-relaxed text-muted-foreground/86 md:hidden">
             <li>Stablecoin or treasury monitoring</li>

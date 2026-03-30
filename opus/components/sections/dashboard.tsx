@@ -7,11 +7,11 @@ import { FadeIn } from "@/components/shared/fade-in";
 import { dashboardScreenshots } from "@/lib/generated/dashboard-screenshots.generated";
 
 const capabilities = [
-  "Unified monitoring across DEX, lending, and issuer contracts",
-  "Normalized metrics across protocol domains",
-  "Historical event storage and replay",
-  "Cross-protocol risk surfaces",
-  "Decision-support outputs for live operations",
+  "Cross-protocol monitoring across DEX, lending, yield, and issuer-controlled contract domains",
+  "Structured operational views for liquidity, pricing, exposure, and counterparty behaviour",
+  "Historical event retention for investigation, replay, and root-cause analysis",
+  "Queryable analytical layer for rapid follow-up work when live incidents occur",
+  "Extendable architecture for new protocols and market domains",
 ];
 
 const fallbackScreenshots = [
@@ -101,16 +101,20 @@ export function Dashboard() {
           <div className="grid items-start gap-9 md:grid-cols-[2fr_3fr] md:gap-10">
             <div className="md:pl-1 md:pr-6">
               <p className="mb-3 font-mono text-xs uppercase tracking-wider text-foreground/90">
-                Core Intelligence Platform
+                Platform / What this is
               </p>
+              <h2 className="text-[1.72rem] font-medium tracking-tight text-foreground/98">
+                One operational picture across live financial venues
+              </h2>
               <p className="body-measure mb-7 text-[0.98rem] leading-relaxed text-muted-foreground/96 sm:mb-8 sm:text-[1.02rem]">
-                I design operational intelligence environments that turn complex
-                protocol activity into visibility across liquidity,
-                execution quality, and risk - enabling realtime decision support.
+                A specialized monitoring and analytical system for teams managing live onchain financial operations.
+              </p>
+              <p className="body-measure mb-7 text-[0.95rem] leading-relaxed text-muted-foreground/90 sm:text-[0.99rem]">
+                The platform converts raw onchain activity into decision-oriented visibility across market structure, liquidity, reserves, counterparties, structured exposures, and stress events.
               </p>
 
               <p className="section-label mb-3 text-muted-foreground/90">
-                Key Capabilities
+                Core platform capabilities
               </p>
               <ul className="mb-6 space-y-2 sm:mb-7">
                 {capabilities.map((item) => (
@@ -130,13 +134,12 @@ export function Dashboard() {
                   Deployment Readiness
                 </p>
                 <p className="text-[0.96rem] leading-relaxed text-muted-foreground/97 sm:text-[1.01rem]">
-                  Solana protocols&ensp;&ndash;&ensp;turnkey deployment
+                  Solana coverage today
                   <br />
-                  EVM environments&ensp;&ndash;&ensp;rapid implementation
+                  EVM environments feasible
                 </p>
                 <p className="mt-2.5 text-[0.88rem] font-[300] text-muted-foreground/86">
-                  Shared analytical framework, protocol mechanics already
-                  modelled.
+                  Shared analytical framework, protocol-specific implementation.
                 </p>
               </div>
             </div>
@@ -180,7 +183,7 @@ export function Dashboard() {
                 href="https://demo.rmckinley.net"
                 className="mt-5 inline-block font-mono text-[11px] text-cta/91 transition-[color,filter] duration-600 ease-in-out hover:text-cta/93 hover:drop-shadow-[0_0_1px_rgba(248,169,74,0.9)] hover:[filter:drop-shadow(0_0_1px_rgba(248,169,74,0.9))_drop-shadow(0_0_3px_rgba(248,169,74,0.3))] sm:mt-[1.375rem] sm:text-[12px]"
               >
-                Explore Operational Dashboard&ensp;&rarr;
+                Explore Live Platform&ensp;&rarr;
               </a>
             </div>
           </div>

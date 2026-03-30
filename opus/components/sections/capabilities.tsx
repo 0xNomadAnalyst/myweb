@@ -5,27 +5,27 @@ const domains = [
   {
     title: "Liquidity & Market Structure Visibility",
     description:
-      "Understand true depth, concentration risk, and venue dependency under live trading conditions.",
+      "Understand available depth, concentration, venue dependency, and price-impact conditions before execution quality deteriorates.",
   },
   {
     title: "Market Maker Visibility & Accountability",
     description:
-      "Measure third-party liquidity support against explicit KPIs, stress-period behaviour, and replacement thresholds.",
+      "Measure actual support against operational needs, detect degraded performance under stress, and improve negotiation and KPI design.",
   },
   {
     title: "Cross-Protocol Risk & Exposure Monitoring",
     description:
-      "Monitor dependencies across liquidity, lending, and yield venues through normalized metrics and unified risk views.",
+      "Track dependencies across DEXs, lending markets, yield venues, and issuer-controlled flows using normalized metrics and unified views.",
   },
   {
     title: "Incident Replay & Root-Cause Analysis",
     description:
-      "Use historical event data to explain stress episodes, isolate mechanisms, and refine playbooks.",
+      "Turn live stress events into structured investigation quickly, shortening the path from incident to understanding.",
   },
   {
-    title: "Simulation & Risk Policy Modelling",
+    title: "Simulation & Risk-Policy Support",
     description:
-      "Test thresholds, liquidity buffers, and design choices before they become operational risk.",
+      "Use observed behaviour and structured historical data to refine intervention rules, thresholds, and operating playbooks.",
   },
 ];
 
@@ -83,12 +83,12 @@ export function Capabilities() {
 
       <div className="hidden md:block">
         <FadeIn>
-          <p className="section-label">Key Operational Domains</p>
+          <p className="section-label">Where this helps</p>
           <h2 className="section-title">
             Where Visibility Matters Most
           </h2>
-          <p className="section-intro max-w-none">
-            The operational domains where better monitoring, accountability, and system-level understanding have the greatest impact.
+          <p className="section-intro max-w-[78ch]">
+            The operational domains below are where better monitoring, accountability, and system-level understanding tend to have the greatest impact.
           </p>
         </FadeIn>
         <div className="mt-7 grid gap-3.5 sm:mt-8 sm:gap-4 md:grid-cols-12">
@@ -115,6 +115,11 @@ export function Capabilities() {
             );
           })}
         </div>
+        <FadeIn delay={0.18}>
+          <p className="mt-6 text-[0.95rem] leading-relaxed text-muted-foreground/87">
+            Built for environments where risk is system-level rather than confined to one interface.
+          </p>
+        </FadeIn>
       </div>
     </SectionShell>
   );
