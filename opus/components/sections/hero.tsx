@@ -85,9 +85,6 @@ export function Hero() {
             <p className="mt-3 text-[0.92rem] leading-relaxed text-muted-foreground/82">
               Built for environments where liquidity, leverage, counterparties, and execution risk interact across multiple venues in real time.
             </p>
-            <p className="mt-2.5 text-[0.9rem] leading-relaxed text-muted-foreground/76">
-              Engagements include platform-led monitoring and scoped data-driven advisory work where full deployment is not required.
-            </p>
             <div className="mt-6 flex flex-col gap-2.5">
               <Button variant="cta" className="w-full justify-center" asChild>
                 <a href="https://demo.rmckinley.net">Explore Live Platform</a>
@@ -124,13 +121,13 @@ export function Hero() {
             </h1>
 
             <p className="body-measure mt-4 text-[1rem] leading-[1.68] text-foreground/90 sm:mt-5 sm:text-[1.08rem] sm:leading-7">
-              I build monitoring, analytics, and decision-support systems for digital-asset teams operating across DEXs, lending venues, yield markets, and issuer-controlled contracts.
+              I work with teams facing complex financial environments, combining analytical judgment and technical implementation as a single principal practitioner.
             </p>
             <p className="mt-3 max-w-[86ch] text-[0.97rem] leading-relaxed text-muted-foreground/86 sm:text-[1rem]">
-              The work is designed for environments where liquidity conditions, leverage, counterparties, and execution risk interact across multiple venues in real time - and where fragmented visibility leads to weak operating decisions.
+              This independent practice spans financial and system analysis, empirical modelling, and realtime infrastructure across digital-asset markets.
             </p>
-            <p className="mt-3 max-w-[86ch] text-[0.94rem] leading-relaxed text-muted-foreground/78 sm:text-[0.97rem]">
-              Engagements can be platform-led monitoring deployments or targeted analytical support, incident diagnostics, and risk-policy work where a full platform rollout is not required.
+            <p className="mt-2.5 max-w-[86ch] text-[0.95rem] leading-relaxed text-muted-foreground/80 sm:text-[0.98rem]">
+              The flagship platform shown here is one expression of that work: a monitoring and analytical environment for live onchain financial operations.
             </p>
             <div className="mt-7 sm:mt-8">
               <Button variant="cta" className="w-full justify-center sm:w-auto" asChild>
@@ -162,12 +159,6 @@ export function Hero() {
                 className="mt-2 block font-mono text-xs text-muted-foreground/52 transition-colors duration-700 ease-out hover:text-muted-foreground/72"
               >
                 View platform capabilities overview
-              </a>
-              <a
-                href="#contact"
-                className="mt-1.5 block font-mono text-xs text-muted-foreground/48 transition-colors duration-700 ease-out hover:text-muted-foreground/68"
-              >
-                Discuss analytical engagement
               </a>
               <p className="mt-4 max-w-[86ch] text-[0.88rem] leading-relaxed text-muted-foreground/70">
                 Principal-led practice built around a specialized platform for cross-protocol monitoring, incident investigation, and risk-policy support.
