@@ -117,38 +117,31 @@ export function Hero() {
         <FadeIn>
           <div className="max-w-[980px]">
             <h1 className="text-[1.9rem] font-medium leading-[1.16] tracking-tight text-foreground sm:text-[2.2rem] md:text-[2.9rem] md:leading-tight">
-              Operational intelligence for complex onchain financial systems
+              Understand and operate complex <br></br>financial systems in realtime environments.
             </h1>
 
-            <p className="body-measure mt-4 text-[1rem] leading-[1.68] text-foreground/90 sm:mt-5 sm:text-[1.08rem] sm:leading-7">
-              I work with teams facing complex financial environments, combining analytical judgment and technical implementation as a single principal practitioner.
+            <p className="mt-4 max-w-[72ch] text-[1rem] leading-[1.68] text-foreground/90 sm:mt-5 sm:text-[1.08rem] sm:leading-7">
+              I build monitoring, analytics, and decision-support systems, and provide data-driven advisory for teams operating in DeFi and other complex digital-asset environments.
             </p>
-            <p className="mt-3 max-w-[86ch] text-[0.97rem] leading-relaxed text-muted-foreground/86 sm:text-[1rem]">
-              This independent practice spans financial and system analysis, empirical modelling, and realtime infrastructure across digital-asset markets.
+            <p className="mt-3 max-w-[72ch] text-[0.97rem] leading-relaxed text-muted-foreground/86 sm:text-[1rem]">
+              This independent practice spans financial risk analysis, empirical modelling, and realtime infrastructure across digital-asset markets - from problem definition to deployment.
             </p>
-            <p className="mt-2.5 max-w-[86ch] text-[0.95rem] leading-relaxed text-muted-foreground/80 sm:text-[0.98rem]">
-              The flagship platform shown here is one expression of that work: a monitoring and analytical environment for live onchain financial operations.
+            <hr className="my-6 border-muted-foreground/24 sm:my-7" />
+            <p className="text-[0.93rem] text-muted-foreground/50 sm:text-[0.98rem]">
+              Roderick McKinley, CFA, FRM
+              <br />
+              Independent Financial Systems Analyst
             </p>
             <div className="mt-7 sm:mt-8">
               <Button variant="cta" className="w-full justify-center sm:w-auto" asChild>
-                <a href="https://demo.rmckinley.net">Explore Live Platform</a>
-              </Button>
-              <Button variant="ghost" className="mt-3 w-full justify-center sm:ml-3 sm:mt-0 sm:w-auto" asChild>
-                <a
-                  href="/downloads/RMcKinley-FinancialSystemsAnalyst-Capabilities.pdf#view=FitH&page=1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  type="application/pdf"
-                >
-                  Download Overview
-                </a>
+                <a href="https://demo.rmckinley.net">Explore Operational Dashboard</a>
               </Button>
               <button
                 type="button"
                 onClick={openVideo}
-                className="mt-3.5 flex items-center gap-2 text-[0.85rem] text-muted-foreground/63 transition-colors duration-700 ease-out hover:text-foreground/82 sm:text-[0.92rem]"
+                className="mt-3.5 flex items-center gap-2 text-[0.83rem] text-muted-foreground/60 transition-colors duration-700 ease-out hover:text-foreground/80 sm:text-sm"
               >
-                Watch short introduction
+                Watch dashboard introduction video
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3.01 3.01 0 0 0-2.12-2.13C19.54 3.6 12 3.6 12 3.6s-7.54 0-9.38.47A3.01 3.01 0 0 0 .5 6.2 31.6 31.6 0 0 0 0 12a31.6 31.6 0 0 0 .5 5.8 3.01 3.01 0 0 0 2.12 2.13C4.46 20.4 12 20.4 12 20.4s7.54 0 9.38-.47a3.01 3.01 0 0 0 2.12-2.13A31.6 31.6 0 0 0 24 12a31.6 31.6 0 0 0-.5-5.8zM9.75 15.52V8.48L15.86 12l-6.11 3.52z"/></svg>
               </button>
               <a
@@ -156,13 +149,10 @@ export function Hero() {
                 target="_blank"
                 rel="noopener noreferrer"
                 type="application/pdf"
-                className="mt-2 block font-mono text-xs text-muted-foreground/52 transition-colors duration-700 ease-out hover:text-muted-foreground/72"
+                className="mt-2 block font-mono text-xs text-muted-foreground/45 transition-colors duration-700 ease-out hover:text-muted-foreground/67"
               >
-                View platform capabilities overview
+                View advisory capabilities deck (PDF)
               </a>
-              <p className="mt-4 max-w-[86ch] text-[0.88rem] leading-relaxed text-muted-foreground/70">
-                Principal-led practice built around a specialized platform for cross-protocol monitoring, incident investigation, and risk-policy support.
-              </p>
             </div>
           </div>
         </FadeIn>
@@ -170,6 +160,7 @@ export function Hero() {
         <FadeIn delay={0.2}>
           <div className="mt-9 flex flex-wrap gap-2 sm:mt-11">
             {[
+              "Risk Management",
               "DEX liquidity visibility",
               "Market-maker oversight",
               "Incident analysis",
@@ -180,10 +171,10 @@ export function Hero() {
                 className="group rounded-md border border-border-soft/80 bg-secondary/48 px-2.5 py-1 hover:border-border-soft hover:bg-secondary/66 hover:shadow-[0_0_0_1px_rgba(128,162,198,0.12),0_0_16px_rgba(82,114,150,0.2)]"
                 style={{
                   transition:
-                    "box-shadow 750ms ease-in-out, border-color 750ms ease-in-out, background-color 750ms ease-in-out",
+                    "box-shadow 480ms ease-in-out, border-color 480ms ease-in-out, background-color 480ms ease-in-out",
                 }}
               >
-                <p className="font-mono text-[11px] leading-snug tracking-[0.04em] text-muted-foreground/91 transition-colors duration-750 ease-in-out group-hover:text-foreground/96">
+                <p className="font-mono text-[11px] leading-snug tracking-[0.04em] text-muted-foreground/91 transition-colors duration-500 ease-in-out group-hover:text-foreground/96">
                   {domain}
                 </p>
               </div>

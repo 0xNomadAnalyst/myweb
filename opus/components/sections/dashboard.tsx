@@ -7,11 +7,12 @@ import { FadeIn } from "@/components/shared/fade-in";
 import { dashboardScreenshots } from "@/lib/generated/dashboard-screenshots.generated";
 
 const capabilities = [
-  "Cross-protocol monitoring across DEX, lending, yield, and issuer-controlled contract domains",
-  "Structured operational views for liquidity, pricing, exposure, and counterparty behaviour",
-  "Historical event retention for investigation, replay, and root-cause analysis",
-  "Queryable analytical layer for rapid follow-up work when live incidents occur",
-  "Extendable architecture for new protocols and market domains",
+  "Cross-protocol monitoring across DeFi domains",
+  "Structured views for liquidity, pricing, and exposure",
+  "Customizable views tailored to operational needs",
+  "Fast analytical follow-up after live incidents",
+  "Historical event storage for replay and investigation",
+  "Extendable architecture for new protocols and markets",
 ];
 
 const fallbackScreenshots = [
@@ -101,18 +102,11 @@ export function Dashboard() {
           <div className="grid items-start gap-9 md:grid-cols-[2fr_3fr] md:gap-10">
             <div className="md:pl-1 md:pr-6">
               <p className="mb-3 font-mono text-xs uppercase tracking-wider text-foreground/90">
-                Platform / What this is
+                Flagship Intelligence Platform
               </p>
-              <h2 className="text-[1.72rem] font-medium tracking-tight text-foreground/98">
-                One operational picture across live financial venues
-              </h2>
               <p className="body-measure mb-7 text-[0.98rem] leading-relaxed text-muted-foreground/96 sm:mb-8 sm:text-[1.02rem]">
-                A specialized monitoring and analytical system for teams managing live onchain financial operations.
+              A specialized monitoring and analytical system for teams managing live onchain financial operations, turning raw onchain activity into decision-oriented visibility across liquidity, market structure, counterparties, and stress events.
               </p>
-              <p className="body-measure mb-7 text-[0.95rem] leading-relaxed text-muted-foreground/90 sm:text-[0.99rem]">
-                The platform converts raw onchain activity into decision-oriented visibility across market structure, liquidity, reserves, counterparties, structured exposures, and stress events.
-              </p>
-
               <p className="section-label mb-3 text-muted-foreground/90">
                 Core platform capabilities
               </p>
@@ -134,12 +128,9 @@ export function Dashboard() {
                   Deployment Readiness
                 </p>
                 <p className="text-[0.96rem] leading-relaxed text-muted-foreground/97 sm:text-[1.01rem]">
-                  Solana coverage today
+                  Solana protocols – turnkey deployment
                   <br />
-                  EVM environments feasible
-                </p>
-                <p className="mt-2.5 text-[0.88rem] font-[300] text-muted-foreground/86">
-                  Shared analytical framework, protocol-specific implementation.
+                  EVM environments – rapid implementation
                 </p>
               </div>
             </div>

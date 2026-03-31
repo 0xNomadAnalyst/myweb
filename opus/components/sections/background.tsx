@@ -11,17 +11,17 @@ const credentialGroups: CredentialGroup[] = [
   {
     title: "Digital Asset & OnChain Work",
     items: [
-      "Operational risk infrastructure",
-      "Public live monitoring environment",
-      "Token launch, treasury, and market-structure support",
+      "Operational Risk Infrastructure - Solstice USX Stablecoin (~$350M AUM)",
+      "Public Token Economy Dashboard - Token LaunchPad with 250k users",
+      "ICO / Utility Token Fundraising Support - (~$60M in private and public raises)",
     ],
   },
   {
     title: "Institutional Experience",
     items: [
-      "Bloomberg",
-      "Advisory and financial modelling",
-      "Transaction and project-finance analytical work",
+      "Bloomberg - Analytical Research & Financial Modelling",
+      "M&A Analyst - UK Renewable Energy Assets",
+      "Project Finance Modelling - Private Equity Sponsored Renewables (Chile)",
     ],
   },
   {
@@ -31,8 +31,8 @@ const credentialGroups: CredentialGroup[] = [
   {
     title: "Education",
     items: [
-      "MSc Economics",
-      "BSc Economics & Philosophy",
+      "MSc Economic Policy - University College London",
+      "BSc Economics & Philosophy - University of Bristol (First Class Honours)",
     ],
   },
 ];
@@ -97,10 +97,10 @@ export function Background() {
           className="pointer-events-none absolute inset-0 hidden md:block [background:radial-gradient(780px_380px_at_82%_12%,rgba(128,162,198,0.12),transparent_62%),radial-gradient(480px_320px_at_12%_88%,rgba(248,169,74,0.05),transparent_60%)]"
         />
         <FadeIn>
-          <p className="section-label">Background</p>
-          <h2 className="section-title">Institutional Finance, Applied to Onchain Systems</h2>
-          <p className="section-intro max-w-[79ch] text-foreground/92">
-            My work sits at the intersection of institutional finance, risk analysis, and digital-asset market infrastructure.
+          <p className="section-label">Professional Foundations</p>
+          <h2 className="section-title">Institutional Discipline, Onchain</h2>
+          <p className="section-intro max-w-none md:whitespace-nowrap text-foreground/92">
+            Judgment shaped by experience across institutional finance, risk analysis, and digital-asset markets.
           </p>
         </FadeIn>
 
@@ -109,10 +109,10 @@ export function Background() {
             <div className="space-y-6 sm:space-y-7">
               <div className="body-measure max-w-[60ch] space-y-3.5 text-[0.95rem] leading-[1.66] text-muted-foreground/95 sm:space-y-4 sm:text-[1rem] sm:leading-[1.72]">
                 <p>
-                  I came into this field from traditional finance, advisory, and independent analytical consulting, and now focus on operational intelligence for digital-asset systems.
+                  Blockchain systems introduce genuinely new financial structures, requiring the ability to reinterpret legacy instruments, institutions, and infrastructure while cutting through narrative, ideology, and conflicting incentives that can obscure economic reality.
                 </p>
                 <p>
-                  The work centers on building monitoring, analytical, and risk-support layers needed when live environments become too complex to manage through fragmented tools alone.
+                  A strong foundation in traditional finance and economic reasoning provides the grounding to do this clearly, while remaining open to the structural possibilities programmable onchain systems create.
                 </p>
               </div>
 
@@ -125,12 +125,15 @@ export function Background() {
 
               <div className="body-measure max-w-[60ch] space-y-3.5 text-[0.95rem] leading-[1.66] text-muted-foreground/95 sm:space-y-4 sm:text-[1rem] sm:leading-[1.72]">
                 <p>
-                  A core part of the value is bringing structured financial reasoning into environments where operational clarity is often weak - not only through dashboard views, but through the underlying analytical and data infrastructure required to investigate incidents, assess counterparties, and improve policy over time.
+                  Success depends on treating blockchain networks as observable financial systems – drawing on the public data they expose, though often only through substantial analytical and infrastructure work.
+                </p>
+                <p>
+                  My work – from institutional finance through independent consulting – has centred on enabling data-driven decision-making in materially risky environments. That same perspective now informs monitoring and risk-support work for complex digital-asset systems.
                 </p>
               </div>
 
               <blockquote className="body-measure relative max-w-[60ch] pl-[0.9rem] text-[0.95rem] leading-[1.62] text-foreground/86 before:absolute before:bottom-[0.18rem] before:left-0 before:top-[0.18rem] before:w-[1.5px] before:bg-cta/57 before:content-[''] sm:pl-[1.125rem] sm:text-[1.02rem] sm:leading-[1.68]">
-                The aim is practical: clearer visibility, faster investigation, and stronger operating decisions in live onchain financial systems.
+                The results: clearer visibility, faster investigation, and stronger operating decisions in live financial environments.
               </blockquote>
             </div>
           </FadeIn>

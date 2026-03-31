@@ -3,24 +3,19 @@ import { FadeIn } from "@/components/shared/fade-in";
 
 const principles = [
   {
-    title: "Monitoring Deployment or Adaptation",
+    title: "Principal-Led Delivery",
     description:
-      "Deploying or tailoring a monitoring environment around protocol footprint, market structure, and operational priorities.",
+      "You work directly with the person defining analysis, models, and operational systems - without delivery layers or handoffs.",
   },
   {
-    title: "Liquidity and Market-Structure Analysis",
+    title: "Integrated Advisory & Build",
     description:
-      "Evaluating liquidity conditions, venue dependencies, execution sensitivity, and the behaviour of external support providers.",
+      "Analytical definition and technical implementation remain aligned throughout the engagement, ensuring decisions translate into working systems.",
   },
   {
-    title: "Market-Maker Oversight and Incident Diagnostics",
+    title: "Designed for Internal Ownership",
     description:
-      "Supporting independent assessment of external MMs or LPs, and rapid investigation when live stress events occur.",
-  },
-  {
-    title: "Risk-Policy Support and New Protocol Coverage",
-    description:
-      "Refining intervention logic, thresholds, and playbooks while extending monitoring into additional venues or market domains as required.",
+      "Systems and analytical frameworks are transferred so internal teams can understand, operate, and extend them independently.",
   },
 ];
 
@@ -29,7 +24,7 @@ export function Engagement() {
     <SectionShell id="engagement" variant="open">
       <div className="md:hidden">
         <FadeIn>
-          <p className="section-label">How I work</p>
+          <p className="section-label">Working together</p>
           <h2 className="section-title">Principal-Led Analysis and Implementation</h2>
           <p className="section-intro">
             I work directly with teams on the monitoring, analysis, and implementation required for their operating environment.
@@ -51,18 +46,18 @@ export function Engagement() {
       <div className="hidden md:grid gap-8 sm:gap-10 lg:grid-cols-[minmax(0,6fr)_minmax(0,6fr)] lg:gap-14">
         <FadeIn>
           <div className="max-w-xl">
-            <p className="section-label">How engagement works</p>
+            <p className="section-label">Working Together</p>
             <h2 className="section-title">
               What Engagement Looks Like
             </h2>
             <p className="section-intro mt-4 max-w-[56ch] sm:mt-5">
-              A compact, principal-led model designed to stay close to operating reality and avoid fragmentation across analysis, implementation, and handover.
+              A compact, principal-led model designed to stay close to operating realities and avoid fragmentation between analysis, implementation, and handover.
             </p>
             <p className="mt-4 text-[0.93rem] leading-relaxed text-muted-foreground/92 sm:mt-5 sm:text-[0.98rem]">
-              Engagements are structured around the operating problem, team context, and level of support required.
+              Engagements are shaped around the specific operational problem, internal team structure, and level of support required. Some begin with diagnostic analysis, policy review, or strategic advisory; others extend into monitoring design, implementation, or refinement of an existing system.
             </p>
             <p className="mt-4 text-[0.93rem] leading-relaxed text-muted-foreground/90 sm:mt-5 sm:text-[0.98rem]">
-              The model is deliberately direct. Analysis and implementation remain aligned end to end, so operational questions can be answered quickly and acted on without unnecessary delivery layers.
+              The aim is to keep analytical definition, technical execution, and operational context aligned throughout - so useful work happens quickly and internal teams can take ownership without unnecessary delivery layers.
             </p>
           </div>
         </FadeIn>

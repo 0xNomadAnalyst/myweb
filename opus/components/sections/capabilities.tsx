@@ -10,12 +10,12 @@ const domains = [
   {
     title: "Market Maker Visibility & Accountability",
     description:
-      "Measure actual support against operational needs, detect degraded performance under stress, and improve negotiation and KPI design.",
+      "Monitor third party support, performance during stress periods, and improve negotiation and KPI design.",
   },
   {
     title: "Cross-Protocol Risk & Exposure Monitoring",
     description:
-      "Track dependencies across DEXs, lending markets, yield venues, and issuer-controlled flows using normalized metrics and unified views.",
+      "Track and interpret exposures across DeFi venues, and issuer-controlled contracts using normalized metrics and unified views.",
   },
   {
     title: "Incident Replay & Root-Cause Analysis",
@@ -83,12 +83,12 @@ export function Capabilities() {
 
       <div className="hidden md:block">
         <FadeIn>
-          <p className="section-label">Where this helps</p>
+          <p className="section-label">Key Operational Domains</p>
           <h2 className="section-title">
             Where Visibility Matters Most
           </h2>
-          <p className="section-intro max-w-[78ch]">
-            The operational domains below are where better monitoring, accountability, and system-level understanding tend to have the greatest impact.
+          <p className="section-intro max-w-none lg:whitespace-nowrap">
+            Domains where better monitoring, accountability, and system-level understanding have the greatest impact.
           </p>
         </FadeIn>
         <div className="mt-7 grid gap-3.5 sm:mt-8 sm:gap-4 md:grid-cols-12">
@@ -115,11 +115,6 @@ export function Capabilities() {
             );
           })}
         </div>
-        <FadeIn delay={0.18}>
-          <p className="mt-6 text-[0.95rem] leading-relaxed text-muted-foreground/87">
-            Built for environments where risk is system-level rather than confined to one interface.
-          </p>
-        </FadeIn>
       </div>
     </SectionShell>
   );

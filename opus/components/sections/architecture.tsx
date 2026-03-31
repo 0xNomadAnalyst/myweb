@@ -39,13 +39,13 @@ export function Architecture() {
 
       <div className="hidden md:block">
         <FadeIn>
-          <p className="section-label">Analytical approach</p>
+          <p className="section-label">Guiding Principles</p>
           <h2 className="section-title">
-            Analytical Discipline in Practice
+            Analytical Rigour, Operationally Applied
           </h2>
           <div className="mt-3 grid gap-6 md:grid-cols-1">
             <p className="text-[0.99rem] leading-[1.66] text-muted-foreground/96 sm:text-[1.08rem] sm:leading-7">
-              Empirical analysis, operational orientation, and direct implementation responsibility keep complex work rigorous, adaptable, and continuous from definition through deployment.
+              My approach combines empirical rigour, operational realism, and direct implementation responsibility – keeping complex work analytically sound, practically useful, and adapted to real operating conditions.
             </p>
           </div>
         </FadeIn>
@@ -73,10 +73,10 @@ export function Architecture() {
                 Protocol-Level Understanding
               </h3>
               <p className="mt-2.5 text-[0.93rem] leading-relaxed text-muted-foreground/96 sm:mt-3 sm:text-[0.98rem]">
-                Onchain systems often require protocol-level interpretation, with raw data transformed into operationally meaningful views rather than read directly from fragmented interfaces.
+              Onchain systems must be understood at protocol level, with data ingestion and analytics engineered to reflect underlying mechanics, capital flows, and edge cases accurately.
               </p>
               <p className="mt-5 font-mono text-[0.82rem] tracking-wide text-muted-foreground/88 sm:mt-6 sm:text-[0.88rem]">
-                A cross-domain monitoring architecture joining ingestion, analytics, and operational views.
+                It is this precision which analysis accurate and monitoring reliable.
               </p>
             </div>
 

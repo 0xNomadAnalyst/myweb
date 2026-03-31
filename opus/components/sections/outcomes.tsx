@@ -8,9 +8,9 @@ const outcomes = [
 ];
 
 const metrics = [
-  { label: "Annual MM cost", from: "~$2m", to: "~$840k" },
-  { label: "External MM model", from: "2 partners", to: "1 partner" },
-  { label: "Operating model", from: "External-only", to: "Internal MM capability added" },
+  { label: "Annual Market Maker cost", from: "~$2m", to: "~$840k" },
+  { label: "External Market Maker model", from: "2 partners", to: "1 partner" },
+  { label: "Operating model", from: "External-only", to: "Internal capability" },
 ];
 
 export function Outcomes() {
@@ -54,10 +54,10 @@ export function Outcomes() {
 
       <div className="hidden md:block">
         <FadeIn>
-          <p className="section-label">Selected outcomes</p>
-          <h2 className="section-title">Selected Operating Improvements</h2>
-          <p className="section-intro max-w-[72ch]">
-            The value of the work is not better visibility in the abstract. It is better visibility tied to concrete operating decisions.
+          <p className="section-label">Selected  Client Outcomes</p>
+          <h2 className="section-title">Improvements with Financial Impact</h2>
+          <p className="section-intro max-w-none md:whitespace-nowrap">
+            Better visibility translated into concrete changes in operating model, market-maker oversight, and cost.
           </p>
         </FadeIn>
 
@@ -88,9 +88,6 @@ export function Outcomes() {
               </li>
             ))}
           </ul>
-          <p className="mt-5 text-[0.95rem] leading-relaxed text-muted-foreground/88">
-            Better visibility in live markets, and faster understanding when something goes wrong.
-          </p>
         </FadeIn>
       </div>
     </SectionShell>
