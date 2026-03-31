@@ -80,10 +80,10 @@ export function Hero() {
               Operational intelligence for complex onchain systems
             </h1>
             <p className="mt-4 text-[0.98rem] leading-[1.6] text-foreground/92">
-              I build monitoring and analytics systems for digital-asset teams operating across DEXs, lending venues, yield markets, and issuer-controlled contracts.
+              I build monitoring and analytics systems, and provide related data-driven advisory, for teams operating in DeFi and other complex digital-asset environments.
             </p>
             <p className="mt-3 text-[0.92rem] leading-relaxed text-muted-foreground/82">
-              Built for environments where liquidity, leverage, counterparties, and execution risk interact across multiple venues in real time.
+              Built for environments where liquidity, leverage, counterparties, and execution risk interact across venues in real time.
             </p>
             <div className="mt-6 flex flex-col gap-2.5">
               <Button variant="cta" className="w-full justify-center" asChild>

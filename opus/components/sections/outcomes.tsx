@@ -8,9 +8,9 @@ const outcomes = [
 ];
 
 const metrics = [
-  { label: "Annual Market Maker cost", from: "~$2m", to: "~$840k" },
-  { label: "External Market Maker model", from: "2 partners", to: "1 partner" },
-  { label: "Operating model", from: "External-only", to: "Internal capability" },
+  { label: "Annual MM Cost", from: "~$2m", to: "~$840k" },
+  { label: "External MM Model", from: "2 partners", to: "1 partner" },
+  { label: "Operating Model", from: "External only", to: "Internal capability" },
 ];
 
 export function Outcomes() {
@@ -19,7 +19,10 @@ export function Outcomes() {
       <div className="md:hidden">
         <FadeIn>
           <p className="section-label">Selected outcomes</p>
-          <h2 className="section-title">Client-Reported Operating Improvements</h2>
+          <h2 className="section-title">Improvements with Financial Impact</h2>
+          <p className="section-intro">
+            Better visibility translated into concrete changes in operating model, oversight, and cost.
+          </p>
         </FadeIn>
 
         <div className="mt-5 grid gap-3">

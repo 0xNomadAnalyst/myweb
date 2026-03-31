@@ -40,17 +40,17 @@ export function Capabilities() {
     <SectionShell id="capabilities" variant="open">
       <div className="md:hidden">
         <FadeIn>
-          <p className="section-label">What this is</p>
-          <h2 className="section-title">Built for Live Financial Operations</h2>
+          <p className="section-label">What this supports</p>
+          <h2 className="section-title">Monitoring, Analysis, and Decision Support</h2>
           <p className="section-intro">
-            A specialized monitoring and analytics capability for teams managing live onchain financial systems.
+            A combination of monitoring, analysis, investigation, and decision support for teams managing live onchain financial operations.
           </p>
         </FadeIn>
         <FadeIn delay={0.06}>
           <ul className="mt-4 space-y-2 text-[0.95rem] leading-relaxed text-muted-foreground/95">
             <li className="flex gap-2.5"><span className="mt-[0.55rem] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />Cross-protocol visibility</li>
             <li className="flex gap-2.5"><span className="mt-[0.55rem] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />Operational analytics</li>
-            <li className="flex gap-2.5"><span className="mt-[0.55rem] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />Incident investigation and risk-policy support</li>
+            <li className="flex gap-2.5"><span className="mt-[0.55rem] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />Incident investigation and risk support</li>
           </ul>
           <p className="mt-4 text-[0.92rem] leading-relaxed text-muted-foreground/86">
             Built for live decisions, not passive reporting.
@@ -60,7 +60,7 @@ export function Capabilities() {
           {[
             {
               title: "Monitoring",
-              description: "Track liquidity, execution quality, exposure, and counterparties across venue types.",
+              description: "Track liquidity, execution quality, exposure, and counterparties across venues.",
             },
             {
               title: "Analytics",

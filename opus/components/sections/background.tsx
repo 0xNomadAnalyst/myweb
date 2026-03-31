@@ -58,9 +58,12 @@ export function Background() {
       <div className="md:hidden">
         <FadeIn>
           <p className="section-label">Background</p>
-          <h2 className="section-title">Institutional Finance, Applied to Onchain Systems</h2>
+          <h2 className="section-title">Institutional Discipline, Onchain</h2>
           <p className="section-intro">
-            I come from institutional finance, risk analysis, and independent analytical consulting, and now focus on operational intelligence for digital-asset systems.
+            My work is shaped by experience across institutional finance, risk analysis, and digital-asset markets.
+          </p>
+          <p className="mt-2.5 text-[0.92rem] leading-relaxed text-muted-foreground/85">
+            That perspective now informs monitoring and risk-support work for complex digital-asset systems.
           </p>
         </FadeIn>
         <FadeIn delay={0.08}>

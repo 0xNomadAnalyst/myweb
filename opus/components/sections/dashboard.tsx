@@ -54,7 +54,7 @@ export function Dashboard() {
           <p className="section-label">Platform in action</p>
           <h2 className="section-title">Cross-Protocol Monitoring in One View</h2>
           <p className="section-intro">
-            Cross-protocol monitoring across DEX, lending, yield, and issuer-controlled contract domains.
+            A specialized monitoring and analytical system for teams managing live onchain financial operations.
           </p>
         </FadeIn>
         <FadeIn delay={0.08}>

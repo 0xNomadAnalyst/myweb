@@ -27,7 +27,7 @@ export function Architecture() {
           <p className="section-label">System architecture</p>
           <h2 className="section-title">Built for End-to-End Operational Visibility</h2>
           <p className="section-intro">
-            A protocol-level monitoring stack that joins ingestion, analytics, and decision support across domains.
+            A protocol-level monitoring stack joining ingestion, analytics, and decision support across domains.
           </p>
         </FadeIn>
         <FadeIn delay={0.08}>

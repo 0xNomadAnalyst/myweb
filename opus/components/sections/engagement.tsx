@@ -24,10 +24,10 @@ export function Engagement() {
     <SectionShell id="engagement" variant="open">
       <div className="md:hidden">
         <FadeIn>
-          <p className="section-label">Working together</p>
+          <p className="section-label">How I work</p>
           <h2 className="section-title">Principal-Led Analysis and Implementation</h2>
           <p className="section-intro">
-            I work directly with teams on the monitoring, analysis, and implementation required for their operating environment.
+            I work directly with teams on monitoring, analysis, implementation, and related advisory shaped to their operating environment.
           </p>
         </FadeIn>
         <FadeIn delay={0.08}>

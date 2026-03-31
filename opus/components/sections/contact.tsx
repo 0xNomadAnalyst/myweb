@@ -94,7 +94,7 @@ export function Contact() {
             <h2 className="section-title">Start a Conversation</h2>
             <p className="section-intro text-[1rem] leading-[1.68] sm:text-[1.12rem] sm:leading-8">
               <span className="md:hidden">
-                For teams operating token, treasury, and market-structure systems where visibility and execution quality matter.
+                For teams operating token, treasury, and market-structure environments where visibility, execution quality, and data-driven decision support matter.
               </span>
               <span className="hidden md:inline">
                 I work with teams operating token, treasury, and market-structure environments where visibility, execution quality, and cross-protocol understanding are operationally important.
@@ -103,11 +103,17 @@ export function Contact() {
             <p className="mt-4 hidden text-[0.93rem] leading-relaxed text-muted-foreground/84 md:block">
               If there is a live system, venue footprint, or operating problem you need to understand more clearly, I&apos;m happy to discuss scope.
             </p>
-            <ul className="mt-3 space-y-1.5 text-[0.9rem] leading-relaxed text-muted-foreground/86 md:hidden">
+            <ul className="mt-3 space-y-2 text-[0.9rem] leading-relaxed text-muted-foreground/88 md:hidden">
               {calloutCards.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item} className="flex gap-2.5">
+                  <span aria-hidden className="mt-[0.5rem] h-1.5 w-1.5 shrink-0 rounded-full bg-cta/70" />
+                  {item}
+                </li>
               ))}
             </ul>
+            <p className="mt-3 text-[0.88rem] leading-relaxed text-muted-foreground/82 md:hidden">
+              Work may begin with monitoring, investigation, advisory, or custom analytical buildout.
+            </p>
             {!isMounted ? (
               <div className="mt-7 h-[20rem] sm:mt-8" aria-hidden />
             ) : (
