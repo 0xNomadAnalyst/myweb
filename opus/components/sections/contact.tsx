@@ -92,6 +92,9 @@ export function Contact() {
               I work with teams operating token, treasury, and market-structure environments where visibility, execution quality, and cross-protocol understanding are operationally important.
             </span>
           </p>
+          <p className="mt-2 hidden text-[0.9rem] leading-relaxed text-muted-foreground/82 md:block">
+            Engagements can include full monitoring deployment or focused analytical support where a platform rollout is not required.
+          </p>
           <ul className="mt-3 hidden space-y-1.5 text-[0.93rem] leading-relaxed text-muted-foreground/88 md:block">
             <li>Stablecoin or treasury monitoring requirements</li>
             <li>Market-maker oversight and accountability</li>

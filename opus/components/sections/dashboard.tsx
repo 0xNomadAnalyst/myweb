@@ -112,6 +112,9 @@ export function Dashboard() {
               <p className="body-measure mb-7 text-[0.95rem] leading-relaxed text-muted-foreground/90 sm:text-[0.99rem]">
                 The platform converts raw onchain activity into decision-oriented visibility across market structure, liquidity, reserves, counterparties, structured exposures, and stress events.
               </p>
+              <p className="body-measure mb-7 text-[0.92rem] leading-relaxed text-muted-foreground/80 sm:text-[0.96rem]">
+                While many engagements use this platform directly, work can also be delivered as scoped analytical and advisory support where that is the better fit.
+              </p>
 
               <p className="section-label mb-3 text-muted-foreground/90">
                 Core platform capabilities
