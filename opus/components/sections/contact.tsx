@@ -112,7 +112,7 @@ export function Contact() {
               ))}
             </ul>
             <p className="mt-3 text-[0.88rem] leading-relaxed text-muted-foreground/82 md:hidden">
-              Work may begin with monitoring, investigation, advisory, or custom analytical buildout.
+              Work may begin with monitoring, investigation, advisory, or custom analytical build.
             </p>
             {!isMounted ? (
               <div className="mt-7 h-[20rem] sm:mt-8" aria-hidden />

@@ -81,7 +81,7 @@ export function Hero() {
               Operational intelligence for complex onchain systems
             </h1>
             <p className="mt-4 text-[0.98rem] leading-[1.6] text-foreground/92">
-              Monitoring, analytics, and data-driven advisory for DeFi and other digital-asset environments
+              Monitoring, analytics, and data-driven advisory across DeFi and broader digital-asset environments.
             </p>
             <p className="mt-3 text-[0.92rem] leading-relaxed text-muted-foreground/82">
               Principal-led problem definition, analysis, and implementation – end-to-end accountability

@@ -22,21 +22,6 @@ const principles = [
 export function Architecture() {
   return (
     <SectionShell id="approach">
-      <div className="md:hidden">
-        <FadeIn>
-          <p className="section-label">System architecture</p>
-          <h2 className="section-title">Built for End-to-End Operational Visibility</h2>
-          <p className="section-intro">
-            A protocol-level monitoring stack joining ingestion, analytics, and decision support across domains.
-          </p>
-        </FadeIn>
-        <FadeIn delay={0.08}>
-          <div className="mt-5 card-interactive rounded-lg border bg-none px-4 pb-3 pt-4 [background:linear-gradient(180deg,rgba(19,33,58,0.86)_0%,rgba(13,24,45,0.82)_100%)] [border-color:rgba(124,158,196,0.3)] shadow-[0_0_0_1px_rgba(116,150,188,0.14),0_10px_32px_rgba(1,8,20,0.34),0_0_24px_rgba(53,95,148,0.14)]">
-            <ProtocolDiagramCarousel />
-          </div>
-        </FadeIn>
-      </div>
-
       <div className="hidden md:block">
         <FadeIn>
           <p className="section-label">Guiding Principles</p>

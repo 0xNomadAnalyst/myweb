@@ -63,8 +63,8 @@ const mobileSummaryCards = [
   {
     title: "Education",
     items: [
-      "MSc Economic Policy - University College London",
-      "BSc Economics & Philosophy - University of Bristol (First Class Honours)",
+      "MSc Economic Policy – UCL",
+      "BSc Economics & Philosophy – Bristol",
     ],
   },
 ];
@@ -90,6 +90,10 @@ export function Background() {
               aria-hidden
               className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"
             />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-cta/55 to-transparent shadow-[0_0_10px_rgba(246,155,52,0.24)]"
+            />
             <div className="grid gap-3 py-4 pl-4 pr-3">
               <div className="pt-0.5">
                 <p className="font-mono text-[11.5px] uppercase tracking-[0.14em] leading-snug text-foreground/92">
@@ -98,11 +102,11 @@ export function Background() {
               </div>
               <ul className="space-y-2.5">
                 <li className="relative pl-3.5">
-                  <span aria-hidden className="absolute left-0 top-[0.56rem] h-[4px] w-[4px] rounded-full bg-cta/68" />
+                  <span aria-hidden className="absolute left-0 top-[0.56rem] h-[3px] w-[3px] rounded-full bg-muted-foreground/46" />
                   <p className="text-[0.92rem] leading-[1.28] text-foreground/88">CFA Charterholder</p>
                 </li>
                 <li className="relative pl-3.5">
-                  <span aria-hidden className="absolute left-0 top-[0.56rem] h-[4px] w-[4px] rounded-full bg-cta/68" />
+                  <span aria-hidden className="absolute left-0 top-[0.56rem] h-[3px] w-[3px] rounded-full bg-muted-foreground/46" />
                   <p className="text-[0.92rem] leading-[1.28] text-foreground/88">Financial Risk Manager (FRM)</p>
                 </li>
               </ul>
@@ -117,14 +121,29 @@ export function Background() {
                   aria-hidden
                   className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"
                 />
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-cta/55 to-transparent shadow-[0_0_10px_rgba(246,155,52,0.24)]"
+                />
                 <p className="font-mono text-[11.5px] uppercase tracking-[0.14em] leading-snug text-foreground/92">
                   {card.title}
                 </p>
                 <ul className="mt-2.5 space-y-2">
                   {card.items.map((item) => (
                     <li key={item} className="relative pl-3.5">
-                      <span aria-hidden className="absolute left-0 top-[0.56rem] h-[4px] w-[4px] rounded-full bg-cta/68" />
-                      <p className="text-[0.9rem] leading-[1.35] text-foreground/86">{item}</p>
+                      <span aria-hidden className="absolute left-0 top-[0.56rem] h-[3px] w-[3px] rounded-full bg-muted-foreground/46" />
+                      {item.includes("|") ? (
+                        <>
+                          <p className="text-[0.9rem] leading-[1.3] text-foreground/86">
+                            {item.split("|")[0]}
+                          </p>
+                          <p className="mt-0.5 text-[0.82rem] leading-[1.25] text-foreground/80">
+                            {item.split("|")[1]}
+                          </p>
+                        </>
+                      ) : (
+                        <p className="text-[0.9rem] leading-[1.35] text-foreground/86">{item}</p>
+                      )}
                     </li>
                   ))}
                 </ul>

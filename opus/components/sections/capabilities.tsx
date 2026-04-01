@@ -43,7 +43,7 @@ export function Capabilities() {
           <p className="section-label">Key Applications</p>
           <h2 className="section-title">Support for Live Financial Operations</h2>
           <p className="section-intro">
-            For teams managing live onchain financial operations, support usually falls into one or more of these areas.
+            Teams managing live onchain financial operations often need support in one or more of these areas.
           </p>
         </FadeIn>
         <div className="mt-6 grid gap-3">
@@ -62,9 +62,21 @@ export function Capabilities() {
             },
           ].map((item, index) => (
             <FadeIn key={item.title} delay={0.08 * (index + 1)}>
-              <div className="card-interactive rounded-lg border border-border-strong bg-card px-4 py-4 hover:bg-accent">
-                <h3 className="text-[1rem] font-medium tracking-tight text-foreground/97">{item.title}</h3>
-                <p className="mt-1.5 text-[0.93rem] leading-relaxed text-muted-foreground/95">{item.description}</p>
+              <div className="card-interactive relative overflow-hidden rounded-xl border border-border-strong/65 bg-card/36 px-4 py-4 hover:bg-accent">
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"
+                />
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-cta/52 to-transparent shadow-[0_0_10px_rgba(246,155,52,0.22)]"
+                />
+                <h3 className="text-[1.02rem] font-medium tracking-tight text-foreground/97">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-[0.93rem] leading-[1.52] text-muted-foreground/94">
+                  {item.description}
+                </p>
               </div>
             </FadeIn>
           ))}

@@ -30,7 +30,7 @@ export default function Home() {
         <div className="order-2 md:order-none"><Capabilities /></div>
         <div className="order-4 md:order-none"><Outcomes /></div>
         <div className="hidden md:block"><SectionDivider /></div>
-        <div className="order-7 md:order-none"><Architecture /></div>
+        <div className="hidden md:block"><Architecture /></div>
         <div className="hidden md:block"><SectionDivider /></div>
         <div className="order-5 md:order-none"><Engagement /></div>
         <div className="hidden md:block"><SectionDivider /></div>
