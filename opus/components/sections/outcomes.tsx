@@ -21,14 +21,18 @@ export function Outcomes() {
           <p className="section-label">Selected outcomes</p>
           <h2 className="section-title">Improvements with Financial Impact</h2>
           <p className="section-intro">
-            Better visibility translated into concrete changes in operating model, oversight, and cost.
+            Better visibility translated into measurable changes in cost, oversight, and operating model.
           </p>
         </FadeIn>
 
         <div className="mt-5 grid gap-3">
           {metrics.map((metric, index) => (
             <FadeIn key={metric.label} delay={0.06 * (index + 1)}>
-              <div className="card-interactive rounded-lg border border-border-strong bg-card px-4 py-3.5 hover:bg-accent">
+              <div className="card-interactive relative overflow-hidden rounded-lg border border-border-strong/65 bg-card/36 px-4 py-3.5 pl-[1.15rem] hover:bg-accent">
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cta/72 to-transparent shadow-[0_0_16px_rgba(246,155,52,0.42)]"
+                />
                 <p className="font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground/86">
                   {metric.label}
                 </p>
@@ -41,16 +45,8 @@ export function Outcomes() {
         </div>
 
         <FadeIn delay={0.24}>
-          <ul className="mt-4 space-y-2 text-[0.94rem] leading-relaxed text-muted-foreground/94">
-            {outcomes.map((item) => (
-              <li key={item} className="flex gap-2.5">
-                <span className="mt-[0.55rem] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />
-                {item}
-              </li>
-            ))}
-          </ul>
           <p className="mt-4 text-[0.92rem] leading-relaxed text-muted-foreground/86">
-            Better visibility in live markets, and faster understanding when something goes wrong.
+            Reported benefits also included earlier stress visibility, stronger market-maker oversight, and faster post-incident analysis.
           </p>
         </FadeIn>
       </div>

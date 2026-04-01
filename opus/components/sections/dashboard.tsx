@@ -1,10 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Image from "next/image";
 import { SectionShell } from "@/components/shared/section-shell";
 import { FadeIn } from "@/components/shared/fade-in";
-import { dashboardScreenshots } from "@/lib/generated/dashboard-screenshots.generated";
+import { DashboardScreenshotCarousel } from "@/components/shared/dashboard-screenshot-carousel";
 
 const capabilities = [
   "Cross-protocol monitoring across DeFi domains",
@@ -15,77 +13,29 @@ const capabilities = [
   "Extendable architecture for new protocols and markets",
 ];
 
-const fallbackScreenshots = [
-  { src: "/dashboard/pt-swaps.png", alt: "Swap flow and trade count monitoring" },
-  { src: "/dashboard/loans-hf.png", alt: "Loan distribution and health factor analysis" },
-  { src: "/dashboard/ohlcv.png", alt: "OHLCV price and volume analysis" },
-  { src: "/dashboard/fixed-spread.png", alt: "Fixed vs variable rate spread monitoring" },
-];
-
-const screenshots = dashboardScreenshots.length > 0
-  ? dashboardScreenshots
-  : fallbackScreenshots;
-
 export function Dashboard() {
-  const [active, setActive] = useState(0);
-  const [failedSrcs, setFailedSrcs] = useState<Set<string>>(new Set());
-
-  const visibleScreenshots = screenshots.filter((img) => !failedSrcs.has(img.src));
-  const carouselScreenshots = visibleScreenshots.length > 0
-    ? visibleScreenshots
-    : fallbackScreenshots.filter((img) => !failedSrcs.has(img.src));
-  const activeIndex = carouselScreenshots.length > 0
-    ? active % carouselScreenshots.length
-    : 0;
-
-  useEffect(() => {
-    if (carouselScreenshots.length <= 1) return;
-    const id = setInterval(
-      () => setActive((prev) => (prev + 1) % carouselScreenshots.length),
-      2000,
-    );
-    return () => clearInterval(id);
-  }, [carouselScreenshots.length]);
-
   return (
     <SectionShell id="system" variant="feature" className="py-10 md:py-14">
       <div className="md:hidden">
         <FadeIn>
-          <p className="section-label">Platform in action</p>
+          <p className="section-label">Flagship Platform</p>
           <h2 className="section-title">Cross-Protocol Monitoring in One View</h2>
           <p className="section-intro">
-            A specialized monitoring and analytical system for teams managing live onchain financial operations.
+            A risk monitoring and analytical system for live onchain financial operations.
           </p>
+          <ul className="mt-3 space-y-2 text-[0.9rem] leading-relaxed text-muted-foreground/88">
+            <li className="flex gap-2.5">
+              <span aria-hidden className="mt-[0.5rem] h-1.5 w-1.5 shrink-0 rounded-full bg-cta/70" />
+              Turnkey for key Solana DeFi protocols
+            </li>
+            <li className="flex gap-2.5">
+              <span aria-hidden className="mt-[0.5rem] h-1.5 w-1.5 shrink-0 rounded-full bg-cta/70" />
+              Rapid adaptation for EVM environments
+            </li>
+          </ul>
         </FadeIn>
         <FadeIn delay={0.08}>
-          <div className="mt-5 card-interactive overflow-hidden rounded-xl border border-border/55 bg-[#0a1020] shadow-[0_0_0_1px_rgba(128,162,198,0.16),0_0_22px_1px_rgba(82,114,150,0.2),0_12px_30px_rgba(1,8,20,0.34)]">
-            <div className="relative aspect-[17/10] overflow-hidden bg-[#0a1020]">
-              {carouselScreenshots.map((img, i) => (
-                <Image
-                  key={`mobile-${img.src}`}
-                  src={img.src}
-                  alt={img.alt}
-                  fill
-                  unoptimized
-                  sizes="100vw"
-                  priority={i === 0}
-                  onError={() => {
-                    setFailedSrcs((prev) => {
-                      if (prev.has(img.src)) return prev;
-                      const next = new Set(prev);
-                      next.add(img.src);
-                      return next;
-                    });
-                  }}
-                  className="absolute inset-0 h-full w-full object-contain object-center saturate-[0.98] contrast-[0.99] transition-opacity duration-[900ms] ease-in-out"
-                  style={{
-                    opacity: i === activeIndex ? 0.95 : 0,
-                  }}
-                />
-              ))}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent from-60% to-black/[0.16]" />
-            </div>
-          </div>
+          <DashboardScreenshotCarousel className="mt-5" imageKeyPrefix="dash-mobile-" />
         </FadeIn>
         <FadeIn delay={0.12}>
           <a
@@ -139,36 +89,11 @@ export function Dashboard() {
               <p className="section-label mb-4 text-muted-foreground/90 sm:mb-6">
                 Selected Platform Views
               </p>
-              <div className="card-interactive overflow-hidden rounded-xl border border-border/55 bg-[#0a1020] bg-none shadow-[0_0_0_1px_rgba(128,162,198,0.16),0_0_22px_1px_rgba(82,114,150,0.2),0_12px_30px_rgba(1,8,20,0.34)] hover:bg-accent/35 hover:shadow-[0_0_0_1px_rgba(143,178,219,0.28),0_0_30px_4px_rgba(88,132,186,0.26),0_18px_36px_rgba(1,8,20,0.42)]">
-                <div className="relative grid aspect-[17/10] overflow-hidden bg-[#0a1020]">
-                  {carouselScreenshots.map((img, i) => (
-                    <Image
-                      key={img.src}
-                      src={img.src}
-                      alt={img.alt}
-                      fill
-                      unoptimized
-                      sizes="(max-width: 1024px) 100vw, 61vw"
-                      priority={i === 0}
-                      onError={() => {
-                        setFailedSrcs((prev) => {
-                          if (prev.has(img.src)) return prev;
-                          const next = new Set(prev);
-                          next.add(img.src);
-                          return next;
-                        });
-                      }}
-                      className="col-start-1 row-start-1 h-full w-full object-contain object-center saturate-[0.98] contrast-[0.99] transition-[opacity,transform] duration-[900ms] ease-in-out"
-                      style={{
-                        opacity: i === activeIndex ? 0.95 : 0,
-                      }}
-                    />
-                  ))}
-                  <div className="pointer-events-none col-start-1 row-start-1 relative z-10 h-full w-full">
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent from-60% to-black/[0.16]" />
-                  </div>
-                </div>
-              </div>
+              <DashboardScreenshotCarousel
+                imageKeyPrefix="dash-desktop-"
+                sizes="(max-width: 1024px) 100vw, 61vw"
+                cardClassName="bg-none hover:bg-accent/35 hover:shadow-[0_0_0_1px_rgba(143,178,219,0.28),0_0_30px_4px_rgba(88,132,186,0.26),0_18px_36px_rgba(1,8,20,0.42)]"
+              />
 
               <a
                 href="https://demo.rmckinley.net"

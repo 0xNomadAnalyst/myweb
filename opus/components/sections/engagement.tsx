@@ -19,28 +19,52 @@ const principles = [
   },
 ];
 
+const mobileCards = [
+  {
+    title: "Principal-Led",
+    description:
+      "Direct work with the person defining analysis and implementation.",
+  },
+  {
+    title: "Integrated Advisory & Build",
+    description:
+      "Analytical and technical work stay aligned end to end.",
+  },
+  {
+    title: "Designed for Internal Ownership",
+    description:
+      "Built so internal teams can understand, operate, and extend the work.",
+  },
+];
+
 export function Engagement() {
   return (
     <SectionShell id="engagement" variant="open">
       <div className="md:hidden">
         <FadeIn>
-          <p className="section-label">How I work</p>
-          <h2 className="section-title">Principal-Led Analysis and Implementation</h2>
+          <p className="section-label">Working Together</p>
+          <h2 className="section-title">Principal Expertise, End-to-End</h2>
           <p className="section-intro">
-            I work directly with teams on monitoring, analysis, implementation, and related advisory shaped to their operating environment.
+            A principal-led model that keeps analysis, implementation, and operating context aligned from start to finish.
           </p>
         </FadeIn>
-        <FadeIn delay={0.08}>
-          <ul className="mt-4 space-y-2 text-[0.94rem] leading-relaxed text-muted-foreground/94">
-            <li className="flex gap-2.5"><span className="mt-[0.55rem] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />Monitoring deployment or adaptation</li>
-            <li className="flex gap-2.5"><span className="mt-[0.55rem] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />Liquidity and market-structure analysis</li>
-            <li className="flex gap-2.5"><span className="mt-[0.55rem] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />Market-maker oversight and incident diagnostics</li>
-            <li className="flex gap-2.5"><span className="mt-[0.55rem] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />Risk-policy support and new protocol coverage</li>
-          </ul>
-          <p className="mt-4 text-[0.92rem] leading-relaxed text-muted-foreground/86">
-            Analysis and implementation stay aligned end to end.
-          </p>
-        </FadeIn>
+        <div className="mt-5 space-y-3">
+          {mobileCards.map((item, index) => (
+            <FadeIn key={item.title} delay={0.08 * (index + 1)}>
+              <div className="card-interactive relative rounded-lg border border-border-strong bg-card px-4 py-4 pl-11 hover:bg-accent">
+                <p className="absolute left-4 top-4 font-mono text-[11px] text-cta/84">
+                  {String(index + 1).padStart(2, "0")}
+                </p>
+                <h3 className="text-[0.98rem] font-medium tracking-tight text-foreground/97">
+                  {item.title}
+                </h3>
+                <p className="mt-1.5 text-[0.92rem] leading-relaxed text-muted-foreground/95">
+                  {item.description}
+                </p>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
       </div>
 
       <div className="hidden md:grid gap-8 sm:gap-10 lg:grid-cols-[minmax(0,6fr)_minmax(0,6fr)] lg:gap-14">

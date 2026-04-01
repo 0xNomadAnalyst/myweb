@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { SectionShell } from "@/components/shared/section-shell";
 import { FadeIn } from "@/components/shared/fade-in";
+import { DashboardScreenshotCarousel } from "@/components/shared/dashboard-screenshot-carousel";
 
 const COVER_VIDEO_ID = "0wgPh78PwAs";
 const COVER_VIDEO_EMBED_URL = `https://www.youtube-nocookie.com/embed/${COVER_VIDEO_ID}?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&vq=hd1080&enablejsapi=1`;
@@ -80,11 +81,14 @@ export function Hero() {
               Operational intelligence for complex onchain systems
             </h1>
             <p className="mt-4 text-[0.98rem] leading-[1.6] text-foreground/92">
-              I build monitoring and analytics systems, and provide related data-driven advisory, for teams operating in DeFi and other complex digital-asset environments.
+              Monitoring, analytics, and data-driven advisory for DeFi and other digital-asset environments
             </p>
             <p className="mt-3 text-[0.92rem] leading-relaxed text-muted-foreground/82">
-              Built for environments where liquidity, leverage, counterparties, and execution risk interact across venues in real time.
+              Principal-led problem definition, analysis, and implementation – end-to-end accountability
             </p>
+            <FadeIn delay={0.06}>
+              <DashboardScreenshotCarousel className="mt-6" imageKeyPrefix="hero-mobile-" />
+            </FadeIn>
             <div className="mt-6 flex flex-col gap-2.5">
               <Button variant="cta" className="w-full justify-center" asChild>
                 <a href="https://demo.rmckinley.net">Explore Live Platform</a>
@@ -106,9 +110,6 @@ export function Hero() {
                 Watch short introduction
               </button>
             </div>
-            <p className="mt-4 text-[0.84rem] text-muted-foreground/68">
-              Principal-led build, analysis, and implementation.
-            </p>
           </div>
         </FadeIn>
       </div>

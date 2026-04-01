@@ -40,35 +40,25 @@ export function Capabilities() {
     <SectionShell id="capabilities" variant="open">
       <div className="md:hidden">
         <FadeIn>
-          <p className="section-label">What this supports</p>
-          <h2 className="section-title">Monitoring, Analysis, and Decision Support</h2>
+          <p className="section-label">Key Applications</p>
+          <h2 className="section-title">Support for Live Financial Operations</h2>
           <p className="section-intro">
-            A combination of monitoring, analysis, investigation, and decision support for teams managing live onchain financial operations.
-          </p>
-        </FadeIn>
-        <FadeIn delay={0.06}>
-          <ul className="mt-4 space-y-2 text-[0.95rem] leading-relaxed text-muted-foreground/95">
-            <li className="flex gap-2.5"><span className="mt-[0.55rem] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />Cross-protocol visibility</li>
-            <li className="flex gap-2.5"><span className="mt-[0.55rem] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />Operational analytics</li>
-            <li className="flex gap-2.5"><span className="mt-[0.55rem] h-1 w-1 shrink-0 rounded-full bg-muted-foreground/78" />Incident investigation and risk support</li>
-          </ul>
-          <p className="mt-4 text-[0.92rem] leading-relaxed text-muted-foreground/86">
-            Built for live decisions, not passive reporting.
+            For teams managing live onchain financial operations, support usually falls into one or more of these areas.
           </p>
         </FadeIn>
         <div className="mt-6 grid gap-3">
           {[
             {
               title: "Monitoring",
-              description: "Track liquidity, execution quality, exposure, and counterparties across venues.",
+              description: "Cross-venue visibility into liquidity, risk exposure, and market-maker performance.",
             },
             {
-              title: "Analytics",
-              description: "Investigate stress events and query protocol behavior with decision-ready outputs.",
+              title: "Investigation",
+              description: "Targeted analysis of stress events, protocol behaviour, and cross-venue dynamics when conditions need to be understood quickly.",
             },
             {
               title: "Decision Support",
-              description: "Support intervention policy, market-maker oversight, and operating priorities.",
+              description: "Data-led support for risk policy, operating decisions, and strategic direction.",
             },
           ].map((item, index) => (
             <FadeIn key={item.title} delay={0.08 * (index + 1)}>

@@ -51,6 +51,24 @@ function splitCredential(item: string) {
   };
 }
 
+const mobileSummaryCards = [
+  {
+    title: "Institutional Experience",
+    items: [
+      "Bloomberg - Research & Financial Modelling",
+      "M&A Analyst - UK Renewable Energy Assets",
+      "Project Finance Modelling - Private Equity Deals",
+    ],
+  },
+  {
+    title: "Education",
+    items: [
+      "MSc Economic Policy - University College London",
+      "BSc Economics & Philosophy - University of Bristol (First Class Honours)",
+    ],
+  },
+];
+
 
 export function Background() {
   return (
@@ -73,25 +91,47 @@ export function Background() {
               className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"
             />
             <div className="grid gap-3 py-4 pl-4 pr-3">
-              <div className="flex items-start gap-2.5 pt-0.5">
-                <span aria-hidden className="mt-[5px] h-[6px] w-[6px] flex-none rounded-full bg-cta/58" />
+              <div className="pt-0.5">
                 <p className="font-mono text-[11.5px] uppercase tracking-[0.14em] leading-snug text-foreground/92">
                   Credentials
                 </p>
               </div>
               <ul className="space-y-2.5">
                 <li className="relative pl-3.5">
-                  <span aria-hidden className="absolute left-0 top-[0.56rem] h-[3px] w-[3px] rounded-full bg-muted-foreground/46" />
+                  <span aria-hidden className="absolute left-0 top-[0.56rem] h-[4px] w-[4px] rounded-full bg-cta/68" />
                   <p className="text-[0.92rem] leading-[1.28] text-foreground/88">CFA Charterholder</p>
                 </li>
                 <li className="relative pl-3.5">
-                  <span aria-hidden className="absolute left-0 top-[0.56rem] h-[3px] w-[3px] rounded-full bg-muted-foreground/46" />
+                  <span aria-hidden className="absolute left-0 top-[0.56rem] h-[4px] w-[4px] rounded-full bg-cta/68" />
                   <p className="text-[0.92rem] leading-[1.28] text-foreground/88">Financial Risk Manager (FRM)</p>
                 </li>
               </ul>
             </div>
           </div>
         </FadeIn>
+        <div className="mt-3 grid gap-3">
+          {mobileSummaryCards.map((card, index) => (
+            <FadeIn key={card.title} delay={0.12 + index * 0.06}>
+              <div className="card-interactive relative overflow-hidden rounded-xl border border-border-strong/65 bg-card/36 px-4 py-3.5">
+                <span
+                  aria-hidden
+                  className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent"
+                />
+                <p className="font-mono text-[11.5px] uppercase tracking-[0.14em] leading-snug text-foreground/92">
+                  {card.title}
+                </p>
+                <ul className="mt-2.5 space-y-2">
+                  {card.items.map((item) => (
+                    <li key={item} className="relative pl-3.5">
+                      <span aria-hidden className="absolute left-0 top-[0.56rem] h-[4px] w-[4px] rounded-full bg-cta/68" />
+                      <p className="text-[0.9rem] leading-[1.35] text-foreground/86">{item}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </FadeIn>
+          ))}
+        </div>
       </div>
 
       <div className="hidden md:block">
