@@ -4,12 +4,21 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-const navLinks = [
+const desktopNavLinks = [
   { label: "Platform", href: "#system" },
   { label: "Domains", href: "#capabilities" },
   { label: "Outcomes", href: "#outcomes" },
   { label: "Approach", href: "#approach" },
   { label: "Background", href: "#background" },
+];
+
+const mobileNavLinks = [
+  { label: "Domains", href: "#capabilities" },
+  { label: "Platform", href: "#system" },
+  { label: "Outcomes", href: "#outcomes" },
+  { label: "Working Together", href: "#engagement" },
+  { label: "Background", href: "#background" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const brandName = "Roderick McKinley, CFA, FRM";
@@ -44,7 +53,7 @@ export function Header() {
           {brandName}
         </Link>
         <nav className="flex items-center gap-2 sm:gap-6">
-          {navLinks.map((link) => (
+          {desktopNavLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
@@ -91,7 +100,7 @@ export function Header() {
           className={`absolute right-2 top-14 z-50 w-fit min-w-[9.75rem] origin-top-right overflow-hidden border border-border-soft bg-[rgba(7,12,23,0.82)] px-3 py-2.5 backdrop-blur-md will-change-transform transition-[opacity,transform] duration-[620ms] ease-[cubic-bezier(0.22,1,0.36,1)] ${isNavOpen ? "translate-y-0 scale-y-100 opacity-100" : "-translate-y-3 scale-y-[0.82] opacity-0"}`}
         >
           <div className="space-y-2">
-            {navLinks.map((link) => (
+            {mobileNavLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -101,13 +110,6 @@ export function Header() {
                 {link.label}
               </a>
             ))}
-            <a
-              href="#contact"
-              onClick={() => setIsNavOpen(false)}
-              className="block whitespace-nowrap rounded-md px-2.5 py-1.5 text-right text-[0.95rem] text-muted-foreground/95 transition-colors hover:bg-accent hover:text-foreground"
-            >
-              Contact
-            </a>
           </div>
         </div>
       </div>
