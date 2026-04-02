@@ -16,7 +16,7 @@ const mobileNavLinks = [
   { label: "Domains", href: "#capabilities" },
   { label: "Platform", href: "#system" },
   { label: "Outcomes", href: "#outcomes" },
-  { label: "Working Together", href: "#engagement" },
+  { label: "Engagement", href: "#engagement" },
   { label: "Background", href: "#background" },
   { label: "Contact", href: "#contact" },
 ];
