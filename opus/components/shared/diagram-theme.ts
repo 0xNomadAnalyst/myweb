@@ -18,6 +18,11 @@ export const diagramGroupStyle = {
   fill: diagramPalette.groupFill,
   stroke: diagramPalette.groupStroke,
   strokeWidth: 1,
+  style: {
+    filter:
+      "drop-shadow(3px 4px 8px rgba(2, 8, 20, 0.34)) " +
+      "drop-shadow(1px 1.5px 3px rgba(2, 8, 20, 0.22))",
+  },
 } as const;
 
 export const diagramEdgeAccentStrong = `rgba(${accentOrangeRgb}, 0.64)`;
