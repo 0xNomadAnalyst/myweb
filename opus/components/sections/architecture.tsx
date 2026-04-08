@@ -58,7 +58,7 @@ export function Architecture() {
                 Protocol-Level Understanding
               </h3>
               <p className="mt-2.5 text-[0.93rem] leading-relaxed text-muted-foreground/96 sm:mt-3 sm:text-[0.98rem]">
-              Onchain systems must be understood at protocol level, with data ingestion and analytics engineered to reflect underlying mechanics, capital flows, and edge cases accurately.
+                Onchain systems must be understood at protocol level, with data ingestion and analytics engineered to reflect underlying mechanics, capital flows, and edge cases accurately.
               </p>
               <p className="mt-5 font-mono text-[0.82rem] tracking-wide text-muted-foreground/88 sm:mt-6 sm:text-[0.88rem]">
                 This precision makes analysis accurate and monitoring reliable.
