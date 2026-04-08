@@ -3,6 +3,9 @@ import {
   diagramEdgeAccentSoft,
   diagramEdgeAccentFilter,
   diagramEdgeAccentStrong,
+  diagramTopEdgeAccentSoft,
+  diagramTopEdgeAccentStrong,
+  diagramTopEdgeAccentTail,
   diagramConnectorStyle,
   diagramDashStyle,
   diagramGroupStyle,
@@ -36,8 +39,9 @@ export function SystemDiagram() {
       >
         <defs>
           <linearGradient id="sys-corner-top-accent" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor={diagramEdgeAccentStrong} />
-            <stop offset="22%" stopColor={diagramEdgeAccentSoft} />
+            <stop offset="0%" stopColor={diagramTopEdgeAccentStrong} />
+            <stop offset="70%" stopColor={diagramTopEdgeAccentSoft} />
+            <stop offset="92%" stopColor={diagramTopEdgeAccentTail} />
             <stop offset="100%" stopColor="transparent" />
           </linearGradient>
           <linearGradient id="sys-corner-left-accent" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -65,7 +69,7 @@ export function SystemDiagram() {
           {/* Left group: Lending Market */}
           <rect x="0" y="0" width="350" height="300" rx="8" {...group} />
           <path d="M0.9,188 L0.9,8 Q0.9,0.9 8,0.9" stroke="url(#sys-corner-left-accent)" strokeWidth="0.75" fill="none" />
-          <path d="M8,0.9 L236,0.9" stroke="url(#sys-corner-top-accent)" strokeWidth="0.75" fill="none" />
+          <rect x="8" y="0.5" width="276" height="0.72" fill="url(#sys-corner-top-accent)" />
           <path
             d="M0.9,188 L0.9,8 Q0.9,0.9 8,0.9"
             stroke="url(#sys-corner-left-accent)"
@@ -74,12 +78,13 @@ export function SystemDiagram() {
             fill="none"
             style={{ filter: diagramEdgeAccentFilter }}
           />
-          <path
-            d="M8,0.9 L236,0.9"
-            stroke="url(#sys-corner-top-accent)"
-            strokeWidth="1.45"
-            opacity="0.34"
-            fill="none"
+          <rect
+            x="8"
+            y="0.7"
+            width="276"
+            height="1.1"
+            fill="url(#sys-corner-top-accent)"
+            opacity="0.26"
             style={{ filter: diagramEdgeAccentFilter }}
           />
           <text
@@ -182,7 +187,7 @@ export function SystemDiagram() {
           {/* Right group: Obligation Accounts */}
           <rect x="455" y="0" width="345" height="300" rx="8" {...group} />
           <path d="M455.9,188 L455.9,8 Q455.9,0.9 463,0.9" stroke="url(#sys-corner-left-accent)" strokeWidth="0.75" fill="none" />
-          <path d="M463,0.9 L699,0.9" stroke="url(#sys-corner-top-accent)" strokeWidth="0.75" fill="none" />
+          <rect x="463" y="0.5" width="273" height="0.72" fill="url(#sys-corner-top-accent)" />
           <path
             d="M455.9,188 L455.9,8 Q455.9,0.9 463,0.9"
             stroke="url(#sys-corner-left-accent)"
@@ -191,12 +196,13 @@ export function SystemDiagram() {
             fill="none"
             style={{ filter: diagramEdgeAccentFilter }}
           />
-          <path
-            d="M463,0.9 L699,0.9"
-            stroke="url(#sys-corner-top-accent)"
-            strokeWidth="1.45"
-            opacity="0.34"
-            fill="none"
+          <rect
+            x="463"
+            y="0.7"
+            width="273"
+            height="1.1"
+            fill="url(#sys-corner-top-accent)"
+            opacity="0.26"
             style={{ filter: diagramEdgeAccentFilter }}
           />
           <text

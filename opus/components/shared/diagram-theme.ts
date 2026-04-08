@@ -22,6 +22,9 @@ export const diagramGroupStyle = {
 
 export const diagramEdgeAccentStrong = `rgba(${accentOrangeRgb}, 0.64)`;
 export const diagramEdgeAccentSoft = `rgba(${accentOrangeRgb}, 0.22)`;
+export const diagramTopEdgeAccentStrong = `rgba(${accentOrangeRgb}, 0.86)`;
+export const diagramTopEdgeAccentSoft = `rgba(${accentOrangeRgb}, 0.42)`;
+export const diagramTopEdgeAccentTail = `rgba(${accentOrangeRgb}, 0.08)`;
 export const diagramEdgeAccentFilter =
   `drop-shadow(0 0 0.7px rgba(${accentOrangeRgb}, 0.26)) ` +
   `drop-shadow(0 0 4px rgba(${accentOrangeRgb}, 0.12))`;

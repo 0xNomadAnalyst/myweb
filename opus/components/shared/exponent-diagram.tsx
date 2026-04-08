@@ -3,6 +3,9 @@ import {
   diagramEdgeAccentSoft,
   diagramEdgeAccentFilter,
   diagramEdgeAccentStrong,
+  diagramTopEdgeAccentSoft,
+  diagramTopEdgeAccentStrong,
+  diagramTopEdgeAccentTail,
   diagramConnectorStyle,
   diagramDashStyle,
   diagramGroupStyle,
@@ -36,8 +39,9 @@ export function ExponentDiagram() {
       >
         <defs>
           <linearGradient id="exp-corner-top-accent" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor={diagramEdgeAccentStrong} />
-            <stop offset="22%" stopColor={diagramEdgeAccentSoft} />
+            <stop offset="0%" stopColor={diagramTopEdgeAccentStrong} />
+            <stop offset="70%" stopColor={diagramTopEdgeAccentSoft} />
+            <stop offset="92%" stopColor={diagramTopEdgeAccentTail} />
             <stop offset="100%" stopColor="transparent" />
           </linearGradient>
           <linearGradient id="exp-corner-left-accent" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -60,7 +64,7 @@ export function ExponentDiagram() {
         <g transform="translate(0 8)">
           <rect x="0" y="0" width="228" height="300" rx="8" {...group} />
           <path d="M0.9,188 L0.9,8 Q0.9,0.9 8,0.9" stroke="url(#exp-corner-left-accent)" strokeWidth="0.75" fill="none" />
-          <path d="M8,0.9 L158,0.9" stroke="url(#exp-corner-top-accent)" strokeWidth="0.75" fill="none" />
+          <rect x="8" y="0.5" width="178" height="0.72" fill="url(#exp-corner-top-accent)" />
           <path
             d="M0.9,188 L0.9,8 Q0.9,0.9 8,0.9"
             stroke="url(#exp-corner-left-accent)"
@@ -69,12 +73,13 @@ export function ExponentDiagram() {
             fill="none"
             style={{ filter: diagramEdgeAccentFilter }}
           />
-          <path
-            d="M8,0.9 L158,0.9"
-            stroke="url(#exp-corner-top-accent)"
-            strokeWidth="1.45"
-            opacity="0.34"
-            fill="none"
+          <rect
+            x="8"
+            y="0.7"
+            width="178"
+            height="1.1"
+            fill="url(#exp-corner-top-accent)"
+            opacity="0.26"
             style={{ filter: diagramEdgeAccentFilter }}
           />
           <text
@@ -133,7 +138,7 @@ export function ExponentDiagram() {
 
           <rect x="286" y="0" width="228" height="300" rx="8" {...group} />
           <path d="M286.9,188 L286.9,8 Q286.9,0.9 294,0.9" stroke="url(#exp-corner-left-accent)" strokeWidth="0.75" fill="none" />
-          <path d="M294,0.9 L444,0.9" stroke="url(#exp-corner-top-accent)" strokeWidth="0.75" fill="none" />
+          <rect x="294" y="0.5" width="178" height="0.72" fill="url(#exp-corner-top-accent)" />
           <path
             d="M286.9,188 L286.9,8 Q286.9,0.9 294,0.9"
             stroke="url(#exp-corner-left-accent)"
@@ -142,12 +147,13 @@ export function ExponentDiagram() {
             fill="none"
             style={{ filter: diagramEdgeAccentFilter }}
           />
-          <path
-            d="M294,0.9 L444,0.9"
-            stroke="url(#exp-corner-top-accent)"
-            strokeWidth="1.45"
-            opacity="0.34"
-            fill="none"
+          <rect
+            x="294"
+            y="0.7"
+            width="178"
+            height="1.1"
+            fill="url(#exp-corner-top-accent)"
+            opacity="0.26"
             style={{ filter: diagramEdgeAccentFilter }}
           />
           <text
@@ -216,7 +222,7 @@ export function ExponentDiagram() {
 
           <rect x="572" y="0" width="228" height="300" rx="8" {...group} />
           <path d="M572.9,188 L572.9,8 Q572.9,0.9 580,0.9" stroke="url(#exp-corner-left-accent)" strokeWidth="0.75" fill="none" />
-          <path d="M580,0.9 L730,0.9" stroke="url(#exp-corner-top-accent)" strokeWidth="0.75" fill="none" />
+          <rect x="580" y="0.5" width="178" height="0.72" fill="url(#exp-corner-top-accent)" />
           <path
             d="M572.9,188 L572.9,8 Q572.9,0.9 580,0.9"
             stroke="url(#exp-corner-left-accent)"
@@ -225,12 +231,13 @@ export function ExponentDiagram() {
             fill="none"
             style={{ filter: diagramEdgeAccentFilter }}
           />
-          <path
-            d="M580,0.9 L730,0.9"
-            stroke="url(#exp-corner-top-accent)"
-            strokeWidth="1.45"
-            opacity="0.34"
-            fill="none"
+          <rect
+            x="580"
+            y="0.7"
+            width="178"
+            height="1.1"
+            fill="url(#exp-corner-top-accent)"
+            opacity="0.26"
             style={{ filter: diagramEdgeAccentFilter }}
           />
           <text

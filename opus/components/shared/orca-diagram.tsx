@@ -3,6 +3,9 @@ import {
   diagramEdgeAccentSoft,
   diagramEdgeAccentFilter,
   diagramEdgeAccentStrong,
+  diagramTopEdgeAccentSoft,
+  diagramTopEdgeAccentStrong,
+  diagramTopEdgeAccentTail,
   diagramConnectorStyle,
   diagramDashStyle,
   diagramGroupStyle,
@@ -36,8 +39,9 @@ export function OrcaDiagram() {
       >
         <defs>
           <linearGradient id="dex-corner-top-accent" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor={diagramEdgeAccentStrong} />
-            <stop offset="22%" stopColor={diagramEdgeAccentSoft} />
+            <stop offset="0%" stopColor={diagramTopEdgeAccentStrong} />
+            <stop offset="70%" stopColor={diagramTopEdgeAccentSoft} />
+            <stop offset="92%" stopColor={diagramTopEdgeAccentTail} />
             <stop offset="100%" stopColor="transparent" />
           </linearGradient>
           <linearGradient id="dex-corner-left-accent" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -60,7 +64,7 @@ export function OrcaDiagram() {
           {/* Left column: vaults */}
           <rect x="14" y="20" width="220" height="118" rx="8" {...group} />
           <path d="M14.9,108 L14.9,28 Q14.9,20.9 22,20.9" stroke="url(#dex-corner-left-accent)" strokeWidth="0.75" fill="none" />
-          <path d="M22,20.9 L152,20.9" stroke="url(#dex-corner-top-accent)" strokeWidth="0.75" fill="none" />
+          <rect x="22" y="20.5" width="160" height="0.72" fill="url(#dex-corner-top-accent)" />
           <path
             d="M14.9,108 L14.9,28 Q14.9,20.9 22,20.9"
             stroke="url(#dex-corner-left-accent)"
@@ -69,12 +73,13 @@ export function OrcaDiagram() {
             fill="none"
             style={{ filter: diagramEdgeAccentFilter }}
           />
-          <path
-            d="M22,20.9 L152,20.9"
-            stroke="url(#dex-corner-top-accent)"
-            strokeWidth="1.45"
-            opacity="0.34"
-            fill="none"
+          <rect
+            x="22"
+            y="20.7"
+            width="160"
+            height="1.1"
+            fill="url(#dex-corner-top-accent)"
+            opacity="0.26"
             style={{ filter: diagramEdgeAccentFilter }}
           />
           <text
@@ -113,7 +118,7 @@ export function OrcaDiagram() {
           {/* Left column: pool strictly below vaults */}
           <rect x="14" y="156" width="220" height="118" rx="8" {...group} />
           <path d="M14.9,244 L14.9,164 Q14.9,156.9 22,156.9" stroke="url(#dex-corner-left-accent)" strokeWidth="0.75" fill="none" />
-          <path d="M22,156.9 L152,156.9" stroke="url(#dex-corner-top-accent)" strokeWidth="0.75" fill="none" />
+          <rect x="22" y="156.5" width="160" height="0.72" fill="url(#dex-corner-top-accent)" />
           <path
             d="M14.9,244 L14.9,164 Q14.9,156.9 22,156.9"
             stroke="url(#dex-corner-left-accent)"
@@ -122,12 +127,13 @@ export function OrcaDiagram() {
             fill="none"
             style={{ filter: diagramEdgeAccentFilter }}
           />
-          <path
-            d="M22,156.9 L152,156.9"
-            stroke="url(#dex-corner-top-accent)"
-            strokeWidth="1.45"
-            opacity="0.34"
-            fill="none"
+          <rect
+            x="22"
+            y="156.7"
+            width="160"
+            height="1.1"
+            fill="url(#dex-corner-top-accent)"
+            opacity="0.26"
             style={{ filter: diagramEdgeAccentFilter }}
           />
           <text
@@ -165,7 +171,7 @@ export function OrcaDiagram() {
           {/* Middle-right: tick arrays (aligned top/bottom with positions) */}
           <rect x="284" y="20" width="220" height="254" rx="8" {...group} />
           <path d="M284.9,188 L284.9,28 Q284.9,20.9 292,20.9" stroke="url(#dex-corner-left-accent)" strokeWidth="0.75" fill="none" />
-          <path d="M292,20.9 L448,20.9" stroke="url(#dex-corner-top-accent)" strokeWidth="0.75" fill="none" />
+          <rect x="292" y="20.5" width="184" height="0.72" fill="url(#dex-corner-top-accent)" />
           <path
             d="M284.9,188 L284.9,28 Q284.9,20.9 292,20.9"
             stroke="url(#dex-corner-left-accent)"
@@ -174,12 +180,13 @@ export function OrcaDiagram() {
             fill="none"
             style={{ filter: diagramEdgeAccentFilter }}
           />
-          <path
-            d="M292,20.9 L448,20.9"
-            stroke="url(#dex-corner-top-accent)"
-            strokeWidth="1.45"
-            opacity="0.34"
-            fill="none"
+          <rect
+            x="292"
+            y="20.7"
+            width="184"
+            height="1.1"
+            fill="url(#dex-corner-top-accent)"
+            opacity="0.26"
             style={{ filter: diagramEdgeAccentFilter }}
           />
           <text
@@ -229,7 +236,7 @@ export function OrcaDiagram() {
           {/* Right column: position accounts + NFTs (aligned top/bottom with tick arrays) */}
           <rect x="538" y="20" width="248" height="254" rx="8" {...group} />
           <path d="M538.9,188 L538.9,28 Q538.9,20.9 546,20.9" stroke="url(#dex-corner-left-accent)" strokeWidth="0.75" fill="none" />
-          <path d="M546,20.9 L708,20.9" stroke="url(#dex-corner-top-accent)" strokeWidth="0.75" fill="none" />
+          <rect x="546" y="20.5" width="194" height="0.72" fill="url(#dex-corner-top-accent)" />
           <path
             d="M538.9,188 L538.9,28 Q538.9,20.9 546,20.9"
             stroke="url(#dex-corner-left-accent)"
@@ -238,12 +245,13 @@ export function OrcaDiagram() {
             fill="none"
             style={{ filter: diagramEdgeAccentFilter }}
           />
-          <path
-            d="M546,20.9 L708,20.9"
-            stroke="url(#dex-corner-top-accent)"
-            strokeWidth="1.45"
-            opacity="0.34"
-            fill="none"
+          <rect
+            x="546"
+            y="20.7"
+            width="194"
+            height="1.1"
+            fill="url(#dex-corner-top-accent)"
+            opacity="0.26"
             style={{ filter: diagramEdgeAccentFilter }}
           />
           <text
